@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 01 · Adventure Capitalism</title>
+<meta name="ac:tags" content="interest=customers; comfort=no-code; time=45min; track=core; ai=off">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800;900&family=Public+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* Adventure Capitalism house style, inlined.
+   Every page carries this block so it renders on its own, no external CSS.
+   Copy this whole file to start a new page. Do not edit the tokens per page. */
+
+:root{
+  --paper:#F7F6F3;
+  --paper-pure:#FFFFFF;
+  --ink:#141414;
+  --ink-soft:#57574F;
+  --accent:#1B2CE8;
+  --accent-deep:#1220A8;
+  --rule:#161616;
+  --hairline:#D9D8D1;
+  --measure:37rem;
+  --rail:9rem;
+  --gap:2.5rem;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+html{-webkit-text-size-adjust:100%;}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Public Sans",system-ui,sans-serif;
+  font-size:clamp(1rem,0.95rem + 0.25vw,1.1rem);
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+.mono{
+  font-family:"Space Mono","SFMono-Regular",monospace;
+  font-weight:400;
+  letter-spacing:0.02em;
+}
+
+.wrap{
+  max-width:64rem;
+  margin:0 auto;
+  padding:0 clamp(1.25rem,5vw,4rem);
+}
+
+/* ---- Masthead ---- */
+.masthead{
+  border-bottom:2px solid var(--rule);
+}
+.masthead .wrap{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  padding-top:1.1rem;
+  padding-bottom:1.1rem;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+.brand{
+  font-family:"Archivo",sans-serif;
+  font-weight:900;
+  font-size:1.05rem;
+  letter-spacing:-0.01em;
+  text-transform:uppercase;
+}
+.brand .dot{color:var(--accent);}
+.masthead .meta{
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.18em;
+  color:var(--ink-soft);
+}
+
+/* ---- Class header (signature) ---- */
+.classhead{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:end;
+  gap:1.5rem;
+  padding-top:clamp(2.5rem,6vw,4.5rem);
+  padding-bottom:1.4rem;
+}
+.kicker{
+  font-size:0.74rem;
+  text-transform:uppercase;
+  letter-spacing:0.22em;
+  color:var(--accent);
+  margin-bottom:1.1rem;
+}
+h1{
+  font-family:"Archivo",sans-serif;
+  font-weight:900;
+  font-size:clamp(2.4rem,2rem + 4vw,4.6rem);
+  line-height:0.94;
+  letter-spacing:-0.025em;
+  max-width:14ch;
+}
+.classnum{
+  font-family:"Archivo",sans-serif;
+  font-weight:900;
+  font-size:clamp(5rem,4rem + 12vw,13rem);
+  line-height:0.72;
+  letter-spacing:-0.04em;
+  color:var(--accent);
+  align-self:end;
+  user-select:none;
+}
+
+/* ---- Tag rail ---- */
+.tags{
+  border-top:2px solid var(--rule);
+  border-bottom:1px solid var(--hairline);
+  padding:0.85rem 0;
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.55rem 1.4rem;
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+  color:var(--ink-soft);
+}
+.tags b{
+  color:var(--ink);
+  font-weight:700;
+}
+.tags .sep{color:var(--hairline);}
+
+/* ---- Body grid ---- */
+.content{
+  display:grid;
+  grid-template-columns:var(--rail) minmax(0,var(--measure));
+  gap:var(--gap);
+  padding-top:clamp(2.2rem,5vw,3.4rem);
+  padding-bottom:5rem;
+}
+.rail{
+  grid-column:1;
+}
+.rail-label{
+  position:sticky;
+  top:1.5rem;
+  font-size:0.7rem;
+  text-transform:uppercase;
+  letter-spacing:0.16em;
+  color:var(--ink-soft);
+  padding-top:0.4rem;
+  border-top:2px solid var(--rule);
+}
+.body{
+  grid-column:2;
+  max-width:var(--measure);
+}
+.body p{margin-bottom:1.35rem;}
+.lead{
+  font-size:1.22em;
+  line-height:1.5;
+  letter-spacing:-0.01em;
+}
+.body a{
+  color:var(--accent);
+  text-decoration:none;
+  background-image:linear-gradient(var(--accent),var(--accent));
+  background-size:100% 1px;
+  background-position:0 100%;
+  background-repeat:no-repeat;
+}
+.body a:hover{color:var(--accent-deep);}
+
+/* ---- The work / activity block ---- */
+.work{
+  margin:2.6rem 0;
+}
+.work-label{
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.2em;
+  color:var(--ink-soft);
+  padding-bottom:0.7rem;
+  margin-bottom:1.3rem;
+  border-bottom:1px solid var(--hairline);
+}
+.aitag{
+  display:inline-block;
+  font-family:"Space Mono",monospace;
+  font-weight:700;
+  font-size:0.78rem;
+  letter-spacing:0.04em;
+  padding:0.25rem 0.6rem;
+  margin-bottom:0.9rem;
+}
+.aitag.off{
+  background:var(--ink);
+  color:var(--paper);
+}
+.aitag.on{
+  background:transparent;
+  color:var(--accent);
+  box-shadow:inset 0 0 0 2px var(--accent);
+}
+.work .why{
+  font-size:0.94em;
+  color:var(--ink-soft);
+  border-left:2px solid var(--accent);
+  padding-left:1.1rem;
+  margin-top:1.2rem;
+}
+
+/* ---- Deep dive ---- */
+details.deepdive{
+  margin-top:2.8rem;
+  border-top:2px solid var(--rule);
+  padding-top:1.1rem;
+}
+details.deepdive summary{
+  cursor:pointer;
+  list-style:none;
+  display:flex;
+  align-items:baseline;
+  gap:0.7rem;
+  font-family:"Archivo",sans-serif;
+  font-weight:800;
+  font-size:1.02rem;
+  letter-spacing:-0.01em;
+}
+details.deepdive summary::-webkit-details-marker{display:none;}
+details.deepdive summary .toggle{
+  font-family:"Space Mono",monospace;
+  font-weight:700;
+  color:var(--accent);
+  font-size:0.95rem;
+}
+details.deepdive summary .dd-tag{
+  margin-left:auto;
+  font-family:"Space Mono",monospace;
+  font-weight:400;
+  font-size:0.66rem;
+  text-transform:uppercase;
+  letter-spacing:0.14em;
+  color:var(--ink-soft);
+  align-self:center;
+}
+details.deepdive[open] summary .toggle::before{content:"–";}
+details.deepdive:not([open]) summary .toggle::before{content:"+";}
+details.deepdive .dd-body{
+  padding-top:1.2rem;
+  color:var(--ink-soft);
+  font-size:0.96em;
+  max-width:var(--measure);
+}
+details.deepdive .dd-body p{margin-bottom:1.1rem;}
+details.deepdive .dd-body p:last-child{margin-bottom:0;}
+
+/* ---- Reading block (primary source) ---- */
+.reading{
+  margin-top:2.6rem;
+  border-top:1px solid var(--hairline);
+  padding-top:1.1rem;
+}
+.reading .reading-label{
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.2em;
+  color:var(--ink-soft);
+  margin-bottom:0.55rem;
+}
+.reading a{
+  font-family:"Archivo",sans-serif;
+  font-weight:800;
+  font-size:1.02rem;
+  letter-spacing:-0.01em;
+  color:var(--accent);
+  text-decoration:none;
+}
+.reading a:hover{color:var(--accent-deep);}
+.reading .why{
+  color:var(--ink-soft);
+  font-size:0.92em;
+  margin-top:0.35rem;
+}
+
+/* ---- Footer nav ---- */
+footer{
+  border-top:2px solid var(--rule);
+}
+footer .wrap{
+  display:flex;
+  justify-content:space-between;
+  padding:1.4rem clamp(1.25rem,5vw,4rem);
+  font-size:0.78rem;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+}
+footer a{color:var(--ink);text-decoration:none;}
+footer a:hover{color:var(--accent);}
+
+/* ---- Responsive ---- */
+@media (max-width:720px){
+  .classhead{
+    grid-template-columns:1fr;
+    align-items:start;
+  }
+  .classnum{
+    order:-1;
+    align-self:start;
+    line-height:0.72;
+  }
+  h1{max-width:100%;}
+  .content{
+    grid-template-columns:1fr;
+    gap:1.2rem;
+  }
+  .rail{grid-column:1;}
+  .body{grid-column:1;}
+  .rail-label{
+    position:static;
+    display:inline-block;
+  }
+}
+
+a:focus-visible,summary:focus-visible{
+  outline:3px solid var(--accent);
+  outline-offset:3px;
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important;animation:none !important;}
+}
+
+/* ---- Page figures (image + diagram). Uses existing tokens only, defines none. ---- */
+.figure{margin:2.3rem 0;}
+.figure img{width:100%;height:auto;display:block;border:1px solid var(--hairline);}
+.figure svg{width:100%;height:auto;display:block;}
+.figcap{
+  font-family:"Space Mono",monospace;
+  font-size:0.7rem;
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+  color:var(--ink-soft);
+  margin-top:0.7rem;
+}
+</style>
+</head>
+<body>
+
+  <header class="masthead">
+    <div class="wrap">
+      <div class="brand">ADVENTURE<span class="dot">.</span>CAPITALISM</div>
+      <div class="meta mono">12 CLASSES / 3 SHARK TANKS</div>
+    </div>
+  </header>
+
+  <div class="wrap">
+
+    <div class="classhead">
+      <div>
+        <div class="kicker mono">CLASS 01 · BUILD · FINDING A PROBLEM</div>
+        <h1>Plausible is a trap.</h1>
+      </div>
+      <div class="classnum" aria-hidden="true">01</div>
+    </div>
+
+    <div class="tags mono">
+      <span><b>INTEREST</b> customers</span>
+      <span class="sep">/</span>
+      <span><b>COMFORT</b> no-code</span>
+      <span class="sep">/</span>
+      <span><b>TIME</b> 45min</span>
+      <span class="sep">/</span>
+      <span><b>TRACK</b> core</span>
+      <span class="sep">/</span>
+      <span><b>FEEDS</b> class 04 pitch</span>
+    </div>
+
+    <div class="content">
+      <aside class="rail">
+        <div class="rail-label mono">Finding<br>a problem</div>
+      </aside>
+
+      <div class="body">
+        <p class="lead">Look at the meme. The fool and the genius agree. The one crying in the middle has the MBA, the five years of consulting, and the whole TED shelf, and he has built nothing.</p>
+
+        <figure class="figure">
+          <img src="assets/midwit-people-want.png" alt="Bell-curve meme. The low-IQ end on the left and the high-IQ end on the right both say 'make something people want.' The midwit in the middle is crying, planning to combine an MBA, a five-year consulting stint, and a whole TED-talk business library into an unstoppable idea.">
+          <figcaption class="figcap">The midwit curve. Both ends already know the answer.</figcaption>
+        </figure>
+
+        <p>Both ends of that curve know the same four words. Make something people want. It is Y Combinator's whole motto, printed on the back of the hoodie. The trap is the middle, where you can read for a year, stack the credentials, and never once find out whether a single person wants the thing.</p>
+
+        <p>The idea that sounds good to everyone in the room is usually the one nobody has checked. Plausible and wanted are different things, and the only way to tell them apart is to go and ask. Asking has a method.</p>
+
+        <p>Steve Blank named it customer development, and it flips the usual order. Most people build the product first and go looking for customers after. Blank's move is to search for the customer first and build second.</p>
+
+        <p>The search has two steps, and you are not allowed near the company until both pass. Discovery: get out of the building and find a problem someone actually has. Validation: prove that same someone will hand over money or an hour of their week to make it go away. If the guess is wrong, you do not push forward. You pivot, back to discovery, and run it again. Only when the search returns a real, repeatable yes do you cross into the right half of the diagram and start building the machine and the company around it.</p>
+
+        <figure class="figure">
+          <svg viewBox="0 0 720 300" role="img" aria-labelledby="cd-title cd-desc" xmlns="http://www.w3.org/2000/svg">
+            <title id="cd-title">The customer development cycle</title>
+            <desc id="cd-desc">Two phases. Search, containing Customer Discovery and Customer Validation with a pivot loop back to Discovery, comes before Execution, containing Customer Creation and Company Building.</desc>
+
+            <!-- phase zones -->
+            <rect x="8"   y="30" width="360" height="210" rx="6" fill="none" stroke="#D9D8D1" stroke-width="1.5"/>
+            <rect x="392" y="30" width="320" height="210" rx="6" fill="none" stroke="#D9D8D1" stroke-width="1.5"/>
+            <text x="24"  y="52" font-family="Space Mono, monospace" font-size="12" letter-spacing="2" fill="#57574F">SEARCH</text>
+            <text x="408" y="52" font-family="Space Mono, monospace" font-size="12" letter-spacing="2" fill="#57574F">EXECUTION</text>
+
+            <!-- connecting arrows (drawn first, sit behind nodes) -->
+            <g stroke="#141414" stroke-width="1.6" fill="none">
+              <line x1="150" y1="132" x2="214" y2="132"/>
+              <line x1="330" y1="132" x2="470" y2="132"/>
+              <line x1="582" y1="132" x2="604" y2="132"/>
+            </g>
+            <g fill="#141414">
+              <polygon points="214,132 206,128 206,136"/>
+              <polygon points="470,132 462,128 462,136"/>
+              <polygon points="604,132 596,128 596,136"/>
+            </g>
+
+            <!-- pivot loop: validation bottom -> down -> left -> up to discovery bottom -->
+            <path d="M 272 186 L 272 212 L 96 212 L 96 186" fill="none" stroke="#141414" stroke-width="1.6"/>
+            <polygon points="96,186 92,194 100,194" fill="#141414"/>
+            <text x="184" y="207" text-anchor="middle" font-family="Space Mono, monospace" font-size="11" letter-spacing="2" fill="#57574F">PIVOT</text>
+
+            <!-- nodes -->
+            <g font-family="Space Mono, monospace" font-size="12.5" font-weight="700" fill="#141414" text-anchor="middle">
+              <circle cx="96"  cy="132" r="54" fill="#FFFFFF" stroke="#141414" stroke-width="2"/>
+              <text x="96" y="128">CUSTOMER</text>
+              <text x="96" y="146">DISCOVERY</text>
+
+              <circle cx="272" cy="132" r="54" fill="#FFFFFF" stroke="#141414" stroke-width="2"/>
+              <text x="272" y="128">CUSTOMER</text>
+              <text x="272" y="146">VALIDATION</text>
+
+              <circle cx="524" cy="132" r="54" fill="#FFFFFF" stroke="#141414" stroke-width="2"/>
+              <text x="524" y="128">CUSTOMER</text>
+              <text x="524" y="146">CREATION</text>
+
+              <circle cx="660" cy="132" r="52" fill="#FFFFFF" stroke="#141414" stroke-width="2"/>
+              <text x="660" y="128">COMPANY</text>
+              <text x="660" y="146">BUILDING</text>
+            </g>
+          </svg>
+          <figcaption class="figcap">Steve Blank's customer development cycle, redrawn. Search on the left, execution on the right.</figcaption>
+        </figure>
+
+        <p>The left half is cheap and the right half is expensive. Everyone wants to skip to the right half. That is the disease the meme is laughing at.</p>
+
+        <p>Three companies you have heard of ran the left half honestly. None of them started with a finished product.</p>
+
+        <p>Drew Houston built the first Dropbox for himself, after leaving his USB stick at home one too many times. Then, instead of finishing it, he stopped and tested the guess. He posted a short screencast showing how the syncing would work, before the product was really built, and the beta waitlist went from 5,000 to 75,000 overnight. He had his answer before he wrote the hard part. <a href="https://www.shortform.com/blog/dropbox-mvp-explainer-video/">Eric Ries tells it in The Lean Startup.</a></p>
+
+        <p>Airbnb was making $200 a week and going nowhere. Graham told the founders to go to their users, which sounded absurd, because meeting people one by one would never scale. They flew to New York anyway and knocked on doors. The idea was fine. The photographs were the problem, grainy phone shots that made decent apartments look like crime scenes, so they borrowed a camera and shot the listings themselves. Bookings moved. <a href="https://paulgraham.com/ds.html">Paul Graham tells it in Do Things That Don't Scale.</a></p>
+
+        <p>Rahul Vohra refused to guess whether Superhuman had fit. He asked every user one question, how would you feel if you could no longer use this, and counted the ones who answered "very disappointed." Sean Ellis had found that companies with real traction almost always cleared 40 percent on that question. Superhuman started at 22, under the line, and Vohra built an engine to climb it. <a href="https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit/">His write-up is in First Round Review.</a></p>
+
+        <div class="work">
+          <div class="work-label mono">The work · 45 minutes</div>
+          <span class="aitag off">[ NO AI ] DO THIS ONE YOURSELF</span>
+          <p>Write down three problems you personally ran into this week. Not startup ideas. Problems. The thing that annoyed you, cost you time, or made you mutter "why is this still like this." Pick the one you would most want gone. Then find five people who hit the same problem and ask them about it, without pitching anything. You are not selling. You are checking whether the problem is real and whether it is yours to chase. Bring what you find to the Class 04 pitch.</p>
+          <p class="why">A model will brainstorm a hundred plausible problems in a second, and every one of them is the midwit's problem, not yours. Class 01 is about noticing something only you have standing to notice. Outsource that and you walk into the shark tank with nothing.</p>
+        </div>
+
+        <div class="reading">
+          <div class="reading-label mono">Reading</div>
+          <a href="https://www.ycombinator.com/library/8z-how-to-get-startup-ideas">Paul Graham · How to Get Startup Ideas</a>
+          <p class="why">Where real ideas come from, and why the ones that sound plausible to everyone are the traps. Read it before Class 02.</p>
+        </div>
+
+        <details class="deepdive">
+          <summary>
+            <span class="toggle mono" aria-hidden="true"></span>
+            <span>Deep dive: talk to users, or pick the right market?</span>
+            <span class="dd-tag">optional</span>
+          </summary>
+          <div class="dd-body">
+            <p>Customer development says the answer is in the building across the street, so get out of yours and go find it. Marc Andreessen says something that sits badly next to that. In his telling the market is the only thing that matters, and a great team shipping a great product into a market that does not want it loses every time. The market pulls the product out of the startup, or it does not.</p>
+            <p>Both are right, and the seam between them is where founders get hurt. You can run flawless customer development inside a market that is too small to matter. You interview your five people, nail their problem, build a tidy thing for a room that never gets any bigger. Talking to users tells you whether the problem is real. It does not tell you whether the market is large enough to be worth your twenties. Blank teaches you to find the problem. Andreessen reminds you that some problems, solved perfectly, still do not add up to anything. Hold both. Read Andreessen's <a href="https://pmarchive.com/guide_to_startups_part4.html">The Only Thing That Matters</a> and argue with it.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <a href="index.html">← Class 01</a>
+      <a href="../class-02/">Class 02 →</a>
+    </div>
+  </footer>
+
+</body>
+</html>
