@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 01 · Adventure Capitalism</title>
+<meta name="ac:tags" content="interest=customers; comfort=no-code; time=deep; track=core; ai=off; type=build">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800;900&family=Public+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+/* Hub-only layout for the module list. Uses house tokens, defines none. */
+.modulelist{
+  border-top:1px solid var(--hairline);
+  margin-top:0.4rem;
+}
+.modulelist a{
+  display:grid;
+  grid-template-columns:2.2rem minmax(0,1fr) auto;
+  align-items:baseline;
+  gap:1.1rem;
+  padding:1.1rem 0;
+  border-bottom:1px solid var(--hairline);
+  text-decoration:none;
+  color:var(--ink);
+}
+.modulelist a:hover{color:var(--accent);}
+.modulelist a:hover .ml-num{color:var(--accent);}
+.ml-num{
+  font-family:"Space Mono",monospace;
+  font-weight:700;
+  font-size:0.9rem;
+  color:var(--ink-soft);
+}
+.ml-title{
+  font-family:"Archivo",sans-serif;
+  font-weight:800;
+  font-size:1.05rem;
+  letter-spacing:-0.01em;
+}
+.ml-sub{
+  display:block;
+  font-family:"Public Sans",sans-serif;
+  font-weight:400;
+  font-size:0.9rem;
+  color:var(--ink-soft);
+  margin-top:0.15rem;
+}
+.ml-meta{
+  font-family:"Space Mono",monospace;
+  font-size:0.64rem;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+  color:var(--ink-soft);
+  text-align:right;
+  white-space:nowrap;
+}
+@media (max-width:560px){
+  .modulelist a{grid-template-columns:2.2rem 1fr;}
+  .ml-meta{grid-column:2;text-align:left;margin-top:0.25rem;}
+}
+</style>
+</head>
+<body>
+
+  <header class="masthead">
+    <div class="wrap">
+      <div class="brand">ADVENTURE<span class="dot">.</span>CAPITALISM</div>
+      <div class="meta mono">12 CLASSES / 3 SHARK TANKS</div>
+    </div>
+  </header>
+
+  <div class="wrap">
+
+    <div class="classhead">
+      <div>
+        <div class="kicker mono">CLASS 01 · BUILD · CUSTOMER DISCOVERY</div>
+        <h1>You are probably wrong. Go find out how.</h1>
+      </div>
+      <div class="classnum" aria-hidden="true">01</div>
+    </div>
+
+    <div class="tags mono">
+      <span><b>INTEREST</b> customers</span>
+      <span class="sep">/</span>
+      <span><b>COMFORT</b> no-code</span>
+      <span class="sep">/</span>
+      <span><b>TIME</b> 3 × 45min</span>
+      <span class="sep">/</span>
+      <span><b>TRACK</b> core</span>
+      <span class="sep">/</span>
+      <span><b>FEEDS</b> class 04 pitch</span>
+    </div>
+
+    <div class="content">
+      <aside class="rail">
+        <div class="rail-label mono">The<br>class</div>
+      </aside>
+
+      <div class="body">
+        <p class="lead">Three founders in this course will spend a term building something nobody wanted. Each of them will have been sure. Class 01 is about not being one of them.</p>
+
+        <p>Customer discovery is one skill split three ways. First you find a problem that is real and not just plausible. Then you learn to hear what people actually mean, under the politeness. Then you look hard at the competition you cannot see. Do them in order. Each one feeds your Class 04 pitch.</p>
+
+        <p>The work lives inside the modules below. Pick the first one and start.</p>
+
+        <nav class="modulelist">
+          <a href="finding-a-problem.html">
+            <span class="ml-num">01</span>
+            <span class="ml-title">Plausible is a trap.<span class="ml-sub">Finding a real problem, and testing the guess before it costs you.</span></span>
+            <span class="ml-meta">no-code · 45min</span>
+          </a>
+          <a href="talking-to-users.html">
+            <span class="ml-num">02</span>
+            <span class="ml-title">Everyone will lie to you.<span class="ml-sub">Interview craft: open questions, and hearing past the politeness.</span></span>
+            <span class="ml-meta">no-code · 45min</span>
+          </a>
+          <a href="competition.html">
+            <span class="ml-num">03</span>
+            <span class="ml-title">Most of your competition never shows up.<span class="ml-sub">Mapping the alternatives, including the ones that are not companies.</span></span>
+            <span class="ml-meta">no-code · 45min · ai</span>
+          </a>
+        </nav>
+
+        <details class="deepdive">
+          <summary>
+            <span class="toggle mono" aria-hidden="true"></span>
+            <span>Deep dive: why three modules and not one</span>
+            <span class="dd-tag">optional</span>
+          </summary>
+          <div class="dd-body">
+            <p>The customer development loop is discovery, then validation, then a pivot when the evidence demands it. The three modules map onto the front of that loop. Finding the problem is discovery. Talking to users is how you validate or kill it. Reading the competition tells you whether solving it would ever have mattered.</p>
+            <p>You could rush all three in an afternoon. The founders who do usually end up validating the wrong thing, politely, against no one.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <a href="../index.html">← Course index</a>
+      <a href="../class-02/">Class 02 →</a>
+    </div>
+  </footer>
+
+</body>
+</html>
