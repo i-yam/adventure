@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adventure Capitalism · Course index</title>
+<meta name="ac:tags" content="interest=all; comfort=no-code; time=deep; track=core; ai=off; type=index">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800;900&family=Public+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* Index-only layout. Uses the same tokens; adds nothing to the house palette. */
+.blockhead{
+  border-top:2px solid var(--rule);
+  padding-top:0.9rem;
+  margin-top:2.8rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+.blockhead h2{
+  font-family:"Archivo",sans-serif;
+  font-weight:900;
+  font-size:1.35rem;
+  letter-spacing:-0.02em;
+}
+.blockhead .promise{
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.16em;
+  color:var(--ink-soft);
+}
+.classlist{
+  border-top:1px solid var(--hairline);
+}
+.classlist a{
+  display:grid;
+  grid-template-columns:3.5rem minmax(0,1fr) auto;
+  align-items:baseline;
+  gap:1.2rem;
+  padding:1rem 0;
+  border-bottom:1px solid var(--hairline);
+  text-decoration:none;
+  color:var(--ink);
+}
+.classlist a:hover{color:var(--accent);}
+.classlist a:hover .cl-num{color:var(--accent);}
+.cl-num{
+  font-family:"Archivo",sans-serif;
+  font-weight:900;
+  font-size:1.5rem;
+  color:var(--ink-soft);
+  letter-spacing:-0.02em;
+}
+.cl-title{
+  font-family:"Archivo",sans-serif;
+  font-weight:800;
+  font-size:1.02rem;
+  letter-spacing:-0.01em;
+}
+.cl-sub{
+  display:block;
+  font-family:"Public Sans",sans-serif;
+  font-weight:400;
+  font-size:0.86rem;
+  color:var(--ink-soft);
+  margin-top:0.15rem;
+}
+.cl-meta{
+  font-family:"Space Mono",monospace;
+  font-size:0.66rem;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+  color:var(--ink-soft);
+  text-align:right;
+  white-space:nowrap;
+}
+.classlist a.pitch .cl-num{color:var(--accent);}
+.classlist a.pitch .cl-meta{color:var(--accent);}
+@media (max-width:560px){
+  .classlist a{grid-template-columns:2.6rem 1fr;}
+  .cl-meta{grid-column:2;text-align:left;margin-top:0.2rem;}
+}
+</style>
+</head>
+<body>
+
+  <header class="masthead">
+    <div class="wrap">
+      <div class="brand">ADVENTURE<span class="dot">.</span>CAPITALISM</div>
+      <div class="meta mono">12 CLASSES / 3 SHARK TANKS</div>
+    </div>
+  </header>
+
+  <div class="wrap">
+
+    <div class="classhead">
+      <div>
+        <div class="kicker mono">THE COURSE · TWELVE CLASSES · THREE SHARK TANKS</div>
+        <h1>Build the thing. Pitch the thing.</h1>
+      </div>
+      <div class="classnum" aria-hidden="true">AC</div>
+    </div>
+
+    <div class="tags mono">
+      <span><b>BLOCKS</b> pre-seed / seed / series a</span>
+      <span class="sep">/</span>
+      <span><b>PITCH DAYS</b> 04 / 08 / 12</span>
+      <span class="sep">/</span>
+      <span><b>READING</b> one essay per build class</span>
+    </div>
+
+    <div class="content">
+      <aside class="rail">
+        <div class="rail-label mono">The<br>index</div>
+      </aside>
+
+      <div class="body">
+        <p class="lead">Twelve classes. You find a problem, prove someone wants it solved, and prove you can grow the solution into a business. Every fourth class, you pitch, and the room pushes back.</p>
+
+        <p>The nine build days feed the three shark tanks. Classes 01 to 03 build toward the rough-idea pitch. 05 to 07 build toward the evidence pitch. 09 to 11 build toward the real one. Pick a class and start.</p>
+
+        <div class="blockhead">
+          <h2>Block 1 · Pre-seed</h2>
+          <span class="promise mono">Make something people want</span>
+        </div>
+        <nav class="classlist">
+          <a href="class-01/">
+            <span class="cl-num">01</span>
+            <span class="cl-title">Get out of the building.<span class="cl-sub">Customer discovery and interview craft.</span></span>
+            <span class="cl-meta">build · no-code · 45min</span>
+          </a>
+          <a href="class-02/">
+            <span class="cl-num">02</span>
+            <span class="cl-title">The venture mindset.<span class="cl-sub">Power laws, exploring before exploiting, the 37% rule.</span></span>
+            <span class="cl-meta">build · no-code · 45min</span>
+          </a>
+          <a href="class-03/">
+            <span class="cl-num">03</span>
+            <span class="cl-title">The pitch.<span class="cl-sub">Turning discovery into a story the room can follow.</span></span>
+            <span class="cl-meta">build · no-code · 45min</span>
+          </a>
+          <a href="class-04/" class="pitch">
+            <span class="cl-num">04</span>
+            <span class="cl-title">Shark Tank #1.<span class="cl-sub">The problem pitch. Is it real?</span></span>
+            <span class="cl-meta">pitch · shark tank</span>
+          </a>
+        </nav>
+
+        <div class="blockhead">
+          <h2>Block 2 · Seed</h2>
+          <span class="promise mono">Prove they want it</span>
+        </div>
+        <nav class="classlist">
+          <a href="class-05/">
+            <span class="cl-num">05</span>
+            <span class="cl-title">Product/market fit.<span class="cl-sub">Prototypes, the MVP, and knowing when you have it.</span></span>
+            <span class="cl-meta">build · no-code · 45min</span>
+          </a>
+          <a href="class-06/">
+            <span class="cl-num">06</span>
+            <span class="cl-title">Solving hard problems.<span class="cl-sub">Decision tools for when there is no playbook.</span></span>
+            <span class="cl-meta">build · no-code · 45min · ai</span>
+          </a>
+          <a href="class-07/">
+            <span class="cl-num">07</span>
+            <span class="cl-title">The seed pitch.<span class="cl-sub">Reloading the deck with traction.</span></span>
+            <span class="cl-meta">build · no-code · 45min</span>
+          </a>
+          <a href="class-08/" class="pitch">
+            <span class="cl-num">08</span>
+            <span class="cl-title">Shark Tank #2.<span class="cl-sub">The seed pitch. Evidence, not enthusiasm.</span></span>
+            <span class="cl-meta">pitch · shark tank</span>
+          </a>
+        </nav>
+
+        <div class="blockhead">
+          <h2>Block 3 · Series A</h2>
+          <span class="promise mono">Prove you can grow it</span>
+        </div>
+        <nav class="classlist">
+          <a href="class-09/">
+            <span class="cl-num">09</span>
+            <span class="cl-title">Go-to-market and unit economics.<span class="cl-sub">CAC, LTV, and the engine that runs on them.</span></span>
+            <span class="cl-meta">build · some-code · 45min · ai</span>
+          </a>
+          <a href="class-10/">
+            <span class="cl-num">10</span>
+            <span class="cl-title">Building and leading the team.<span class="cl-sub">People, then products, then profits.</span></span>
+            <span class="cl-meta">build · no-code · 45min</span>
+          </a>
+          <a href="class-11/">
+            <span class="cl-num">11</span>
+            <span class="cl-title">Incentives and scale load.<span class="cl-sub">Mechanism design, backpressure, changing the game.</span></span>
+            <span class="cl-meta">build · no-code · 45min</span>
+          </a>
+          <a href="class-12/" class="pitch">
+            <span class="cl-num">12</span>
+            <span class="cl-title">Shark Tank #3.<span class="cl-sub">The real pitch. Money is on the table.</span></span>
+            <span class="cl-meta">pitch · shark tank</span>
+          </a>
+        </nav>
+
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <a href="class-01/">Start at Class 01 →</a>
+      <a href="https://www.ycombinator.com/library">YC Startup Library ↗</a>
+    </div>
+  </footer>
+
+</body>
+</html>
