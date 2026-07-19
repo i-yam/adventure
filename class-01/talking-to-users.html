@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 01 · Asking Questions · Adventure Capitalism</title>
+<meta name="ac:tags" content="interest=customers; comfort=no-code; time=45min; track=core; ai=off">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800;900&family=Public+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* Adventure Capitalism house style, inlined.
+   Every page carries this block so it renders on its own, no external CSS.
+   Copy this whole file to start a new page. Do not edit the tokens per page. */
+
+:root{
+  --paper:#F7F6F3;
+  --paper-pure:#FFFFFF;
+  --ink:#141414;
+  --ink-soft:#57574F;
+  --accent:#1B2CE8;
+  --accent-deep:#1220A8;
+  --rule:#161616;
+  --hairline:#D9D8D1;
+  --measure:37rem;
+  --rail:9rem;
+  --gap:2.5rem;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+html{-webkit-text-size-adjust:100%;}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Public Sans",system-ui,sans-serif;
+  font-size:clamp(1rem,0.95rem + 0.25vw,1.1rem);
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+.mono{
+  font-family:"Space Mono","SFMono-Regular",monospace;
+  font-weight:400;
+  letter-spacing:0.02em;
+}
+
+.wrap{
+  max-width:64rem;
+  margin:0 auto;
+  padding:0 clamp(1.25rem,5vw,4rem);
+}
+
+/* ---- Masthead ---- */
+.masthead{
+  border-bottom:2px solid var(--rule);
+}
+.masthead .wrap{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  padding-top:1.1rem;
+  padding-bottom:1.1rem;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+.brand{
+  font-family:"Archivo",sans-serif;
+  font-weight:900;
+  font-size:1.05rem;
+  letter-spacing:-0.01em;
+  text-transform:uppercase;
+}
+.brand .dot{color:var(--accent);}
+.masthead .meta{
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.18em;
+  color:var(--ink-soft);
+}
+
+/* ---- Class header (signature) ---- */
+.classhead{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:end;
+  gap:1.5rem;
+  padding-top:clamp(2.5rem,6vw,4.5rem);
+  padding-bottom:1.4rem;
+}
+.kicker{
+  font-size:0.74rem;
+  text-transform:uppercase;
+  letter-spacing:0.22em;
+  color:var(--accent);
+  margin-bottom:1.1rem;
+}
+h1{
+  font-family:"Archivo",sans-serif;
+  font-weight:900;
+  font-size:clamp(2.4rem,2rem + 4vw,4.6rem);
+  line-height:0.94;
+  letter-spacing:-0.025em;
+  max-width:14ch;
+}
+.classnum{
+  font-family:"Archivo",sans-serif;
+  font-weight:900;
+  font-size:clamp(5rem,4rem + 12vw,13rem);
+  line-height:0.72;
+  letter-spacing:-0.04em;
+  color:var(--accent);
+  align-self:end;
+  user-select:none;
+}
+
+/* ---- Tag rail ---- */
+.tags{
+  border-top:2px solid var(--rule);
+  border-bottom:1px solid var(--hairline);
+  padding:0.85rem 0;
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.55rem 1.4rem;
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+  color:var(--ink-soft);
+}
+.tags b{
+  color:var(--ink);
+  font-weight:700;
+}
+.tags .sep{color:var(--hairline);}
+
+/* ---- Body grid ---- */
+.content{
+  display:grid;
+  grid-template-columns:var(--rail) minmax(0,var(--measure));
+  gap:var(--gap);
+  padding-top:clamp(2.2rem,5vw,3.4rem);
+  padding-bottom:5rem;
+}
+.rail{
+  grid-column:1;
+}
+.rail-label{
+  position:sticky;
+  top:1.5rem;
+  font-size:0.7rem;
+  text-transform:uppercase;
+  letter-spacing:0.16em;
+  color:var(--ink-soft);
+  padding-top:0.4rem;
+  border-top:2px solid var(--rule);
+}
+.body{
+  grid-column:2;
+  max-width:var(--measure);
+}
+.body p{margin-bottom:1.35rem;}
+.lead{
+  font-size:1.22em;
+  line-height:1.5;
+  letter-spacing:-0.01em;
+}
+.body a{
+  color:var(--accent);
+  text-decoration:none;
+  background-image:linear-gradient(var(--accent),var(--accent));
+  background-size:100% 1px;
+  background-position:0 100%;
+  background-repeat:no-repeat;
+}
+.body a:hover{color:var(--accent-deep);}
+
+/* ---- The work / activity block ---- */
+.work{
+  margin:2.6rem 0;
+}
+.work-label{
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.2em;
+  color:var(--ink-soft);
+  padding-bottom:0.7rem;
+  margin-bottom:1.3rem;
+  border-bottom:1px solid var(--hairline);
+}
+.aitag{
+  display:inline-block;
+  font-family:"Space Mono",monospace;
+  font-weight:700;
+  font-size:0.78rem;
+  letter-spacing:0.04em;
+  padding:0.25rem 0.6rem;
+  margin-bottom:0.9rem;
+}
+.aitag.off{
+  background:var(--ink);
+  color:var(--paper);
+}
+.aitag.on{
+  background:transparent;
+  color:var(--accent);
+  box-shadow:inset 0 0 0 2px var(--accent);
+}
+.work .why{
+  font-size:0.94em;
+  color:var(--ink-soft);
+  border-left:2px solid var(--accent);
+  padding-left:1.1rem;
+  margin-top:1.2rem;
+}
+
+/* ---- Deep dive ---- */
+details.deepdive{
+  margin-top:2.8rem;
+  border-top:2px solid var(--rule);
+  padding-top:1.1rem;
+}
+details.deepdive summary{
+  cursor:pointer;
+  list-style:none;
+  display:flex;
+  align-items:baseline;
+  gap:0.7rem;
+  font-family:"Archivo",sans-serif;
+  font-weight:800;
+  font-size:1.02rem;
+  letter-spacing:-0.01em;
+}
+details.deepdive summary::-webkit-details-marker{display:none;}
+details.deepdive summary .toggle{
+  font-family:"Space Mono",monospace;
+  font-weight:700;
+  color:var(--accent);
+  font-size:0.95rem;
+}
+details.deepdive summary .dd-tag{
+  margin-left:auto;
+  font-family:"Space Mono",monospace;
+  font-weight:400;
+  font-size:0.66rem;
+  text-transform:uppercase;
+  letter-spacing:0.14em;
+  color:var(--ink-soft);
+  align-self:center;
+}
+details.deepdive[open] summary .toggle::before{content:"–";}
+details.deepdive:not([open]) summary .toggle::before{content:"+";}
+details.deepdive .dd-body{
+  padding-top:1.2rem;
+  color:var(--ink-soft);
+  font-size:0.96em;
+  max-width:var(--measure);
+}
+details.deepdive .dd-body p{margin-bottom:1.1rem;}
+details.deepdive .dd-body p:last-child{margin-bottom:0;}
+
+/* ---- Reading block (primary source) ---- */
+.reading{
+  margin-top:2.6rem;
+  border-top:1px solid var(--hairline);
+  padding-top:1.1rem;
+}
+.reading .reading-label{
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.2em;
+  color:var(--ink-soft);
+  margin-bottom:0.55rem;
+}
+.reading a{
+  font-family:"Archivo",sans-serif;
+  font-weight:800;
+  font-size:1.02rem;
+  letter-spacing:-0.01em;
+  color:var(--accent);
+  text-decoration:none;
+}
+.reading a:hover{color:var(--accent-deep);}
+.reading .why{
+  color:var(--ink-soft);
+  font-size:0.92em;
+  margin-top:0.35rem;
+}
+
+/* ---- Footer nav ---- */
+footer{
+  border-top:2px solid var(--rule);
+}
+footer .wrap{
+  display:flex;
+  justify-content:space-between;
+  padding:1.4rem clamp(1.25rem,5vw,4rem);
+  font-size:0.78rem;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+}
+footer a{color:var(--ink);text-decoration:none;}
+footer a:hover{color:var(--accent);}
+
+/* ---- Responsive ---- */
+@media (max-width:720px){
+  .classhead{
+    grid-template-columns:1fr;
+    align-items:start;
+  }
+  .classnum{
+    order:-1;
+    align-self:start;
+    line-height:0.72;
+  }
+  h1{max-width:100%;}
+  .content{
+    grid-template-columns:1fr;
+    gap:1.2rem;
+  }
+  .rail{grid-column:1;}
+  .body{grid-column:1;}
+  .rail-label{
+    position:static;
+    display:inline-block;
+  }
+}
+
+a:focus-visible,summary:focus-visible{
+  outline:3px solid var(--accent);
+  outline-offset:3px;
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important;animation:none !important;}
+}
+</style>
+</head>
+<body>
+
+  <header class="masthead">
+    <div class="wrap">
+      <div class="brand">ADVENTURE<span class="dot">.</span>CAPITALISM</div>
+      <div class="meta mono">12 CLASSES / 3 SHARK TANKS</div>
+    </div>
+  </header>
+
+  <div class="wrap">
+
+    <div class="classhead">
+      <div>
+        <div class="kicker mono">CLASS 01 · BUILD · TALKING TO USERS</div>
+        <h1>Everyone will lie to you</h1>
+      </div>
+      <div class="classnum" aria-hidden="true">01</div>
+    </div>
+
+    <div class="tags mono">
+      <span><b>INTEREST</b> customers</span>
+      <span class="sep">/</span>
+      <span><b>COMFORT</b> no-code</span>
+      <span class="sep">/</span>
+      <span><b>TIME</b> 45min</span>
+      <span class="sep">/</span>
+      <span><b>TRACK</b> core</span>
+      <span class="sep">/</span>
+      <span><b>FEEDS</b> class 04 pitch</span>
+    </div>
+
+    <div class="content">
+      <aside class="rail">
+        <div class="rail-label mono">How to<br>ask</div>
+      </aside>
+
+      <div class="body">
+        <p class="lead">Show your idea to your mother and she will tell you it is brilliant. She would say the same about a laundromat on the moon. She loves you.</p>
+
+        <p>Your first ten customers run a quieter version of the same script. They do not love you, but they are strangers being polite, and polite strangers say encouraging things to someone who is obviously excited. Ask them whether your app is a good idea and they will say yes. Then they will not download it. The kind word cost them nothing. The wrong product costs you a year.</p>
+
+        <p>So the interview is not a sales call. You are not there to win anyone over. You are there to learn how their life already works, and whether the problem you think you see is one they actually have. Three things get you there.</p>
+
+        <p>Start by connecting. You do this yourself, not a hired researcher and not a form with ten questions on it. Keep it casual. Coffee gets you the truth. A scheduled "user interview" with a notepad held up like a shield gets you a performance. The second someone feels studied, they start answering the study instead of you.</p>
+
+        <p>Once you are talking, listen. Your instinct is to explain the thing you have been building in your head for a month. Fight it. Every sentence you spend describing your solution is a sentence you did not spend learning their problem. Try to talk a fifth of the time. When they trail off, do not rescue them. The pause is uncomfortable and they will fill it, usually with the honest thing they were too polite to lead with.</p>
+
+        <p>And keep your questions open. A closed question hands the person an easy exit. Ask "would you use an app that did this" and you get a yes that means nothing, because they are guessing about a tidier, more disciplined version of themselves who does not exist. An open question about the past has no exit. Ask them to walk you through the last time the problem happened and you get a story, and the story is true, because it already happened. People are unreliable about what they would do. They are reliable about what they did.</p>
+
+        <p>So point every question at the past, not the future. Not "would you pay for this" but "what are you using now, and what does it cost you." Not "is this a problem for you" but "when did it last go wrong, and what did you do about it." If it turns out they have never once tried to fix the thing, you have your answer, and it is not the one you were hoping for. People with a real problem have already gone looking for duct tape.</p>
+
+        <div class="work">
+          <div class="work-label mono">The work · 30 minutes</div>
+          <span class="aitag off">[ NO AI ] DO THIS ONE YOURSELF</span>
+          <p>Here are five questions founders actually ask. Every one of them is broken. Rewrite each into a question the person cannot answer with a polite lie. Do it on paper first. Then open the reference and see how close you got. Opening it before you have written your own version is just reading, and reading is not the exercise.</p>
+          <p class="why">If a model rewrites these for you, you never learn to hear the leading question coming out of your own mouth. That ear is the whole skill.</p>
+
+          <p>"Do you think this is a good idea?"</p>
+          <details class="deepdive">
+            <summary>
+              <span class="toggle mono" aria-hidden="true"></span>
+              <span>Show a stronger version</span>
+              <span class="dd-tag">reference</span>
+            </summary>
+            <div class="dd-body">
+              <p>"How do you handle this today? Walk me through the last time it came up."</p>
+              <p>You are not asking them to grade your idea. That grade is a compliment. Their last Tuesday is data.</p>
+            </div>
+          </details>
+
+          <p>"Would you buy a product that did this?"</p>
+          <details class="deepdive">
+            <summary>
+              <span class="toggle mono" aria-hidden="true"></span>
+              <span>Show a stronger version</span>
+              <span class="dd-tag">reference</span>
+            </summary>
+            <div class="dd-body">
+              <p>"What have you already tried to fix this, and how did that go?"</p>
+              <p>A future purchase is a fantasy. A past attempt is a receipt. If they never tried anything, the pain is not real enough to open a wallet.</p>
+            </div>
+          </details>
+
+          <p>"How much would you pay for it?"</p>
+          <details class="deepdive">
+            <summary>
+              <span class="toggle mono" aria-hidden="true"></span>
+              <span>Show a stronger version</span>
+              <span class="dd-tag">reference</span>
+            </summary>
+            <div class="dd-body">
+              <p>"What is this problem costing you now, in money, time, or workarounds?"</p>
+              <p>People invent a number to be nice. Ask what the problem already costs them and you get a number they actually live with.</p>
+            </div>
+          </details>
+
+          <p>"Do you like this feature?"</p>
+          <details class="deepdive">
+            <summary>
+              <span class="toggle mono" aria-hidden="true"></span>
+              <span>Show a stronger version</span>
+              <span class="dd-tag">reference</span>
+            </summary>
+            <div class="dd-body">
+              <p>"What were you trying to get done when you reached for something like it?"</p>
+              <p>A feature request is a symptom. Chase the job behind it, or you build exactly what they asked for and watch it sit unused.</p>
+            </div>
+          </details>
+
+          <p>"You'd use this, right?"</p>
+          <details class="deepdive">
+            <summary>
+              <span class="toggle mono" aria-hidden="true"></span>
+              <span>Show a stronger version</span>
+              <span class="dd-tag">reference</span>
+            </summary>
+            <div class="dd-body">
+              <p>"When did you last need something like this, and what did you do instead?"</p>
+              <p>A leading question is a door held open for a lie. Point it at a real moment in the past and there is nothing to be polite about.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="reading">
+          <div class="reading-label mono">Reading</div>
+          <a href="https://www.ycombinator.com/library/6g-how-to-talk-to-users">Eric Migicovsky · How to Talk to Users</a>
+          <p class="why">A YC partner walking the same rules in twenty minutes, straight off The Mom Test. Watch it before Class 04.</p>
+        </div>
+
+        <details class="deepdive">
+          <summary>
+            <span class="toggle mono" aria-hidden="true"></span>
+            <span>Deep dive: the three answers to throw away</span>
+            <span class="dd-tag">optional</span>
+          </summary>
+          <div class="dd-body">
+            <p>Not everything a person says in an interview counts as data. Three kinds of answer feel like progress and are not.</p>
+            <p>Compliments feel best and mean least. "That is so cool, you are going to crush it" tells you the person is kind and nothing else. File it under kindness, not evidence.</p>
+            <p>Fluff is anything in the conditional tense: what they would, could, or usually do. "I always..." and "I would definitely..." are stories people tell about a better version of themselves. Steer back to the specific last time it actually happened.</p>
+            <p>A feature request is a customer doing your job, badly. "You should add X" is worth noticing, but the thing to write down is the problem sitting under X, because that is what they will actually pay to have solved.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <a href="index.html">← Class 01</a>
+      <a href="../class-02/">Class 02 →</a>
+    </div>
+  </footer>
+
+</body>
+</html>
