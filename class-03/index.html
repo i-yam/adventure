@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Class 03 · Adventure Capitalism</title>
-<meta name="ac:tags" content="interest=fundraising; comfort=no-code; time=45min; track=core; ai=off">
+<meta name="ac:tags" content="interest=fundraising, customers; comfort=no-code; time=deep; track=core; ai=off">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800;900&family=Public+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -336,6 +336,39 @@ a:focus-visible,summary:focus-visible{
 @media (prefers-reduced-motion:reduce){
   *{transition:none !important;animation:none !important;}
 }
+
+/* ---- Class 03 hub: four-part contents list. Existing tokens only, no new colors. ---- */
+.contents{margin-top:0.4rem;}
+.modrow{
+  display:block;
+  border-top:1px solid var(--hairline);
+  padding:1.35rem 0;
+  text-decoration:none;
+  color:var(--ink);
+}
+.modrow:last-child{border-bottom:1px solid var(--hairline);}
+.modrow .modmeta{
+  font-family:"Space Mono",monospace;
+  font-size:0.7rem;
+  text-transform:uppercase;
+  letter-spacing:0.14em;
+  color:var(--ink-soft);
+  margin-bottom:0.55rem;
+}
+.modrow .modtitle{
+  font-family:"Archivo",sans-serif;
+  font-weight:800;
+  font-size:1.18rem;
+  letter-spacing:-0.01em;
+  color:var(--accent);
+}
+.modrow:hover .modtitle{color:var(--accent-deep);}
+.modrow .modwhy{
+  color:var(--ink-soft);
+  font-size:0.95em;
+  margin-top:0.35rem;
+  max-width:var(--measure);
+}
 </style>
 </head>
 <body>
@@ -352,17 +385,17 @@ a:focus-visible,summary:focus-visible{
     <div class="classhead">
       <div>
         <div class="kicker mono">CLASS 03 · BUILD · THE PITCH</div>
-        <h1>Every deck that works is the same six boxes</h1>
+        <h1>Two weeks of notes, five minutes to pitch them</h1>
       </div>
       <div class="classnum" aria-hidden="true">03</div>
     </div>
 
     <div class="tags mono">
-      <span><b>INTEREST</b> fundraising</span>
+      <span><b>INTEREST</b> fundraising, customers</span>
       <span class="sep">/</span>
       <span><b>COMFORT</b> no-code</span>
       <span class="sep">/</span>
-      <span><b>TIME</b> 45min</span>
+      <span><b>TIME</b> deep</span>
       <span class="sep">/</span>
       <span><b>TRACK</b> core</span>
       <span class="sep">/</span>
@@ -371,50 +404,36 @@ a:focus-visible,summary:focus-visible{
 
     <div class="content">
       <aside class="rail">
-        <div class="rail-label mono">The<br>spine</div>
+        <div class="rail-label mono">The<br>class</div>
       </aside>
 
       <div class="body">
-        <p class="lead">You have a notebook full of interviews. In Class 04 the room gives you five minutes to turn it into something they will believe. Five minutes is not much. So you do not improvise it.</p>
+        <p class="lead">This is the last build class before the first shark tank. Four short pieces, back to back. By the end you have a rough pitch, a problem and a guess at a solution, built to survive a room that wants to know one thing, whether the problem is real.</p>
 
-        <p>Every pitch that has ever worked is the same six boxes, filled in order. Miss one and the room feels the hole even if they cannot name it. Here they are.</p>
+        <p>Do them in order. Each part hands its output to the next.</p>
 
-        <p>Box one is the problem itself. State it so plainly that a stranger nods before you have said a word about what you are building. The fix comes later. Right now the room only wants to know the problem is real.</p>
-
-        <p>Box two is who has it. A problem everyone has is a problem nobody pays to fix. Name one person, specific enough that you could picture them sitting in the room.</p>
-
-        <p>Box three is the evidence. This is where the last two weeks of fieldwork get spent. What did you actually hear. Real sentences from real people beat any adjective you could reach for.</p>
-
-        <p>Box four is the hypothesis. Your guess at a solution, and you say the word guess out loud. You have no customers yet. Pretending otherwise is the fastest way to get caught.</p>
-
-        <p>Box five is the team. For a rough pitch this is short. Why you. Why you will still be doing this when it stops being fun.</p>
-
-        <p>Box six is why now. What changed. A cost that fell, a habit that shifted, a rule that lifted. If nothing changed, the room wonders why this problem waited around for you.</p>
-
-        <div class="work">
-          <div class="work-label mono">The work · 45 minutes</div>
-          <span class="aitag off">[ NO AI ] DO THIS ONE YOURSELF</span>
-          <p>Fill all six boxes for your own idea. One index card each, or one line each, no more. If a box takes a paragraph, you do not understand it yet. Keep the wording ugly and true. You will make it a story next.</p>
-          <p class="why">The first draft of a pitch is where you find out whether you actually believe it. Hand that to a model and you walk into the room carrying someone else's conviction.</p>
+        <div class="contents">
+          <a class="modrow" href="module-01.html">
+            <div class="modmeta">Part 1 · 45 min · No AI</div>
+            <div class="modtitle">The six boxes</div>
+            <div class="modwhy">Every pitch that works is the same six. Draft yours, ugly and true.</div>
+          </a>
+          <a class="modrow" href="module-02.html">
+            <div class="modmeta">Part 2 · 15 min · No AI</div>
+            <div class="modtitle">The story</div>
+            <div class="modwhy">One sentence for what you do, then the six boxes in the order you would say them out loud.</div>
+          </a>
+          <a class="modrow" href="module-03.html">
+            <div class="modmeta">Part 3 · 15 min · AI OK</div>
+            <div class="modtitle">Be kind to the room</div>
+            <div class="modwhy">Cut the audience's work. One clear ask, sensible defaults, stated limits.</div>
+          </a>
+          <a class="modrow" href="module-04.html">
+            <div class="modmeta">Part 4 · 15 min · No AI</div>
+            <div class="modtitle">Red-team the problem</div>
+            <div class="modwhy">Write the three attacks the room will make, and the evidence that answers each.</div>
+          </a>
         </div>
-
-        <div class="reading">
-          <div class="reading-label mono">Reading</div>
-          <a href="https://paulgraham.com/growth.html">Paul Graham · Startup = Growth</a>
-          <p class="why">Graham's answer to what makes a startup a startup, and why box six is really a question about how big and how fast. Read it before Class 04.</p>
-        </div>
-
-        <details class="deepdive">
-          <summary>
-            <span class="toggle mono" aria-hidden="true"></span>
-            <span>Deep dive: when the growth frame is wrong for you</span>
-            <span class="dd-tag">optional</span>
-          </summary>
-          <div class="dd-body">
-            <p>Graham writes from inside YC, so his startup means one thing, a company built to grow very fast on other people's money. Plenty of good businesses are not that. A profitable two-person studio that grows ten percent a year is a fine life and a terrible venture pitch.</p>
-            <p>If that is what you are building, box six changes. You are not selling a rocket. You are selling a machine that prints a little more each year, reliably, for a long time. Know which one you have before the room decides for you.</p>
-          </div>
-        </details>
 
       </div>
     </div>
@@ -424,7 +443,7 @@ a:focus-visible,summary:focus-visible{
   <footer>
     <div class="wrap">
       <a href="../index.html">← Course index</a>
-      <a href="module-02.html">Part 2 →</a>
+      <a href="../class-04/">Class 04 →</a>
     </div>
   </footer>
 
