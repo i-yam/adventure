@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 05 · Draw It On Paper · Adventure Capitalism</title>
+<meta name="ac:tags" content="interest=product; comfort=no-code; time=45min; track=core; ai=off">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800;900&family=Public+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* Adventure Capitalism house style, inlined.
+   Every page carries this block so it renders on its own, no external CSS.
+   Copy this whole file to start a new page. Do not edit the tokens per page. */
+
+:root{
+  --paper:#F7F6F3;
+  --paper-pure:#FFFFFF;
+  --ink:#141414;
+  --ink-soft:#57574F;
+  --accent:#1B2CE8;
+  --accent-deep:#1220A8;
+  --rule:#161616;
+  --hairline:#D9D8D1;
+  --measure:37rem;
+  --rail:9rem;
+  --gap:2.5rem;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+html{-webkit-text-size-adjust:100%;}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Public Sans",system-ui,sans-serif;
+  font-size:clamp(1rem,0.95rem + 0.25vw,1.1rem);
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+.mono{
+  font-family:"Space Mono","SFMono-Regular",monospace;
+  font-weight:400;
+  letter-spacing:0.02em;
+}
+
+.wrap{
+  max-width:64rem;
+  margin:0 auto;
+  padding:0 clamp(1.25rem,5vw,4rem);
+}
+
+/* ---- Masthead ---- */
+.masthead{
+  border-bottom:2px solid var(--rule);
+}
+.masthead .wrap{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  padding-top:1.1rem;
+  padding-bottom:1.1rem;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+.brand{
+  font-family:"Archivo",sans-serif;
+  font-weight:900;
+  font-size:1.05rem;
+  letter-spacing:-0.01em;
+  text-transform:uppercase;
+}
+.brand .dot{color:var(--accent);}
+.masthead .meta{
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.18em;
+  color:var(--ink-soft);
+}
+
+/* ---- Class header (signature) ---- */
+.classhead{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:end;
+  gap:1.5rem;
+  padding-top:clamp(2.5rem,6vw,4.5rem);
+  padding-bottom:1.4rem;
+}
+.kicker{
+  font-size:0.74rem;
+  text-transform:uppercase;
+  letter-spacing:0.22em;
+  color:var(--accent);
+  margin-bottom:1.1rem;
+}
+h1{
+  font-family:"Archivo",sans-serif;
+  font-weight:900;
+  font-size:clamp(2.4rem,2rem + 4vw,4.6rem);
+  line-height:0.94;
+  letter-spacing:-0.025em;
+  max-width:14ch;
+}
+.classnum{
+  font-family:"Archivo",sans-serif;
+  font-weight:900;
+  font-size:clamp(5rem,4rem + 12vw,13rem);
+  line-height:0.72;
+  letter-spacing:-0.04em;
+  color:var(--accent);
+  align-self:end;
+  user-select:none;
+}
+
+/* ---- Tag rail ---- */
+.tags{
+  border-top:2px solid var(--rule);
+  border-bottom:1px solid var(--hairline);
+  padding:0.85rem 0;
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.55rem 1.4rem;
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+  color:var(--ink-soft);
+}
+.tags b{
+  color:var(--ink);
+  font-weight:700;
+}
+.tags .sep{color:var(--hairline);}
+
+/* ---- Body grid ---- */
+.content{
+  display:grid;
+  grid-template-columns:var(--rail) minmax(0,var(--measure));
+  gap:var(--gap);
+  padding-top:clamp(2.2rem,5vw,3.4rem);
+  padding-bottom:5rem;
+}
+.rail{
+  grid-column:1;
+}
+.rail-label{
+  position:sticky;
+  top:1.5rem;
+  font-size:0.7rem;
+  text-transform:uppercase;
+  letter-spacing:0.16em;
+  color:var(--ink-soft);
+  padding-top:0.4rem;
+  border-top:2px solid var(--rule);
+}
+.body{
+  grid-column:2;
+  max-width:var(--measure);
+}
+.body p{margin-bottom:1.35rem;}
+.lead{
+  font-size:1.22em;
+  line-height:1.5;
+  letter-spacing:-0.01em;
+}
+.body a{
+  color:var(--accent);
+  text-decoration:none;
+  background-image:linear-gradient(var(--accent),var(--accent));
+  background-size:100% 1px;
+  background-position:0 100%;
+  background-repeat:no-repeat;
+}
+.body a:hover{color:var(--accent-deep);}
+
+/* ---- The work / activity block ---- */
+.work{
+  margin:2.6rem 0;
+}
+.work-label{
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.2em;
+  color:var(--ink-soft);
+  padding-bottom:0.7rem;
+  margin-bottom:1.3rem;
+  border-bottom:1px solid var(--hairline);
+}
+.aitag{
+  display:inline-block;
+  font-family:"Space Mono",monospace;
+  font-weight:700;
+  font-size:0.78rem;
+  letter-spacing:0.04em;
+  padding:0.25rem 0.6rem;
+  margin-bottom:0.9rem;
+}
+.aitag.off{
+  background:var(--ink);
+  color:var(--paper);
+}
+.aitag.on{
+  background:transparent;
+  color:var(--accent);
+  box-shadow:inset 0 0 0 2px var(--accent);
+}
+.work .why{
+  font-size:0.94em;
+  color:var(--ink-soft);
+  border-left:2px solid var(--accent);
+  padding-left:1.1rem;
+  margin-top:1.2rem;
+}
+
+/* ---- Deep dive ---- */
+details.deepdive{
+  margin-top:2.8rem;
+  border-top:2px solid var(--rule);
+  padding-top:1.1rem;
+}
+details.deepdive summary{
+  cursor:pointer;
+  list-style:none;
+  display:flex;
+  align-items:baseline;
+  gap:0.7rem;
+  font-family:"Archivo",sans-serif;
+  font-weight:800;
+  font-size:1.02rem;
+  letter-spacing:-0.01em;
+}
+details.deepdive summary::-webkit-details-marker{display:none;}
+details.deepdive summary .toggle{
+  font-family:"Space Mono",monospace;
+  font-weight:700;
+  color:var(--accent);
+  font-size:0.95rem;
+}
+details.deepdive summary .dd-tag{
+  margin-left:auto;
+  font-family:"Space Mono",monospace;
+  font-weight:400;
+  font-size:0.66rem;
+  text-transform:uppercase;
+  letter-spacing:0.14em;
+  color:var(--ink-soft);
+  align-self:center;
+}
+details.deepdive[open] summary .toggle::before{content:"–";}
+details.deepdive:not([open]) summary .toggle::before{content:"+";}
+details.deepdive .dd-body{
+  padding-top:1.2rem;
+  color:var(--ink-soft);
+  font-size:0.96em;
+  max-width:var(--measure);
+}
+details.deepdive .dd-body p{margin-bottom:1.1rem;}
+details.deepdive .dd-body p:last-child{margin-bottom:0;}
+
+/* ---- Reading block (primary source) ---- */
+.reading{
+  margin-top:2.6rem;
+  border-top:1px solid var(--hairline);
+  padding-top:1.1rem;
+}
+.reading .reading-label{
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.2em;
+  color:var(--ink-soft);
+  margin-bottom:0.55rem;
+}
+.reading a{
+  font-family:"Archivo",sans-serif;
+  font-weight:800;
+  font-size:1.02rem;
+  letter-spacing:-0.01em;
+  color:var(--accent);
+  text-decoration:none;
+}
+.reading a:hover{color:var(--accent-deep);}
+.reading .why{
+  color:var(--ink-soft);
+  font-size:0.92em;
+  margin-top:0.35rem;
+}
+
+/* ---- Footer nav ---- */
+footer{
+  border-top:2px solid var(--rule);
+}
+footer .wrap{
+  display:flex;
+  justify-content:space-between;
+  padding:1.4rem clamp(1.25rem,5vw,4rem);
+  font-size:0.78rem;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+}
+footer a{color:var(--ink);text-decoration:none;}
+footer a:hover{color:var(--accent);}
+
+/* ---- Responsive ---- */
+@media (max-width:720px){
+  .classhead{
+    grid-template-columns:1fr;
+    align-items:start;
+  }
+  .classnum{
+    order:-1;
+    align-self:start;
+    line-height:0.72;
+  }
+  h1{max-width:100%;}
+  .content{
+    grid-template-columns:1fr;
+    gap:1.2rem;
+  }
+  .rail{grid-column:1;}
+  .body{grid-column:1;}
+  .rail-label{
+    position:static;
+    display:inline-block;
+  }
+}
+
+a:focus-visible,summary:focus-visible{
+  outline:3px solid var(--accent);
+  outline-offset:3px;
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important;animation:none !important;}
+}
+
+/* ---- Page figure (inline diagram). Existing tokens only. ---- */
+.figure{
+  margin:2.6rem 0;
+  border-top:1px solid var(--hairline);
+  padding-top:1.1rem;
+}
+.figure svg{width:100%;height:auto;display:block;}
+.figcap{
+  font-family:"Space Mono",monospace;
+  font-size:0.7rem;
+  text-transform:uppercase;
+  letter-spacing:0.14em;
+  color:var(--ink-soft);
+  margin-top:0.8rem;
+}
+
+/* ---- Worked prompt block, for AI-on tasks ---- */
+.prompt{
+  font-family:"Space Mono",monospace;
+  font-size:0.86rem;
+  line-height:1.55;
+  background:var(--paper-pure);
+  border:1px solid var(--hairline);
+  padding:1.1rem 1.2rem;
+  margin:1.2rem 0;
+  white-space:pre-wrap;
+}
+
+/* ---- Hub contents rows ---- */
+.contents{margin-top:0.6rem;}
+.row{
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr);
+  gap:0 1.2rem;
+  align-items:baseline;
+  border-top:1px solid var(--hairline);
+  padding:1.15rem 0;
+  text-decoration:none;
+  background-image:none;
+}
+.row:first-child{border-top:2px solid var(--rule);}
+.row:last-child{border-bottom:1px solid var(--hairline);}
+.row .n{
+  font-family:"Space Mono",monospace;
+  font-weight:700;
+  font-size:0.86rem;
+  color:var(--ink-soft);
+}
+.row .t{
+  font-family:"Archivo",sans-serif;
+  font-weight:800;
+  font-size:1.14rem;
+  letter-spacing:-0.01em;
+  color:var(--accent);
+}
+.row:hover .t{color:var(--accent-deep);}
+.row .d{
+  grid-column:2;
+  color:var(--ink);
+  font-size:0.95rem;
+  margin-top:0.3rem;
+}
+.row .m{
+  grid-column:2;
+  font-family:"Space Mono",monospace;
+  font-size:0.68rem;
+  text-transform:uppercase;
+  letter-spacing:0.14em;
+  color:var(--ink-soft);
+  margin-top:0.5rem;
+}
+</style>
+</head>
+<body>
+
+  <header class="masthead">
+    <div class="wrap">
+      <div class="brand">ADVENTURE<span class="dot">.</span>CAPITALISM</div>
+      <div class="meta mono">12 CLASSES / 3 SHARK TANKS</div>
+    </div>
+  </header>
+
+  <div class="wrap">
+
+    <div class="classhead">
+      <div>
+        <div class="kicker mono">CLASS 05 · BUILD · PRODUCT/MARKET FIT</div>
+        <h1>Draw it on paper, then shut up</h1>
+      </div>
+      <div class="classnum" aria-hidden="true">05</div>
+    </div>
+
+    <div class="tags mono">
+      <span><b>INTEREST</b> product</span>
+      <span class="sep">/</span>
+      <span><b>COMFORT</b> no-code</span>
+      <span class="sep">/</span>
+      <span><b>TIME</b> 45min</span>
+      <span class="sep">/</span>
+      <span><b>TRACK</b> core</span>
+      <span class="sep">/</span>
+      <span><b>FEEDS</b> class 08 pitch</span>
+    </div>
+
+    <div class="content">
+      <aside class="rail">
+        <div class="rail-label mono">Module<br>02</div>
+      </aside>
+
+      <div class="body">
+        <p class="lead">The first thing Uber showed you was a small car crawling across a map toward the dot that was you.</p>
+
+        <p>That screen did no work. The car was coming either way. What it removed was the ten minutes of not knowing, which is the part people hated.</p>
+
+        <p>A screen is cheap to draw and expensive to build, and the gap between those two numbers is where most of a term gets wasted. So draw first.</p>
+
+        <p>Paper prototyping means exactly what it says. Index cards or one sheet folded into eight, a pen, no laptop, no design tool, no colour. The drawing should look unfinished, because people are polite to things that look finished and honest with a sketch. Hand someone a polished interface and they compliment your work. Hand them a piece of paper with a box and an arrow on it and they tell you they have no idea what to press.</p>
+
+        <p>Then comes the hard part, which is your silence.</p>
+
+        <div class="work">
+          <div class="work-label mono">The work · 45 minutes</div>
+          <span class="aitag off">[ NO AI ] DO THIS ONE YOURSELF</span>
+          <p>Draw eight frames. Frame one is what your user sees before they know your product exists. Frame eight is the moment they get the thing they came for. Fill in the six between. If you cannot get from one to eight in eight frames, you are holding two products and you should pick one.</p>
+          <p>Now find someone who has never heard you talk about this. Give them a single task in a single sentence, hand them the paper, and stop. Do not explain, do not correct, do not rescue them when they stall. Write down every place they hesitate and every place they press something that does nothing. Those hesitations are your data. What they say when it is over is manners.</p>
+          <p class="why">Drawing badly by hand is the friction, and the friction is the point. A model hands you a clean interface in ten seconds, and clean covers the holes you came here to find.</p>
+        </div>
+
+        <div class="reading">
+          <div class="reading-label mono">Reading</div>
+          <a href="https://www.ycombinator.com/library/96-do-things-that-don-t-scale">Paul Graham · Do Things That Don't Scale</a>
+          <p class="why">Uber recruited its first drivers one at a time, by hand, in person. Read it before Class 06.</p>
+        </div>
+
+        <details class="deepdive">
+          <summary>
+            <span class="toggle mono" aria-hidden="true"></span>
+            <span>Deep dive: what testers say and what testers do</span>
+            <span class="dd-tag">optional</span>
+          </summary>
+          <div class="dd-body">
+            <p>In Class 01 you learned that compliments are worthless and that anything phrased in the future tense is a wish, not a fact. The same rules apply to a prototype test, and they are harder to obey, because now the thing being complimented is something you made.</p>
+            <p>Three things testers hand you that mean nothing. A compliment, which is about the room and not the product. A feature request, which is a guess about a solution from someone who has thought about your problem for ninety seconds. And any sentence with "would" in it, which describes a person who does not exist.</p>
+            <p>One thing that means everything. The pause before they press. Watch the hand, not the mouth.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <a href="module-01.html">← Module 01</a>
+      <a href="module-03.html">Module 03 →</a>
+    </div>
+  </footer>
+
+</body>
+</html>
