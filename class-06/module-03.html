@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 06 · What a price says · Adventure Capitalism</title>
+<meta name="ac:tags" content="interest=finance; comfort=no-code; time=45min; track=core; ai=off">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800;900&family=Public+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* Adventure Capitalism house style, inlined.
+   Every page carries this block so it renders on its own, no external CSS.
+   Copy this whole file to start a new page. Do not edit the tokens per page. */
+
+:root{
+  --paper:#F7F6F3;
+  --paper-pure:#FFFFFF;
+  --ink:#141414;
+  --ink-soft:#57574F;
+  --accent:#1B2CE8;
+  --accent-deep:#1220A8;
+  --rule:#161616;
+  --hairline:#D9D8D1;
+  --measure:37rem;
+  --rail:9rem;
+  --gap:2.5rem;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+html{-webkit-text-size-adjust:100%;}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Public Sans",system-ui,sans-serif;
+  font-size:clamp(1rem,0.95rem + 0.25vw,1.1rem);
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+.mono{
+  font-family:"Space Mono","SFMono-Regular",monospace;
+  font-weight:400;
+  letter-spacing:0.02em;
+}
+
+.wrap{
+  max-width:64rem;
+  margin:0 auto;
+  padding:0 clamp(1.25rem,5vw,4rem);
+}
+
+/* ---- Masthead ---- */
+.masthead{
+  border-bottom:2px solid var(--rule);
+}
+.masthead .wrap{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  padding-top:1.1rem;
+  padding-bottom:1.1rem;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+.brand{
+  font-family:"Archivo",sans-serif;
+  font-weight:900;
+  font-size:1.05rem;
+  letter-spacing:-0.01em;
+  text-transform:uppercase;
+}
+.brand .dot{color:var(--accent);}
+.masthead .meta{
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.18em;
+  color:var(--ink-soft);
+}
+
+/* ---- Class header (signature) ---- */
+.classhead{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:end;
+  gap:1.5rem;
+  padding-top:clamp(2.5rem,6vw,4.5rem);
+  padding-bottom:1.4rem;
+}
+.kicker{
+  font-size:0.74rem;
+  text-transform:uppercase;
+  letter-spacing:0.22em;
+  color:var(--accent);
+  margin-bottom:1.1rem;
+}
+h1{
+  font-family:"Archivo",sans-serif;
+  font-weight:900;
+  font-size:clamp(2.4rem,2rem + 4vw,4.6rem);
+  line-height:0.94;
+  letter-spacing:-0.025em;
+  max-width:14ch;
+}
+.classnum{
+  font-family:"Archivo",sans-serif;
+  font-weight:900;
+  font-size:clamp(5rem,4rem + 12vw,13rem);
+  line-height:0.72;
+  letter-spacing:-0.04em;
+  color:var(--accent);
+  align-self:end;
+  user-select:none;
+}
+
+/* ---- Tag rail ---- */
+.tags{
+  border-top:2px solid var(--rule);
+  border-bottom:1px solid var(--hairline);
+  padding:0.85rem 0;
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.55rem 1.4rem;
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+  color:var(--ink-soft);
+}
+.tags b{
+  color:var(--ink);
+  font-weight:700;
+}
+.tags .sep{color:var(--hairline);}
+
+/* ---- Body grid ---- */
+.content{
+  display:grid;
+  grid-template-columns:var(--rail) minmax(0,var(--measure));
+  gap:var(--gap);
+  padding-top:clamp(2.2rem,5vw,3.4rem);
+  padding-bottom:5rem;
+}
+.rail{
+  grid-column:1;
+}
+.rail-label{
+  position:sticky;
+  top:1.5rem;
+  font-size:0.7rem;
+  text-transform:uppercase;
+  letter-spacing:0.16em;
+  color:var(--ink-soft);
+  padding-top:0.4rem;
+  border-top:2px solid var(--rule);
+}
+.body{
+  grid-column:2;
+  max-width:var(--measure);
+}
+.body p{margin-bottom:1.35rem;}
+.lead{
+  font-size:1.22em;
+  line-height:1.5;
+  letter-spacing:-0.01em;
+}
+.body a{
+  color:var(--accent);
+  text-decoration:none;
+  background-image:linear-gradient(var(--accent),var(--accent));
+  background-size:100% 1px;
+  background-position:0 100%;
+  background-repeat:no-repeat;
+}
+.body a:hover{color:var(--accent-deep);}
+
+/* ---- The work / activity block ---- */
+.work{
+  margin:2.6rem 0;
+}
+.work-label{
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.2em;
+  color:var(--ink-soft);
+  padding-bottom:0.7rem;
+  margin-bottom:1.3rem;
+  border-bottom:1px solid var(--hairline);
+}
+.aitag{
+  display:inline-block;
+  font-family:"Space Mono",monospace;
+  font-weight:700;
+  font-size:0.78rem;
+  letter-spacing:0.04em;
+  padding:0.25rem 0.6rem;
+  margin-bottom:0.9rem;
+}
+.aitag.off{
+  background:var(--ink);
+  color:var(--paper);
+}
+.aitag.on{
+  background:transparent;
+  color:var(--accent);
+  box-shadow:inset 0 0 0 2px var(--accent);
+}
+.work .why{
+  font-size:0.94em;
+  color:var(--ink-soft);
+  border-left:2px solid var(--accent);
+  padding-left:1.1rem;
+  margin-top:1.2rem;
+}
+
+/* ---- Deep dive ---- */
+details.deepdive{
+  margin-top:2.8rem;
+  border-top:2px solid var(--rule);
+  padding-top:1.1rem;
+}
+details.deepdive summary{
+  cursor:pointer;
+  list-style:none;
+  display:flex;
+  align-items:baseline;
+  gap:0.7rem;
+  font-family:"Archivo",sans-serif;
+  font-weight:800;
+  font-size:1.02rem;
+  letter-spacing:-0.01em;
+}
+details.deepdive summary::-webkit-details-marker{display:none;}
+details.deepdive summary .toggle{
+  font-family:"Space Mono",monospace;
+  font-weight:700;
+  color:var(--accent);
+  font-size:0.95rem;
+}
+details.deepdive summary .dd-tag{
+  margin-left:auto;
+  font-family:"Space Mono",monospace;
+  font-weight:400;
+  font-size:0.66rem;
+  text-transform:uppercase;
+  letter-spacing:0.14em;
+  color:var(--ink-soft);
+  align-self:center;
+}
+details.deepdive[open] summary .toggle::before{content:"–";}
+details.deepdive:not([open]) summary .toggle::before{content:"+";}
+details.deepdive .dd-body{
+  padding-top:1.2rem;
+  color:var(--ink-soft);
+  font-size:0.96em;
+  max-width:var(--measure);
+}
+details.deepdive .dd-body p{margin-bottom:1.1rem;}
+details.deepdive .dd-body p:last-child{margin-bottom:0;}
+
+/* ---- Reading block (primary source) ---- */
+.reading{
+  margin-top:2.6rem;
+  border-top:1px solid var(--hairline);
+  padding-top:1.1rem;
+}
+.reading .reading-label{
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.2em;
+  color:var(--ink-soft);
+  margin-bottom:0.55rem;
+}
+.reading a{
+  font-family:"Archivo",sans-serif;
+  font-weight:800;
+  font-size:1.02rem;
+  letter-spacing:-0.01em;
+  color:var(--accent);
+  text-decoration:none;
+}
+.reading a:hover{color:var(--accent-deep);}
+.reading .why{
+  color:var(--ink-soft);
+  font-size:0.92em;
+  margin-top:0.35rem;
+}
+
+/* ---- Footer nav ---- */
+footer{
+  border-top:2px solid var(--rule);
+}
+footer .wrap{
+  display:flex;
+  justify-content:space-between;
+  padding:1.4rem clamp(1.25rem,5vw,4rem);
+  font-size:0.78rem;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+}
+footer a{color:var(--ink);text-decoration:none;}
+footer a:hover{color:var(--accent);}
+
+/* ---- Responsive ---- */
+@media (max-width:720px){
+  .classhead{
+    grid-template-columns:1fr;
+    align-items:start;
+  }
+  .classnum{
+    order:-1;
+    align-self:start;
+    line-height:0.72;
+  }
+  h1{max-width:100%;}
+  .content{
+    grid-template-columns:1fr;
+    gap:1.2rem;
+  }
+  .rail{grid-column:1;}
+  .body{grid-column:1;}
+  .rail-label{
+    position:static;
+    display:inline-block;
+  }
+}
+
+a:focus-visible,summary:focus-visible{
+  outline:3px solid var(--accent);
+  outline-offset:3px;
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important;animation:none !important;}
+}
+</style>
+</head>
+<body>
+
+  <header class="masthead">
+    <div class="wrap">
+      <div class="brand">ADVENTURE<span class="dot">.</span>CAPITALISM</div>
+      <div class="meta mono">12 CLASSES / 3 SHARK TANKS</div>
+    </div>
+  </header>
+
+  <div class="wrap">
+
+    <div class="classhead">
+      <div>
+        <div class="kicker mono">CLASS 06 · BUILD · PRICE AND VALUE</div>
+        <h1>The shortest sentence your company writes</h1>
+      </div>
+      <div class="classnum" aria-hidden="true">06</div>
+    </div>
+
+    <div class="tags mono">
+      <span><b>INTEREST</b> finance</span>
+      <span class="sep">/</span>
+      <span><b>COMFORT</b> no-code</span>
+      <span class="sep">/</span>
+      <span><b>TIME</b> 45min</span>
+      <span class="sep">/</span>
+      <span><b>TRACK</b> core</span>
+      <span class="sep">/</span>
+      <span><b>FEEDS</b> class 08 pitch</span>
+    </div>
+
+    <div class="content">
+      <aside class="rail">
+        <div class="rail-label mono">What a<br>price says</div>
+      </aside>
+
+      <div class="body">
+        <p class="lead">The same half litre of water costs forty cents in a supermarket, a euro fifty in the station downstairs, and three euros past airport security. Same water, same bottle, same week.</p>
+
+        <p>Nothing about the product changed. What changed is who is standing there and what else they can do about being thirsty. Most of what a price is made of shows up in that sentence.</p>
+
+        <p>Three numbers get confused constantly, and confusing them is how founders end up charging a tenth of what they could. Cost is what the thing took you to make. It is the only one of the three you can measure precisely, which is exactly why people hide behind it. Value is what the thing is worth to the person buying it, which you cannot see, cannot measure directly, and which is a different number for every buyer in the room. Price is the figure you name, and it lands somewhere in the gap between the other two.</p>
+
+        <p>Cost is the floor, value is the ceiling, and the space between them is the whole business. Where in that space you land is a decision. Nothing calculates it for you.</p>
+
+        <p>Draw the two curves once and you will never need to draw them again. Buyers want more of a thing as it gets cheaper, so demand slopes down. Sellers want to make more of it as it gets dearer, so supply slopes up. Where the lines cross is where the market settles. The useful part is what happens when something moves. A shortage pushes the crossing point up, and the higher number tells every seller on earth to make more of it, without anyone sending a memo or holding a meeting. Hayek built his career on that observation. No planner knows what a million buyers want on a Tuesday. The price knows, and it is the only message the market can send fast enough to matter.</p>
+
+        <p>How steep the demand line is has a name, and it is the number your revenue actually depends on. Elasticity asks who walks away when the price moves. Double the cost of one brand of soda and most buyers reach for the can beside it. Double the cost of the insulin they need and almost nobody leaves, which is why that market is regulated and yours probably is not. Your product sits somewhere between those two, and if you have not found out where, your revenue forecast is decoration.</p>
+
+        <p>Founders guess this wrong in a predictable direction. They assume their buyers are price sensitive because they themselves are broke, and then they discover they are selling to a company whose only real question was whether the thing works.</p>
+
+        <div class="work">
+          <div class="work-label mono">The work · 45 minutes</div>
+          <span class="aitag off">[ NO AI ] DO THIS ONE YOURSELF</span>
+          <p>Go find three real prices for the same kind of thing. One cheap, one in the middle, one you consider absurd. Shops, websites, menus, published price lists, whatever is within walking distance or one click. Write the actual numbers down along with where you found them.</p>
+          <p>For each, answer three questions in a sentence apiece. Who is this price for. What does the number promise before the buyer has read a single word of copy. Who is being kept out on purpose, because at every price somebody is.</p>
+          <p>Then put your own thing on that line and write a paragraph defending where you put it. If the honest answer is that you have no idea, write that down instead. Part 4 is where you fix it.</p>
+          <p class="why">Prices in the wild carry information a summary strips out, starting with whatever the seller was embarrassed enough to bury in small print. Go look at the shelf.</p>
+        </div>
+
+        <details class="deepdive">
+          <summary>
+            <span class="toggle mono" aria-hidden="true"></span>
+            <span>Deep dive: why cost-plus pricing refuses to die</span>
+            <span class="dd-tag">optional</span>
+          </summary>
+          <div class="dd-body">
+            <p>Take your cost, add a margin, ship. It is the most common pricing method on earth and it is close to useless for software, where the cost of the next copy is roughly nothing and the method therefore points at zero.</p>
+            <p>It survives for two reasons worth respecting. It is defensible, because you can put the arithmetic in front of a board, a regulator, or an angry customer. And it feels fair, which matters more than founders expect, since somebody who believes they are being gouged behaves differently from somebody paying the identical amount happily.</p>
+            <p>The version that works keeps the fairness and throws away the arithmetic. Find the number your buyer can defend to whoever asks them about it, then check that it clears your cost by enough to survive a bad quarter.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <a href="module-02.html">← Part 2</a>
+      <a href="module-04.html">Part 4 →</a>
+    </div>
+  </footer>
+
+</body>
+</html>
