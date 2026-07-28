@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 07 &middot; Ninety Seconds</title>
+<meta name="ac:tags" content="interest=mindset; comfort=no-code; time=15min; track=core; ai=off">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800;900&family=Public+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* Adventure Capitalism house style, inlined.
+   Every page carries this block so it renders on its own, no external CSS.
+   Copy this whole file to start a new page. Do not edit the tokens per page. */
+
+:root{
+  --paper:#F7F6F3;
+  --paper-pure:#FFFFFF;
+  --ink:#141414;
+  --ink-soft:#57574F;
+  --accent:#1B2CE8;
+  --accent-deep:#1220A8;
+  --rule:#161616;
+  --hairline:#D9D8D1;
+  --measure:37rem;
+  --rail:9rem;
+  --gap:2.5rem;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+html{-webkit-text-size-adjust:100%;}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Public Sans",system-ui,sans-serif;
+  font-size:clamp(1rem,0.95rem + 0.25vw,1.1rem);
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+.mono{
+  font-family:"Space Mono","SFMono-Regular",monospace;
+  font-weight:400;
+  letter-spacing:0.02em;
+}
+
+.wrap{
+  max-width:64rem;
+  margin:0 auto;
+  padding:0 clamp(1.25rem,5vw,4rem);
+}
+
+/* ---- Masthead ---- */
+.masthead{
+  border-bottom:2px solid var(--rule);
+}
+.masthead .wrap{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  padding-top:1.1rem;
+  padding-bottom:1.1rem;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+.brand{
+  font-family:"Archivo",sans-serif;
+  font-weight:900;
+  font-size:1.05rem;
+  letter-spacing:-0.01em;
+  text-transform:uppercase;
+}
+.brand .dot{color:var(--accent);}
+.masthead .meta{
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.18em;
+  color:var(--ink-soft);
+}
+
+/* ---- Class header (signature) ---- */
+.classhead{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:end;
+  gap:1.5rem;
+  padding-top:clamp(2.5rem,6vw,4.5rem);
+  padding-bottom:1.4rem;
+}
+.kicker{
+  font-size:0.74rem;
+  text-transform:uppercase;
+  letter-spacing:0.22em;
+  color:var(--accent);
+  margin-bottom:1.1rem;
+}
+h1{
+  font-family:"Archivo",sans-serif;
+  font-weight:900;
+  font-size:clamp(2.4rem,2rem + 4vw,4.6rem);
+  line-height:0.94;
+  letter-spacing:-0.025em;
+  max-width:14ch;
+}
+.classnum{
+  font-family:"Archivo",sans-serif;
+  font-weight:900;
+  font-size:clamp(5rem,4rem + 12vw,13rem);
+  line-height:0.72;
+  letter-spacing:-0.04em;
+  color:var(--accent);
+  align-self:end;
+  user-select:none;
+}
+
+/* ---- Tag rail ---- */
+.tags{
+  border-top:2px solid var(--rule);
+  border-bottom:1px solid var(--hairline);
+  padding:0.85rem 0;
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.55rem 1.4rem;
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+  color:var(--ink-soft);
+}
+.tags b{
+  color:var(--ink);
+  font-weight:700;
+}
+.tags .sep{color:var(--hairline);}
+
+/* ---- Body grid ---- */
+.content{
+  display:grid;
+  grid-template-columns:var(--rail) minmax(0,var(--measure));
+  gap:var(--gap);
+  padding-top:clamp(2.2rem,5vw,3.4rem);
+  padding-bottom:5rem;
+}
+.rail{
+  grid-column:1;
+}
+.rail-label{
+  position:sticky;
+  top:1.5rem;
+  font-size:0.7rem;
+  text-transform:uppercase;
+  letter-spacing:0.16em;
+  color:var(--ink-soft);
+  padding-top:0.4rem;
+  border-top:2px solid var(--rule);
+}
+.body{
+  grid-column:2;
+  max-width:var(--measure);
+}
+.body p{margin-bottom:1.35rem;}
+.lead{
+  font-size:1.22em;
+  line-height:1.5;
+  letter-spacing:-0.01em;
+}
+.body a{
+  color:var(--accent);
+  text-decoration:none;
+  background-image:linear-gradient(var(--accent),var(--accent));
+  background-size:100% 1px;
+  background-position:0 100%;
+  background-repeat:no-repeat;
+}
+.body a:hover{color:var(--accent-deep);}
+
+/* ---- The work / activity block ---- */
+.work{
+  margin:2.6rem 0;
+}
+.work-label{
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.2em;
+  color:var(--ink-soft);
+  padding-bottom:0.7rem;
+  margin-bottom:1.3rem;
+  border-bottom:1px solid var(--hairline);
+}
+.aitag{
+  display:inline-block;
+  font-family:"Space Mono",monospace;
+  font-weight:700;
+  font-size:0.78rem;
+  letter-spacing:0.04em;
+  padding:0.25rem 0.6rem;
+  margin-bottom:0.9rem;
+}
+.aitag.off{
+  background:var(--ink);
+  color:var(--paper);
+}
+.aitag.on{
+  background:transparent;
+  color:var(--accent);
+  box-shadow:inset 0 0 0 2px var(--accent);
+}
+.work .why{
+  font-size:0.94em;
+  color:var(--ink-soft);
+  border-left:2px solid var(--accent);
+  padding-left:1.1rem;
+  margin-top:1.2rem;
+}
+
+/* ---- Deep dive ---- */
+details.deepdive{
+  margin-top:2.8rem;
+  border-top:2px solid var(--rule);
+  padding-top:1.1rem;
+}
+details.deepdive summary{
+  cursor:pointer;
+  list-style:none;
+  display:flex;
+  align-items:baseline;
+  gap:0.7rem;
+  font-family:"Archivo",sans-serif;
+  font-weight:800;
+  font-size:1.02rem;
+  letter-spacing:-0.01em;
+}
+details.deepdive summary::-webkit-details-marker{display:none;}
+details.deepdive summary .toggle{
+  font-family:"Space Mono",monospace;
+  font-weight:700;
+  color:var(--accent);
+  font-size:0.95rem;
+}
+details.deepdive summary .dd-tag{
+  margin-left:auto;
+  font-family:"Space Mono",monospace;
+  font-weight:400;
+  font-size:0.66rem;
+  text-transform:uppercase;
+  letter-spacing:0.14em;
+  color:var(--ink-soft);
+  align-self:center;
+}
+details.deepdive[open] summary .toggle::before{content:"–";}
+details.deepdive:not([open]) summary .toggle::before{content:"+";}
+details.deepdive .dd-body{
+  padding-top:1.2rem;
+  color:var(--ink-soft);
+  font-size:0.96em;
+  max-width:var(--measure);
+}
+details.deepdive .dd-body p{margin-bottom:1.1rem;}
+details.deepdive .dd-body p:last-child{margin-bottom:0;}
+
+/* ---- Reading block (primary source) ---- */
+.reading{
+  margin-top:2.6rem;
+  border-top:1px solid var(--hairline);
+  padding-top:1.1rem;
+}
+.reading .reading-label{
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.2em;
+  color:var(--ink-soft);
+  margin-bottom:0.55rem;
+}
+.reading a{
+  font-family:"Archivo",sans-serif;
+  font-weight:800;
+  font-size:1.02rem;
+  letter-spacing:-0.01em;
+  color:var(--accent);
+  text-decoration:none;
+}
+.reading a:hover{color:var(--accent-deep);}
+.reading .why{
+  color:var(--ink-soft);
+  font-size:0.92em;
+  margin-top:0.35rem;
+}
+
+/* ---- Footer nav ---- */
+footer{
+  border-top:2px solid var(--rule);
+}
+footer .wrap{
+  display:flex;
+  justify-content:space-between;
+  padding:1.4rem clamp(1.25rem,5vw,4rem);
+  font-size:0.78rem;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+}
+footer a{color:var(--ink);text-decoration:none;}
+footer a:hover{color:var(--accent);}
+
+/* ---- Responsive ---- */
+@media (max-width:720px){
+  .classhead{
+    grid-template-columns:1fr;
+    align-items:start;
+  }
+  .classnum{
+    order:-1;
+    align-self:start;
+    line-height:0.72;
+  }
+  h1{max-width:100%;}
+  .content{
+    grid-template-columns:1fr;
+    gap:1.2rem;
+  }
+  .rail{grid-column:1;}
+  .body{grid-column:1;}
+  .rail-label{
+    position:static;
+    display:inline-block;
+  }
+}
+
+a:focus-visible,summary:focus-visible{
+  outline:3px solid var(--accent);
+  outline-offset:3px;
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important;animation:none !important;}
+}
+</style>
+</head>
+<body>
+
+  <header class="masthead">
+    <div class="wrap">
+      <div class="brand">ADVENTURE<span class="dot">.</span>CAPITALISM</div>
+      <div class="meta mono">12 CLASSES / 3 SHARK TANKS</div>
+    </div>
+  </header>
+
+  <div class="wrap">
+
+    <div class="classhead">
+      <div>
+        <div class="kicker mono">CLASS 07 &middot; BUILD &middot; THE SEED PITCH</div>
+        <h1>Ninety seconds to the one who says yes</h1>
+      </div>
+      <div class="classnum" aria-hidden="true">07</div>
+    </div>
+
+    <div class="tags mono">
+      <span><b>INTEREST</b> mindset</span>
+      <span class="sep">/</span>
+      <span><b>COMFORT</b> no-code</span>
+      <span class="sep">/</span>
+      <span><b>TIME</b> 15min</span>
+      <span class="sep">/</span>
+      <span><b>TRACK</b> core</span>
+      <span class="sep">/</span>
+      <span><b>FEEDS</b> class 08 pitch</span>
+    </div>
+
+    <div class="content">
+      <aside class="rail">
+        <div class="rail-label mono">Module<br>04</div>
+      </aside>
+
+      <div class="body">
+        <p class="lead">Eight people are in the room. Seven of them will not invest in you under any circumstances, and you do not know which seven.</p>
+
+        <p>Private fundraising does not run on votes. You are not trying to be acceptable to a room, you are trying to be irresistible to one person in it, and those two decks look nothing alike. The deck built to survive every objection ends up with a slide for each of them, a hedge in every sentence, and nothing anyone would fight for. It offends nobody. It moves nobody. It gets a warm email four days later about staying in touch.</p>
+
+        <p>So pick your person. Not a category, a person. Someone who has already put money into something adjacent to what you are doing, who has said something in public you happen to agree with, who would recognise your customer from across the street. Write one sentence explaining why that specific human says yes to this specific thing, and then look at your nine slides and find the ones that exist only to keep somebody else quiet.</p>
+
+        <p>Cut those. You will lose an objection or two, and you will get them back in the questions, which is a better place to answer them anyway.</p>
+
+        <p>Then say it out loud, which is where most of this falls apart. A deck lets you hide behind the order of your own slides. Ninety seconds with the screen off does not.</p>
+
+        <div class="work">
+          <div class="work-label mono">The work</div>
+          <span class="aitag off">[ NO AI ] DO THIS ONE YOURSELF</span>
+          <p>Name your investor and write the one sentence. Then go through the nine boxes and mark every slide that is there for somebody other than that person. Decide what goes.</p>
+          <p>Find a partner. Ninety seconds, no screen, no notes, standing up: the problem, who has it, what you built, what a customer costs and what one is worth, and the ask. That is all that fits, and finding out what does not fit is the point of the constraint.</p>
+          <p>Your partner writes down every objection that lands. Not every objection they can think of, only the ones where you paused, or hedged, or answered a different question. Three is enough. Swap and do the same for them, and be the kind of partner who says the hard one out loud.</p>
+          <p>Each of those three becomes a slide you keep behind the deck for Class 08, and you do not show it unless somebody asks. Then you show it in one second and the room understands that you already knew.</p>
+          <p class="why">You are rehearsing conviction, and there is no way to borrow that. A model will write you a fluent answer to an objection you have not yet felt land.</p>
+        </div>
+
+        <details class="deepdive">
+          <summary>
+            <span class="toggle mono" aria-hidden="true"></span>
+            <span>Deep dive: what conviction is not</span>
+            <span class="dd-tag">optional</span>
+          </summary>
+          <div class="dd-body">
+            <p>Conviction gets confused with certainty, and they behave differently under questioning. Certainty says the number is right. Conviction says here is the number, here is what it rests on, here is what would have to be true for it to be wrong, and I have thought about that more than you have.</p>
+            <p>The second one survives a hard question. The first one has to defend every figure on the slide, and one loose figure takes the whole deck with it.</p>
+            <p>This is why the assumption lines under your unit economics matter more than the figures above them. A founder who volunteers the weak assumption before anyone finds it has just told the room that the rest of the numbers are solid.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <a href="module-03.html">&larr; Module 03</a>
+      <a href="../class-08/index.html">Class 08 &rarr;</a>
+    </div>
+  </footer>
+
+</body>
+</html>

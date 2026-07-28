@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 07 &middot; The Nine Boxes</title>
+<meta name="ac:tags" content="interest=fundraising; comfort=no-code; time=45min; track=core; ai=off">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800;900&family=Public+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* Adventure Capitalism house style, inlined.
+   Every page carries this block so it renders on its own, no external CSS.
+   Copy this whole file to start a new page. Do not edit the tokens per page. */
+
+:root{
+  --paper:#F7F6F3;
+  --paper-pure:#FFFFFF;
+  --ink:#141414;
+  --ink-soft:#57574F;
+  --accent:#1B2CE8;
+  --accent-deep:#1220A8;
+  --rule:#161616;
+  --hairline:#D9D8D1;
+  --measure:37rem;
+  --rail:9rem;
+  --gap:2.5rem;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+html{-webkit-text-size-adjust:100%;}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Public Sans",system-ui,sans-serif;
+  font-size:clamp(1rem,0.95rem + 0.25vw,1.1rem);
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+.mono{
+  font-family:"Space Mono","SFMono-Regular",monospace;
+  font-weight:400;
+  letter-spacing:0.02em;
+}
+
+.wrap{
+  max-width:64rem;
+  margin:0 auto;
+  padding:0 clamp(1.25rem,5vw,4rem);
+}
+
+/* ---- Masthead ---- */
+.masthead{
+  border-bottom:2px solid var(--rule);
+}
+.masthead .wrap{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  padding-top:1.1rem;
+  padding-bottom:1.1rem;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+.brand{
+  font-family:"Archivo",sans-serif;
+  font-weight:900;
+  font-size:1.05rem;
+  letter-spacing:-0.01em;
+  text-transform:uppercase;
+}
+.brand .dot{color:var(--accent);}
+.masthead .meta{
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.18em;
+  color:var(--ink-soft);
+}
+
+/* ---- Class header (signature) ---- */
+.classhead{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:end;
+  gap:1.5rem;
+  padding-top:clamp(2.5rem,6vw,4.5rem);
+  padding-bottom:1.4rem;
+}
+.kicker{
+  font-size:0.74rem;
+  text-transform:uppercase;
+  letter-spacing:0.22em;
+  color:var(--accent);
+  margin-bottom:1.1rem;
+}
+h1{
+  font-family:"Archivo",sans-serif;
+  font-weight:900;
+  font-size:clamp(2.4rem,2rem + 4vw,4.6rem);
+  line-height:0.94;
+  letter-spacing:-0.025em;
+  max-width:14ch;
+}
+.classnum{
+  font-family:"Archivo",sans-serif;
+  font-weight:900;
+  font-size:clamp(5rem,4rem + 12vw,13rem);
+  line-height:0.72;
+  letter-spacing:-0.04em;
+  color:var(--accent);
+  align-self:end;
+  user-select:none;
+}
+
+/* ---- Tag rail ---- */
+.tags{
+  border-top:2px solid var(--rule);
+  border-bottom:1px solid var(--hairline);
+  padding:0.85rem 0;
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.55rem 1.4rem;
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+  color:var(--ink-soft);
+}
+.tags b{
+  color:var(--ink);
+  font-weight:700;
+}
+.tags .sep{color:var(--hairline);}
+
+/* ---- Body grid ---- */
+.content{
+  display:grid;
+  grid-template-columns:var(--rail) minmax(0,var(--measure));
+  gap:var(--gap);
+  padding-top:clamp(2.2rem,5vw,3.4rem);
+  padding-bottom:5rem;
+}
+.rail{
+  grid-column:1;
+}
+.rail-label{
+  position:sticky;
+  top:1.5rem;
+  font-size:0.7rem;
+  text-transform:uppercase;
+  letter-spacing:0.16em;
+  color:var(--ink-soft);
+  padding-top:0.4rem;
+  border-top:2px solid var(--rule);
+}
+.body{
+  grid-column:2;
+  max-width:var(--measure);
+}
+.body p{margin-bottom:1.35rem;}
+.lead{
+  font-size:1.22em;
+  line-height:1.5;
+  letter-spacing:-0.01em;
+}
+.body a{
+  color:var(--accent);
+  text-decoration:none;
+  background-image:linear-gradient(var(--accent),var(--accent));
+  background-size:100% 1px;
+  background-position:0 100%;
+  background-repeat:no-repeat;
+}
+.body a:hover{color:var(--accent-deep);}
+
+/* ---- The work / activity block ---- */
+.work{
+  margin:2.6rem 0;
+}
+.work-label{
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.2em;
+  color:var(--ink-soft);
+  padding-bottom:0.7rem;
+  margin-bottom:1.3rem;
+  border-bottom:1px solid var(--hairline);
+}
+.aitag{
+  display:inline-block;
+  font-family:"Space Mono",monospace;
+  font-weight:700;
+  font-size:0.78rem;
+  letter-spacing:0.04em;
+  padding:0.25rem 0.6rem;
+  margin-bottom:0.9rem;
+}
+.aitag.off{
+  background:var(--ink);
+  color:var(--paper);
+}
+.aitag.on{
+  background:transparent;
+  color:var(--accent);
+  box-shadow:inset 0 0 0 2px var(--accent);
+}
+.work .why{
+  font-size:0.94em;
+  color:var(--ink-soft);
+  border-left:2px solid var(--accent);
+  padding-left:1.1rem;
+  margin-top:1.2rem;
+}
+
+/* ---- Deep dive ---- */
+details.deepdive{
+  margin-top:2.8rem;
+  border-top:2px solid var(--rule);
+  padding-top:1.1rem;
+}
+details.deepdive summary{
+  cursor:pointer;
+  list-style:none;
+  display:flex;
+  align-items:baseline;
+  gap:0.7rem;
+  font-family:"Archivo",sans-serif;
+  font-weight:800;
+  font-size:1.02rem;
+  letter-spacing:-0.01em;
+}
+details.deepdive summary::-webkit-details-marker{display:none;}
+details.deepdive summary .toggle{
+  font-family:"Space Mono",monospace;
+  font-weight:700;
+  color:var(--accent);
+  font-size:0.95rem;
+}
+details.deepdive summary .dd-tag{
+  margin-left:auto;
+  font-family:"Space Mono",monospace;
+  font-weight:400;
+  font-size:0.66rem;
+  text-transform:uppercase;
+  letter-spacing:0.14em;
+  color:var(--ink-soft);
+  align-self:center;
+}
+details.deepdive[open] summary .toggle::before{content:"–";}
+details.deepdive:not([open]) summary .toggle::before{content:"+";}
+details.deepdive .dd-body{
+  padding-top:1.2rem;
+  color:var(--ink-soft);
+  font-size:0.96em;
+  max-width:var(--measure);
+}
+details.deepdive .dd-body p{margin-bottom:1.1rem;}
+details.deepdive .dd-body p:last-child{margin-bottom:0;}
+
+/* ---- Reading block (primary source) ---- */
+.reading{
+  margin-top:2.6rem;
+  border-top:1px solid var(--hairline);
+  padding-top:1.1rem;
+}
+.reading .reading-label{
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.2em;
+  color:var(--ink-soft);
+  margin-bottom:0.55rem;
+}
+.reading a{
+  font-family:"Archivo",sans-serif;
+  font-weight:800;
+  font-size:1.02rem;
+  letter-spacing:-0.01em;
+  color:var(--accent);
+  text-decoration:none;
+}
+.reading a:hover{color:var(--accent-deep);}
+.reading .why{
+  color:var(--ink-soft);
+  font-size:0.92em;
+  margin-top:0.35rem;
+}
+
+/* ---- Footer nav ---- */
+footer{
+  border-top:2px solid var(--rule);
+}
+footer .wrap{
+  display:flex;
+  justify-content:space-between;
+  padding:1.4rem clamp(1.25rem,5vw,4rem);
+  font-size:0.78rem;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+}
+footer a{color:var(--ink);text-decoration:none;}
+footer a:hover{color:var(--accent);}
+
+/* ---- Responsive ---- */
+@media (max-width:720px){
+  .classhead{
+    grid-template-columns:1fr;
+    align-items:start;
+  }
+  .classnum{
+    order:-1;
+    align-self:start;
+    line-height:0.72;
+  }
+  h1{max-width:100%;}
+  .content{
+    grid-template-columns:1fr;
+    gap:1.2rem;
+  }
+  .rail{grid-column:1;}
+  .body{grid-column:1;}
+  .rail-label{
+    position:static;
+    display:inline-block;
+  }
+}
+
+a:focus-visible,summary:focus-visible{
+  outline:3px solid var(--accent);
+  outline-offset:3px;
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important;animation:none !important;}
+}
+</style>
+</head>
+<body>
+
+  <header class="masthead">
+    <div class="wrap">
+      <div class="brand">ADVENTURE<span class="dot">.</span>CAPITALISM</div>
+      <div class="meta mono">12 CLASSES / 3 SHARK TANKS</div>
+    </div>
+  </header>
+
+  <div class="wrap">
+
+    <div class="classhead">
+      <div>
+        <div class="kicker mono">CLASS 07 &middot; BUILD &middot; THE SEED PITCH</div>
+        <h1>The nine boxes</h1>
+      </div>
+      <div class="classnum" aria-hidden="true">07</div>
+    </div>
+
+    <div class="tags mono">
+      <span><b>INTEREST</b> fundraising</span>
+      <span class="sep">/</span>
+      <span><b>COMFORT</b> no-code</span>
+      <span class="sep">/</span>
+      <span><b>TIME</b> 45min</span>
+      <span class="sep">/</span>
+      <span><b>TRACK</b> core</span>
+      <span class="sep">/</span>
+      <span><b>FEEDS</b> class 08 pitch</span>
+    </div>
+
+    <div class="content">
+      <aside class="rail">
+        <div class="rail-label mono">Module<br>03</div>
+      </aside>
+
+      <div class="body">
+        <p class="lead">Market. Product. How much people use it. What a customer is worth. The financials. The ask.</p>
+
+        <p>That is the order a seed deck arrives in when it works, and every slide in it bought the right to show the next one. You cannot ask for money on slide two, because nobody in the room has a reason yet to care what you would do with it.</p>
+
+        <p>At Class 04 you had six boxes: the problem, who has it, the evidence, the hypothesis, the team, why now. That deck was a claim about a problem. The seed deck is a claim about a business, and it has nine parts. The problem, the market and how big it is, your solution, the unit economics, the team, the ask, the roadmap, the thing you actually built, and why you win.</p>
+
+        <p>Three of those are new since Class 04, and two of them you have been building since Monday. The unit economics box is already full. The market box holds three numbers and a choice. What is left is the roadmap, which is the shortest slide in any good deck and says what the money buys and by when.</p>
+
+        <p>The one founders get wrong is why you win. It is not a feature comparison table. Every feature you list can be built by somebody with more engineers than you. The answer is whatever gets harder to copy the longer you run: the customers who came back, the data you accumulated, the thing you learned in fieldwork that your competitors still have wrong. The strongest version is a loop, where the customers you have produce the reason the next ones show up. A competitor with more money can outspend you on a feature. Stepping into the middle of a loop that has been running for two years is a different problem.</p>
+
+        <div class="work">
+          <div class="work-label mono">The work</div>
+          <span class="aitag off">[ NO AI ] DO THIS ONE YOURSELF</span>
+          <p>Draw the nine boxes on one sheet. Lay your Class 04 deck over them and write, inside each box, the slide you already have. Six of them will fill. Circle the empty ones.</p>
+          <p>Drop in the two slides from Module 02. That is seven or eight boxes done, depending on how honest you were about your solution.</p>
+          <p>Then fill what is left. For every empty box, ask what a person hearing it would need to believe before the next slide makes sense, and write that. If a box stays empty after twenty minutes, leave it empty and write across it what you would need to learn to fill it. An empty box you can name is a fundable gap. A box filled with something you invented on a Tuesday is how a pitch dies in Class 08.</p>
+          <p>Last, put the nine in order and read only the slide titles, top to bottom, out loud. If the order does not build, the argument does not build, and no amount of design fixes it.</p>
+          <p class="why">This is the first draft of your own argument. Hand it to a model and you will get the deck that every other company in the room is also showing.</p>
+        </div>
+
+        <details class="deepdive">
+          <summary>
+            <span class="toggle mono" aria-hidden="true"></span>
+            <span>Deep dive: the order is the argument</span>
+            <span class="dd-tag">optional</span>
+          </summary>
+          <div class="dd-body">
+            <p>Take that sequence and move the ask to the front. Now the room is being asked for money by strangers. Move the unit economics before the product and the room is doing arithmetic about a thing it cannot picture yet. Neither version has a single wrong fact in it.</p>
+            <p>This is computational kindness from Class 03, applied to a deck. Every slide leaves the audience holding some amount of unanswered question. Order the slides so that nobody has to carry a question for more than one slide, and the deck feels short even when it is not.</p>
+            <p>The test is mechanical. Read the titles in order and after each one ask what the room now wants to know. If your next slide answers it, keep going. If it does not, you have found where you lose them.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <a href="module-02.html">&larr; Module 02</a>
+      <a href="module-04.html">Module 04 &rarr;</a>
+    </div>
+  </footer>
+
+</body>
+</html>
