@@ -336,6 +336,61 @@ a:focus-visible,summary:focus-visible{
 @media (prefers-reduced-motion:reduce){
   *{transition:none !important;animation:none !important;}
 }
+
+/* ---- Q&A pairs. A broken question and its reveal are one bound unit, so the
+   eye never reads an answer as belonging to the question below it. Tokens only. */
+.qa{margin-top:2rem;}
+.qa-item{
+  display:grid;
+  grid-template-columns:2.4rem minmax(0,1fr);
+  gap:0 0.6rem;
+  padding:1.15rem 0;
+  border-top:1px solid var(--hairline);
+}
+.qa-item:last-child{border-bottom:1px solid var(--hairline);}
+.qa .qa-num{
+  font-family:"Space Mono",monospace;
+  font-size:0.78rem;
+  line-height:1.95;
+  letter-spacing:0.04em;
+  color:var(--ink-soft);
+}
+.qa .qa-q{
+  font-family:"Archivo",sans-serif;
+  font-weight:600;
+  font-size:1.06rem;
+  line-height:1.45;
+  letter-spacing:-0.01em;
+  margin-bottom:0.5rem;
+}
+.qa-item details{grid-column:2;}
+.qa-item summary{
+  cursor:pointer;
+  list-style:none;
+  display:flex;
+  align-items:baseline;
+  gap:0.5rem;
+  font-family:"Space Mono",monospace;
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.14em;
+  color:var(--ink-soft);
+}
+.qa-item summary::-webkit-details-marker{display:none;}
+.qa-item summary .toggle{
+  font-weight:700;
+  font-size:0.85rem;
+  color:var(--accent);
+}
+.qa-item details[open] summary .toggle::before{content:"+";transform:rotate(45deg);display:inline-block;}
+.qa-item details:not([open]) summary .toggle::before{content:"+";}
+.qa-a{padding-top:0.85rem;font-size:0.96em;color:var(--ink-soft);}
+.qa-a p{margin-bottom:0.7rem;}
+.qa-a p:last-child{margin-bottom:0;}
+.qa .qa-fix{color:var(--ink);font-weight:500;}
+@media (max-width:720px){
+  .qa-item{grid-template-columns:1.9rem minmax(0,1fr);}
+}
 </style>
 </head>
 <body>
@@ -395,75 +450,87 @@ a:focus-visible,summary:focus-visible{
           <p>Here are five questions founders actually ask. Every one of them is broken. Rewrite each into a question the person cannot answer with a polite lie. Do it on paper first. Then open the reference and see how close you got. Opening it before you have written your own version is just reading, and reading is not the exercise.</p>
           <p class="why">If a model rewrites these for you, you never learn to hear the leading question coming out of your own mouth. That ear is the whole skill.</p>
 
-          <p>"Do you think this is a good idea?"</p>
-          <details class="deepdive">
-            <summary>
-              <span class="toggle mono" aria-hidden="true"></span>
-              <span>Show a stronger version</span>
-              <span class="dd-tag">reference</span>
-            </summary>
-            <div class="dd-body">
-              <p>"How do you handle this today? Walk me through the last time it came up."</p>
-              <p>You are not asking them to grade your idea. That grade is a compliment. Their last Tuesday is data.</p>
+          <div class="qa">
+            <div class="qa-item">
+              <div class="qa-num mono">01</div>
+              <p class="qa-q">"Do you think this is a good idea?"</p>
+              <details>
+                <summary>
+                  <span class="toggle mono" aria-hidden="true"></span>
+                  <span>Show a stronger version</span>
+                </summary>
+                <div class="qa-a">
+                  <p class="qa-fix">"How do you handle this today? Walk me through the last time it came up."</p>
+                  <p>You are not asking them to grade your idea. That grade is a compliment. Their last Tuesday is data.</p>
+                </div>
+              </details>
             </div>
-          </details>
 
-          <p>"Would you buy a product that did this?"</p>
-          <details class="deepdive">
-            <summary>
-              <span class="toggle mono" aria-hidden="true"></span>
-              <span>Show a stronger version</span>
-              <span class="dd-tag">reference</span>
-            </summary>
-            <div class="dd-body">
-              <p>"What have you already tried to fix this, and how did that go?"</p>
-              <p>A future purchase is a fantasy. A past attempt is a receipt. If they never tried anything, the pain is not real enough to open a wallet.</p>
+            <div class="qa-item">
+              <div class="qa-num mono">02</div>
+              <p class="qa-q">"Would you buy a product that did this?"</p>
+              <details>
+                <summary>
+                  <span class="toggle mono" aria-hidden="true"></span>
+                  <span>Show a stronger version</span>
+                </summary>
+                <div class="qa-a">
+                  <p class="qa-fix">"What have you already tried to fix this, and how did that go?"</p>
+                  <p>A future purchase is a fantasy. A past attempt is a receipt. If they never tried anything, the pain is not real enough to open a wallet.</p>
+                </div>
+              </details>
             </div>
-          </details>
 
-          <p>"How much would you pay for it?"</p>
-          <details class="deepdive">
-            <summary>
-              <span class="toggle mono" aria-hidden="true"></span>
-              <span>Show a stronger version</span>
-              <span class="dd-tag">reference</span>
-            </summary>
-            <div class="dd-body">
-              <p>"What is this problem costing you now, in money, time, or workarounds?"</p>
-              <p>People invent a number to be nice. Ask what the problem already costs them and you get a number they actually live with.</p>
+            <div class="qa-item">
+              <div class="qa-num mono">03</div>
+              <p class="qa-q">"How much would you pay for it?"</p>
+              <details>
+                <summary>
+                  <span class="toggle mono" aria-hidden="true"></span>
+                  <span>Show a stronger version</span>
+                </summary>
+                <div class="qa-a">
+                  <p class="qa-fix">"What is this problem costing you now, in money, time, or workarounds?"</p>
+                  <p>People invent a number to be nice. Ask what the problem already costs them and you get a number they actually live with.</p>
+                </div>
+              </details>
             </div>
-          </details>
 
-          <p>"Do you like this feature?"</p>
-          <details class="deepdive">
-            <summary>
-              <span class="toggle mono" aria-hidden="true"></span>
-              <span>Show a stronger version</span>
-              <span class="dd-tag">reference</span>
-            </summary>
-            <div class="dd-body">
-              <p>"What were you trying to get done when you reached for something like it?"</p>
-              <p>A feature request is a symptom. Chase the job behind it, or you build exactly what they asked for and watch it sit unused.</p>
+            <div class="qa-item">
+              <div class="qa-num mono">04</div>
+              <p class="qa-q">"Do you like this feature?"</p>
+              <details>
+                <summary>
+                  <span class="toggle mono" aria-hidden="true"></span>
+                  <span>Show a stronger version</span>
+                </summary>
+                <div class="qa-a">
+                  <p class="qa-fix">"What were you trying to get done when you reached for something like it?"</p>
+                  <p>A feature request is a symptom. Chase the job behind it, or you build exactly what they asked for and watch it sit unused.</p>
+                </div>
+              </details>
             </div>
-          </details>
 
-          <p>"You'd use this, right?"</p>
-          <details class="deepdive">
-            <summary>
-              <span class="toggle mono" aria-hidden="true"></span>
-              <span>Show a stronger version</span>
-              <span class="dd-tag">reference</span>
-            </summary>
-            <div class="dd-body">
-              <p>"When did you last need something like this, and what did you do instead?"</p>
-              <p>A leading question is a door held open for a lie. Point it at a real moment in the past and there is nothing to be polite about.</p>
+            <div class="qa-item">
+              <div class="qa-num mono">05</div>
+              <p class="qa-q">"You'd use this, right?"</p>
+              <details>
+                <summary>
+                  <span class="toggle mono" aria-hidden="true"></span>
+                  <span>Show a stronger version</span>
+                </summary>
+                <div class="qa-a">
+                  <p class="qa-fix">"When did you last need something like this, and what did you do instead?"</p>
+                  <p>A leading question is a door held open for a lie. Point it at a real moment in the past and there is nothing to be polite about.</p>
+                </div>
+              </details>
             </div>
-          </details>
+          </div>
         </div>
 
         <div class="reading">
           <div class="reading-label mono">Reading</div>
-          <a href="https://www.ycombinator.com/library/6g-how-to-talk-to-users">Eric Migicovsky · How to Talk to Users</a>
+          <a href="https://youtu.be/MT4Ig2uqjTc">Eric Migicovsky · How to Talk to Users</a>
           <p class="why">A YC partner walking the same rules in twenty minutes, straight off The Mom Test. Watch it before Class 04.</p>
         </div>
 
