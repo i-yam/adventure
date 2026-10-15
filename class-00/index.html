@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 00 · Adventure Capitalism</title>
+<meta name="ac:tags" content="interest=all; comfort=no-code; time=deep; track=core; ai=off; type=notes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800;900&family=Public+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+/* Notes-page layout. Uses the house tokens; adds long-form elements the shared sheet does not cover. */
+.body h2{
+  font-family:"Archivo",sans-serif;
+  font-weight:900;
+  font-size:1.5rem;
+  letter-spacing:-0.02em;
+  line-height:1.1;
+  border-top:2px solid var(--rule);
+  padding-top:1rem;
+  margin:3rem 0 1.2rem;
+}
+.body h2 .num{color:var(--accent);margin-right:0.5rem;}
+.body h3{
+  font-family:"Archivo",sans-serif;
+  font-weight:800;
+  font-size:1.05rem;
+  letter-spacing:-0.01em;
+  margin:2rem 0 0.8rem;
+}
+.body ul,.body ol{margin:0 0 1.35rem 1.3rem;}
+.body li{margin-bottom:0.45rem;}
+.body table{
+  width:100%;
+  border-collapse:collapse;
+  margin:0 0 1.6rem;
+  font-size:0.92em;
+  line-height:1.45;
+}
+.body th,.body td{
+  text-align:left;
+  vertical-align:top;
+  padding:0.55rem 0.7rem 0.55rem 0;
+  border-bottom:1px solid var(--hairline);
+}
+.body th{
+  font-family:"Space Mono",monospace;
+  font-weight:400;
+  font-size:0.68rem;
+  text-transform:uppercase;
+  letter-spacing:0.12em;
+  color:var(--ink-soft);
+  border-bottom:2px solid var(--rule);
+}
+.body .aside{
+  font-size:0.94em;
+  color:var(--ink-soft);
+  border-left:2px solid var(--accent);
+  padding-left:1.1rem;
+  margin:1.4rem 0;
+}
+.toc{
+  margin:0 0 2.5rem;
+  padding:1rem 0 0;
+  border-top:1px solid var(--hairline);
+}
+.toc-label{
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.2em;
+  color:var(--ink-soft);
+  margin-bottom:0.7rem;
+}
+.toc ol{
+  list-style:none;
+  margin:0;
+  columns:2;
+  column-gap:2rem;
+}
+.toc li{margin-bottom:0.3rem;font-size:0.92em;}
+.toc a{background:none;}
+.toc .n{font-family:"Space Mono",monospace;font-size:0.72rem;color:var(--ink-soft);margin-right:0.5rem;}
+@media (max-width:560px){.toc ol{columns:1;} .body table{font-size:0.84em;}}
+</style>
+</head>
+<body>
+
+  <header class="masthead">
+    <div class="wrap">
+      <div class="brand">ADVENTURE<span class="dot">.</span>CAPITALISM</div>
+      <div class="meta mono">12 CLASSES / 3 SHARK TANKS</div>
+    </div>
+  </header>
+
+  <div class="wrap">
+
+    <div class="classhead">
+      <div>
+        <div class="kicker mono">CLASS 00 · INTRODUCTORY LECTURE · NOTES</div>
+        <h1>Ideas, markets and competition.</h1>
+      </div>
+      <div class="classnum" aria-hidden="true">00</div>
+    </div>
+
+    <div class="tags mono">
+      <span><b>FORMAT</b> lecture notes</span>
+      <span class="sep">/</span>
+      <span><b>COMFORT</b> no-code</span>
+      <span class="sep">/</span>
+      <span><b>TIME</b> 25min read</span>
+      <span class="sep">/</span>
+      <span><b>TRACK</b> core</span>
+      <span class="sep">/</span>
+      <span><b>FEEDS</b> every pitch</span>
+    </div>
+
+    <div class="content">
+      <aside class="rail">
+        <div class="rail-label mono">The<br>notes</div>
+      </aside>
+
+      <div class="body">
+        <p class="lead">A founder does not need the average person to like the product. A founder needs a specific group to want it badly. This lecture sets up the course around that idea and gives first tools for judging an idea: who the real competitors are, whether the timing is right, and when to walk away.</p>
+
+        <nav class="toc">
+          <div class="toc-label mono">Contents</div>
+          <ol>
+            <li><span class="n">01</span><a href="#s1">How the course works</a></li>
+            <li><span class="n">02</span><a href="#s2">Why one yes is enough</a></li>
+            <li><span class="n">03</span><a href="#s3">Competition is not an exam</a></li>
+            <li><span class="n">04</span><a href="#s4">Three stages of a startup</a></li>
+            <li><span class="n">05</span><a href="#s5">Learning to fail cheaply</a></li>
+            <li><span class="n">06</span><a href="#s6">Reality first, technology second</a></li>
+            <li><span class="n">07</span><a href="#s7">No competition is bad news</a></li>
+            <li><span class="n">08</span><a href="#s8">B2C versus B2B</a></li>
+            <li><span class="n">09</span><a href="#s9">Competitors by market, not product</a></li>
+            <li><span class="n">10</span><a href="#s10">Timing</a></li>
+            <li><span class="n">11</span><a href="#s11">When to drop an idea</a></li>
+            <li><span class="n">12</span><a href="#s12">The ecosystem around you</a></li>
+          </ol>
+        </nav>
+
+        <h2 id="s1"><span class="num">1</span>How the course works</h2>
+        <p>The course runs in three blocks, each about a month long: three classes followed by a shark tank in the fourth week. Each block corresponds to one stage in the life of a startup (Section 4).</p>
+        <p>In a shark tank you pitch to three external referees, the sharks. The panel rotates from block to block.</p>
+        <ul>
+          <li><b>At least one yes:</b> you may continue with the same project in the next block.</li>
+          <li><b>Three no's:</b> you start something new.</li>
+        </ul>
+        <table>
+          <thead><tr><th>Event</th><th>Date</th><th>Topic of the block</th></tr></thead>
+          <tbody>
+            <tr><td>Shark tank 1</td><td>10 November 2026</td><td>Pre-seed: idea and validation</td></tr>
+            <tr><td>Shark tank 2</td><td>8 December 2026</td><td>Seed: scalability and product-market fit</td></tr>
+            <tr><td>Final roadshow</td><td>19 January 2027</td><td>Series A: unit economics and scaling</td></tr>
+          </tbody>
+        </table>
+        <p>At the final roadshow you present to everyone who served as a shark during the course, mostly over Zoom. The longer gap before it, over the Christmas break, is time to polish.</p>
+        <p><b>Grading.</b> You are graded on all three shark tanks, not only the final one. You submit a portfolio of your three pitch decks and describe your contribution to each. Looking at the three decks side by side also shows you how far you have come.</p>
+        <p><b>Teams.</b> Teams are fixed for one block and free between blocks. If your project fails you can join another team or start again. You may also recruit people away from other teams if you can make them a better offer. The portfolio follows the person, not the team.</p>
+
+        <h2 id="s2"><span class="num">2</span>Why one yes is enough</h2>
+        <h3>A toy model of group choice</h3>
+        <p>Take five people choosing a restaurant in Würzburg. Each person has a private ranking of the K options, from first choice to last. A utility function turns a rank into a number between 0 (worst) and 1 (best), and its shape differs from person to person.</p>
+        <table>
+          <thead><tr><th>Type of person</th><th>Shape of utility</th><th>What it means</th></tr></thead>
+          <tbody>
+            <tr><td>Even-tempered</td><td>Linear from 0 to 1</td><td>Each step down the ranking costs the same</td></tr>
+            <tr><td>Typical</td><td>Curved: flat at the bottom, steep at the top</td><td>Disliked options are all about equally bad; the first choice is much better than the second</td></tr>
+            <tr><td>Opinionated</td><td>Step: 0 for one or two hated options, close to 1 for the rest</td><td>"Anything is fine, except the place that gave me food poisoning"</td></tr>
+          </tbody>
+        </table>
+        <p>The shape decides how much a person is hurt when the group does not pick their favourite. Any procedure for combining the rankings will leave someone dissatisfied, and this is not a matter of bad design.</p>
+
+        <h3>Arrow's impossibility theorem</h3>
+        <p>Kenneth Arrow proved that with three or more alternatives, no rule that turns individual rankings into a group ranking can satisfy a short list of reasonable fairness conditions at once (<a href="https://doi.org/10.1086/256963">Arrow 1950</a>; overview in the <a href="https://plato.stanford.edu/entries/arrows-theorem/">Stanford Encyclopedia of Philosophy</a>). The conditions are:</p>
+        <ul>
+          <li><b>Unrestricted domain:</b> the rule works for any set of individual rankings.</li>
+          <li><b>Pareto:</b> if everyone prefers A to B, so does the group.</li>
+          <li><b>Independence of irrelevant alternatives:</b> the group's ranking of A versus B depends only on how individuals rank A versus B.</li>
+          <li><b>Non-dictatorship:</b> no single person's ranking always decides.</li>
+        </ul>
+        <p>The theorem does not say that democracy fails. It says that no ranked aggregation procedure is ideal, so averaging preferences always loses information that matters to somebody.</p>
+
+        <h3>The consequence for founders</h3>
+        <p>School trains you to be judged on an aggregate: everybody gets the same task and the average opinion of your work becomes your grade. Ventures are not judged this way. As a founder you do not care about the average opinion of your product, your team or your market. You care about the opinion of a target group: your customers, your investors, your partners.</p>
+        <p>The shark tank is built on this. If one shark out of three believes the project can work, that is enough to continue.</p>
+        <p>The working method of the course follows the same logic:</p>
+        <ol>
+          <li>Assume a problem exists.</li>
+          <li>Build a solution. Generative AI has made this step much cheaper than it used to be.</li>
+          <li>Test whether people want it.</li>
+          <li>If they do, you have first traction and can start thinking about a product. If they do not, form the next hypothesis and test again.</li>
+        </ol>
+
+        <h2 id="s3"><span class="num">3</span>Competition is not an exam</h2>
+        <p>In school, competition means doing the same task better than the person next to you. Market competition is the opposite: you do not want the same task as your competitor.</p>
+        <p>Head-to-head competition is the hardest game there is. Pepsi and Coca-Cola must match each other on budget, marketing, sales and distribution, year after year. A startup cannot play that game against an incumbent.</p>
+        <p>Markets reward you for finding the place where the competitor is absent. The ideal position has three properties:</p>
+        <ul>
+          <li>The pain is real.</li>
+          <li>People want a solution.</li>
+          <li>Nobody has yet worked out how to deliver it.</li>
+        </ul>
+        <p>Much of this course is practice in finding such niches and building something useful in them.</p>
+
+        <h2 id="s4"><span class="num">4</span>Three stages of a startup</h2>
+        <p>Each block of the course is devoted to one funding stage. The stage names come from venture capital, but the questions apply equally to a bootstrapped business.</p>
+        <table>
+          <thead><tr><th>Stage</th><th>Where you are</th><th>What you must show</th></tr></thead>
+          <tbody>
+            <tr><td>Pre-seed</td><td>An idea, perhaps a team, perhaps a friend or two who help without committing</td><td>The idea is validated. You have decided between a venture-funded company and a classical bootstrapped business</td></tr>
+            <tr><td>Seed</td><td>The idea is partly validated. People have committed to work with you although they could have taken a better job elsewhere, which is itself a strong signal</td><td>The business can scale. You can estimate its impact and argue for product-market fit</td></tr>
+            <tr><td>Series A</td><td>You have paying clients and working unit economics</td><td>Acquiring the next client costs clearly less than that client brings in, so more money means more growth</td></tr>
+          </tbody>
+        </table>
+        <p>The Series A condition is usually written as a comparison of customer acquisition cost (CAC) with customer lifetime value (LTV): you are ready to scale when LTV is well above CAC.</p>
+
+        <h2 id="s5"><span class="num">5</span>Learning to fail cheaply</h2>
+        <p>The most valuable habit a founder can acquire is tolerance of failure. A market economy implies that some companies fail, and that is healthy. What matters is noticing early that something does not work, and then changing direction or closing down without delay.</p>
+        <p>Two examples from my own experience:</p>
+        <ul>
+          <li><b>Pleias</b> has been bootstrapped for two years and now employs about 20 people, most of them in Paris at Station F. It builds data tooling and small language models that run locally, and it released Common Corpus, one of the largest fully open datasets for training language models. It survived without external investment because we recognised early what was not working, changed it, and changed it again.</li>
+          <li><b>My previous startup</b>, in education technology, had about 300,000 customers at the start of 2022 and was preparing an IPO in Russia. When the war began it lost roughly 90% of its customer base within a month. No amount of good execution protects against that kind of event.</li>
+        </ul>
+        <p>The shark tank format makes failure a normal part of the course. Receiving three no's and starting again costs you a few weeks here. The same lesson in the market costs years and savings.</p>
+
+        <h3>How much should you love your own idea?</h3>
+        <p>Asked how they know an idea is good, most people answer "I think it is good", "I would build an MVP" or "I would ask people". Each answer hides the same trade-off between conviction and evidence.</p>
+        <ul>
+          <li>Some founders ignore their own preferences entirely and build whatever users ask for. This works for some.</li>
+          <li>Others hold a long-term vision and build towards it for years before it pays off. Hard ideas are almost impossible to carry through without this kind of attachment.</li>
+        </ul>
+        <p>There is no general rule. The right balance depends on your beliefs and on how long you can commit to something without proof that it works. Section 11 gives practical ways to decide.</p>
+
+        <h2 id="s6"><span class="num">6</span>Where ideas come from: reality first, technology second</h2>
+        <p>Asked for "an idea of a business", the class produced seven ideas, and every one was an app or a piece of technology. Nobody proposed a restaurant or a bakery.</p>
+        <p>This is a bias, and technical students should fight it. About 18% of the world's working-age population used a generative AI product in mid-2026 (<a href="https://blogs.microsoft.com/on-the-issues/2026/05/07/the-state-of-global-ai-diffusion-in-2026/">Microsoft AI Economy Institute, Q1 2026</a>; <a href="https://www.mediapost.com/publications/article/418164/microsoft-tracks-ai-adoption-rates-us-ranking-s.html">Q2 figure via MediaPost</a>). The penetration of bread is close to 100%.</p>
+        <p>Many of the best ideas come from people who understand a large, established, offline market and bring technology into it. So start from people and physical reality, as far from technology as you can get, and only then ask what technology can change.</p>
+
+        <h3>Example: Cattle Care</h3>
+        <p><a href="https://www.feedstuffs.com/dairy/cattle-care-introduces-new-on-farm-feed-management-platform">Cattle Care</a> is an AI company for dairy farms. Its founder was a machine-learning engineer with a serious interest in farming. He considered opening a farm and then saw that a large pain point could be solved with computer vision at scale.</p>
+        <p>Cheap cameras installed in the barn record what happens to the cows and what the staff do. Two findings from the company's work, as the founder describes them:</p>
+        <ul>
+          <li><b>Feeding.</b> Cameras over the feed lane show whether each cow ate. Feeding more accurately raises milk yield, and a cow that refuses food probably needs a vet soon.</li>
+          <li><b>Milking.</b> Incorrect milking technique leads to mastitis, an inflammation that stops milk production until it is cured. Video of the milking parlour shows which employees need retraining. The founder reports that this saves even more than better feeding.</li>
+        </ul>
+        <p>The hardware is cheap, and a large dairy farm is a multi-million-dollar business, so small percentage gains are worth real money.</p>
+
+        <h3>Markets open and close</h3>
+        <p>Camera-based self-checkout in supermarkets is a second example of computer vision applied to an old industry. Once it became clear that it worked, several startups built it, and that market is now largely divided. You are probably too late for that one, but other markets of the same kind are opening.</p>
+
+        <h2 id="s7"><span class="num">7</span>No competition is bad news</h2>
+        <p>Finding existing products that do what you planned is good for you: it means the idea has already been validated by someone else. Finding nothing is usually a warning. It leaves two explanations:</p>
+        <ul>
+          <li>You are the first to notice a very large market. This happens, but rarely.</li>
+          <li>You have found a <b>tarpit idea</b>.</li>
+        </ul>
+        <p>Tarpit idea is a term used by Y Combinator partners Dalton Caldwell and Michael Seibel. It describes an idea that sounds good and looks viable, attracts many founders, and then traps them: they keep building something nobody buys (<a href="https://www.ycombinator.com/library/Ij-avoid-these-tempting-startup-tarpit-ideas">Y Combinator, "Avoid these tempting startup tarpit ideas"</a>).</p>
+        <p>Once you have found competitors, the next step of validation is to study them. Work out what each does well and badly, and why some are ahead of others.</p>
+
+        <h3>Survivorship bias</h3>
+        <p>You use a few consumer products you love and conclude "I can be that founder". You are looking only at the survivors and not at the large majority who failed.</p>
+        <p>The saying "victory has a hundred fathers, but defeat is an orphan" describes the mechanism. Winners tell their story often and in many versions. Failures end quietly and people move on, although failures usually teach more.</p>
+        <p>Attitudes are changing. Investors increasingly treat a previous venture, successful or not, as an asset, and some prefer second-time founders for that reason.</p>
+
+        <h2 id="s8"><span class="num">8</span>B2C versus B2B</h2>
+        <p>The first thing to know about any idea is who pays: consumers (B2C) or companies (B2B). The two have different bottlenecks.</p>
+        <table>
+          <thead><tr><th></th><th>B2C</th><th>B2B</th></tr></thead>
+          <tbody>
+            <tr><td>Customer</td><td>Individuals</td><td>Companies, including small ones</td></tr>
+            <tr><td>Main difficulty</td><td>Getting attention</td><td>Surviving the sales cycle</td></tr>
+            <tr><td>Do you know who the customers are?</td><td>No, you must find them among millions</td><td>Often yes, sometimes by name</td></tr>
+            <tr><td>Typical cause of death</td><td>Acquiring each user costs too much</td><td>Money runs out before the first real deal closes</td></tr>
+          </tbody>
+        </table>
+
+        <h3>B2C: the attention economy</h3>
+        <p>User attention has never been as divided as it is now. The founder of an online education company put it this way: "We compete with Netflix for the sleep of our customers." His customers work, have families and put their children to bed. In the two hours that remain they can watch a series or take a course, and either choice costs them sleep.</p>
+        <p>This makes consumers very expensive to reach. A B2C idea is allowed in this course, but you need a new and creative route to market. Without one, the cost of acquiring a user will sink the business.</p>
+
+        <h3>B2B: the sales cycle</h3>
+        <p>Suppose you really had a patented technology for delivering Wi-Fi through railway infrastructure. Every railway operator in the world is a potential customer.</p>
+        <ol>
+          <li>Within a day you can list the decision-makers at every operator.</li>
+          <li>Within a month you can speak to most of them, because a filed patent relevant to their business gets emails answered.</li>
+          <li>Closing the first contract may then take one, two or three years.</li>
+        </ol>
+        <p>The question is how you survive in between. Founders usually choose one of two routes:</p>
+        <ul>
+          <li>Take smaller deals from non-target customers and bootstrap until the first proper deal closes.</li>
+          <li>Raise venture capital on the promise that the deal will close soon. If it does not, the pressure builds quickly.</li>
+        </ul>
+        <p>Many B2B companies die only because they misjudged the length of the sales cycle.</p>
+
+        <h3>Small-business customers: a short cycle and a short window</h3>
+        <p>One class idea was fast, template-based websites for restaurant owners who have no time to build their own. The sales cycle is short and repeatable, and the demand is real.</p>
+        <p>The hard questions are different here:</p>
+        <ul>
+          <li><b>Scaling sales.</b> Owners too overworked to make a website are usually short of cash as well. The offer must be so cheap that it needs no thought, or it must show a clear and quick return.</li>
+          <li><b>Defensibility.</b> Others can see the same opportunity. The market may saturate before you have grown, and owners may eventually build their sites themselves with AI tools.</li>
+        </ul>
+        <p>Lovable, the Swedish app-building company, shows how hard defence is. It has a large paying user base and is one of Europe's most valuable startups, and it still faces direct competition from the AI model providers.</p>
+
+        <h2 id="s9"><span class="num">9</span>Define competitors by market, not by product</h2>
+        <h3>The Parker pen</h3>
+        <p>Parker has sold expensive pens for more than a century. Who are its competitors?</p>
+        <p>The first answers are other pen makers: Montblanc, and BIC. BIC is not a competitor at all. A BIC pen is cheap, durable, sold everywhere and unbeatable on price for quality. Its design is plain to the point of ugliness, and for that reason instantly recognisable. BIC is in the market for writing.</p>
+        <p>Nobody who writes a lot buys a pen costing hundreds of euros in order to write with it. Parker is in the market for <b>business gifts</b>. A Parker is what you give a business partner at Christmas or bring to a reception. The range covers every budget with products that look alike:</p>
+        <ul>
+          <li>A pen for under €20 stays below typical gift limits for public officials.</li>
+          <li>A pen for €100 suits an ordinary business contact.</li>
+          <li>A pen for $1,000 suits a senior executive.</li>
+        </ul>
+        <p>Seen this way, Parker's direct competitors are watches at the top of the range and ties and lighters in the middle and lower range. Montblanc is a competitor because it sells gifts and status symbols, and it happens to make pens.</p>
+        <p>The practical consequence is large. A Parker chief executive who believes BIC is the competition cannot save the company. One who knows the competition is Zippo knows what to watch, how to price and what the product must signal.</p>
+        <p class="aside">This is a long-standing classroom example. Distributors confirm the underlying fact: Parker pens are usually bought as gifts, and sales staff are trained to ask about the recipient (<a href="https://www.philstar.com/business/business-as-usual/2001/08/13/130007/pen-and-paper/amp/">Philippine Star, 2001</a>).</p>
+
+        <h3>Wi-Fi on trains and Starlink</h3>
+        <p>Apply the same reasoning to the class idea of delivering internet to trains through railway infrastructure. The obvious competitor is whoever supplies Deutsche Bahn's on-board Wi-Fi today. That service relies on mobile networks and fails where the networks have gaps.</p>
+        <p>The real competitor is Starlink. It uses a different technology and serves the same market: connectivity where terrestrial coverage is missing. Deutsche Bahn tested Starlink with its Wi-Fi supplier Icomera in 2024 and judged it not yet ready for the market (<a href="https://winfuture.de/news,146960.html">WinFuture</a>). A competing operator has announced Starlink-equipped trains in Germany from 2028 (<a href="https://www.inside-digital.de/news/2028-deutschland-starlink-bahn">inside digital</a>).</p>
+        <p>Knowing the real competitor gives you three things at once:</p>
+        <ul>
+          <li><b>A price ceiling.</b> If satellite service costs an operator some amount per train per month (€300 was the rough figure used in class), you must be clearly below it. Assume the incumbent will also discount for a large, stable customer.</li>
+          <li><b>A deadline.</b> You have the time it takes the competitor to close its deal, and no longer.</li>
+          <li><b>A priority.</b> The core task is the one that gets you under the price ceiling before the deadline.</li>
+        </ul>
+
+        <h3>The class ideas, read by market</h3>
+        <table>
+          <thead><tr><th>Idea</th><th>Type</th><th>Product-level competitors</th><th>Market-level competitors</th></tr></thead>
+          <tbody>
+            <tr><td>Internet for trains via rail infrastructure</td><td>B2B</td><td>Current on-board Wi-Fi suppliers, mobile carriers</td><td>Starlink and other satellite services</td></tr>
+            <tr><td>Daily check-in app for couples</td><td>B2C</td><td>Many existing couples apps (a crowded market)</td><td>Social networks that already know your relationship status; AI assistants with family plans</td></tr>
+            <tr><td>Fast websites for restaurants and small firms</td><td>B2B</td><td>Local web agencies</td><td>AI app builders such as Lovable; owners doing it themselves</td></tr>
+            <tr><td>Weekly meal planning from what you have, within a budget</td><td>B2C</td><td>Nutrition and recipe apps</td><td>Wearables such as Oura and Whoop; general-purpose chatbots</td></tr>
+            <tr><td>Warehouse management with neurosymbolic AI</td><td>B2B</td><td>Classical warehouse management systems</td><td>Vendors adding machine learning to those systems</td></tr>
+            <tr><td>Skin checks for cancer risk by phone</td><td>B2C</td><td>Existing skin-check apps</td><td>Dermatologists; no global leader, because health regulation fragments the market</td></tr>
+            <tr><td>Practice tests for German language exams</td><td>B2C</td><td>Old sample papers circulating as PDFs</td><td>English-exam platforms extending to German; chatbots</td></tr>
+          </tbody>
+        </table>
+        <p>On the couples app, one finding from my own tests of a similar product: couples report losing touch above all after the birth of a child. That is a narrower and more reachable market than "couples".</p>
+
+        <h2 id="s10"><span class="num">10</span>Timing</h2>
+        <p>At every level of technological maturity there are bets you can place on how the future will unfold. When you place the bet matters as much as what the bet is.</p>
+
+        <h3>Burbn becomes Instagram</h3>
+        <p>Around 2009 and 2010, location check-in apps were the fashion. You announced where you were, collected points and became "mayor" of the café you visited most. Foursquare led the market and Gowalla was second.</p>
+        <p>Burbn was a late and smaller entrant, built by Kevin Systrom and later Mike Krieger with about $500,000 of seed funding. The founders saw that they could not beat better-funded rivals at check-ins. They also saw that users ignored most of Burbn's features and used one: posting photos.</p>
+        <p>They removed everything except photos, comments and likes, and launched the result as Instagram in October 2010. It reached 100,000 users in a week, and Facebook bought it for $1 billion in 2012 (<a href="https://techcrunch.com/?p=241149">TechCrunch, "A Pivotal Pivot"</a>; <a href="https://www.npr.org/transcripts/493923472">NPR, How I Built This</a>).</p>
+        <p>The check-in category that Burbn lost has since faded as a consumer market. Instagram's location tags are a trace of where it started.</p>
+        <p>Losing a market is often not a disaster, provided you ask what can be built from what you already have.</p>
+
+        <h3>Vine and TikTok</h3>
+        <p>Being early can be as fatal as being late.</p>
+        <table>
+          <thead><tr><th>Year</th><th>Event</th></tr></thead>
+          <tbody>
+            <tr><td>2012</td><td>Twitter buys Vine before launch</td></tr>
+            <tr><td>January 2013</td><td>Vine launches: six-second looping videos</td></tr>
+            <tr><td>September 2016</td><td>ByteDance launches Douyin in China</td></tr>
+            <tr><td>October 2016</td><td>Twitter announces that Vine will close</td></tr>
+            <tr><td>2017</td><td>TikTok, the international version of Douyin, launches</td></tr>
+          </tbody>
+        </table>
+        <p>Vine had the right idea roughly four years too soon. In 2013 mobile data was expensive for most of the world, and good phone cameras were rare. Few creators could make videos that held attention, and Vine gave those it had no way to earn money (<a href="https://creatoreconomy.so/p/how-short-video-created-the-worlds-most-valuable-startup-4d7403a78cfc">Creator Economy</a>; <a href="https://www.cbinsights.com/company/vine/">CB Insights</a>).</p>
+        <p>After Vine closed, the category looked dead. By the time ByteDance entered, Android phones were cheap and capable, mobile coverage was far better, and a generation had grown up filming itself.</p>
+        <p>The same pattern holds for social networks. Facebook was not the first: Friendster and MySpace came earlier. It arrived when people had become comfortable sharing personal data online.</p>
+        <p>A good idea at the wrong time looks exactly like a bad idea. That is why the reason for a failure matters more than the failure itself.</p>
+
+        <h2 id="s11"><span class="num">11</span>When to drop an idea</h2>
+        <p>A student asked how to tell that an idea is lost. There are three practical tests. None is a hard rule, and each founder's path is different.</p>
+
+        <h3>Test 1: deadlines</h3>
+        <p>Agree in advance on a date and a threshold: "We work on this for a year. If traction is above this line, we continue."</p>
+        <p>This is dull and it works. It is much harder for a solo founder, who can always negotiate another month with themselves. A team that was assembled around an explicit commitment keeps the effort honest.</p>
+
+        <h3>Test 2: the bottleneck</h3>
+        <p>Soon after you start, you find the hardest part of the business. It is usually one of three kinds:</p>
+        <ul>
+          <li><b>Customers.</b> Getting them to notice you at all. This is the most common.</li>
+          <li><b>Technology.</b> It is not yet good enough for what you planned.</li>
+          <li><b>Law and politics.</b> The activity is not permitted, or nobody knows who is liable.</li>
+        </ul>
+        <p>Self-driving taxis show the third kind. The technology works: Waymo's vehicles had 68% fewer police-reportable crashes than human drivers in a 2026 study by the Insurance Institute for Highway Safety (<a href="https://www.inquirer.com/transportation/waymo-human-driver-safety-study-philadelphia-20260728.html">Philadelphia Inquirer</a>). Surveys also find that women feel safer from harassment in a driverless car than in a ride-hail with a driver (<a href="https://www.nbcnews.com/tech/innovation/are-taxis-safer-no-driver-women-think-rcna173936">NBC News</a>; <a href="https://dailytrojan.com/2026/08/19/usc-research-on-waymo/">USC survey via Daily Trojan</a>). Most places still have no robotaxis, because permitting them is a political decision.</p>
+        <p>Once you know your bottleneck, ask whether you can open it with technology, talent or a clever idea within about three months. If you cannot, park the idea. Do not be afraid to leave it.</p>
+        <p>A bottleneck you have run into yourself is hard to forget. When the world changes and removes it, you will notice sooner than anyone and understand the problem more deeply than new entrants.</p>
+
+        <h3>Test 3: can you recruit a co-founder or an investor?</h3>
+        <p>Other people's commitment is evidence, and you can collect it before you have a product.</p>
+        <p><b>Co-founders.</b> Suppose you are technical and your business needs someone who can sell to small firms. Approach the head of sales at a regional bank and offer half the company. If that person leaves a secure job to join you, the idea has passed a serious test. It will also impress investors: "our sales lead ran sales at the Sparkasse and decided he could not miss this."</p>
+        <p>This is why founders with a Google background raise money easily. Leaving a six-figure salary for a startup is a costly signal, so investors believe it.</p>
+        <p><b>Advisors.</b> A senior person may not leave their job for you. Ask whether they will put their name on your deck as an advisor. A yes is a good sign and a no is a bad one.</p>
+        <p><b>Investors.</b> Early-stage investors exist to make early, risky judgments on ideas and teams, so use them as a test. You can pitch at any stage of readiness: at startup events and pitch slams, or by writing directly to investors on LinkedIn. If nobody responds, something is wrong with the idea, with its positioning, or with how you present yourself.</p>
+        <p>If nobody at all will put skin in the game, take that seriously.</p>
+        <p class="aside">One caveat from experience. Pleias did not plan to raise money, attracted investor interest anyway, did not close a round, and carried on. We continued because clients were paying and the company was cash-positive. Paying customers outrank investor opinion.</p>
+
+        <h3>How investors read a pitch</h3>
+        <p>Founders treat a pitch as a chance to explain what could go right. The investor sits at the other end of a funnel. A scout who takes half-hour calls all day hears about sixteen pitches, and reads many more decks that never get a call.</p>
+        <p>So the first pass is a search for reasons to say no. Only when no red flag appears does the investor start asking why to invest. Common red flags:</p>
+        <ul>
+          <li>The founder does not understand the competition.</li>
+          <li>The team does not look able to deliver.</li>
+          <li>The founders misjudge how fast they can or must move.</li>
+          <li>The team lacks the connections to hire quickly when it needs to scale.</li>
+        </ul>
+        <div class="reading">
+          <div class="reading-label mono">Reading</div>
+          <a href="https://www.hachette.co.uk/titles/ilya-strebulaev/the-venture-mindset/9781399810005/">Ilya Strebulaev &amp; Alex Dang · The Venture Mindset (2024)</a>
+          <p class="why">How venture investors decide, from a Stanford professor who has studied them for two decades. Several stories in this course come from it. A German edition exists.</p>
+        </div>
+
+        <h3>"My idea is too unusual for anyone to join"</h3>
+        <p>Then ask why nobody joins. Companies that freeze people's brains in the hope of future revival have found funding. If cryonics can raise money, an idea is rarely too strange to fund. The number of wild ideas that get funded and fail should convince you that no idea is impossible to finance.</p>
+        <p>What matters is traction, and much of that depends on your network (Section 12). If you believe in the idea, find a way to pitch it where the investors are most willing to take risk. If even they decline, it is probably a bad idea.</p>
+
+        <h2 id="s12"><span class="num">12</span>The ecosystem around you</h2>
+        <h3>EXIST: a year of non-dilutive funding</h3>
+        <p>The federal EXIST-Gründungsstipendium funds teams of up to three people from a German university for twelve months. It is a grant, so you give up no equity (<a href="https://www.ptj.de/exist/gruenderstipendium">Projektträger Jülich</a>; <a href="https://www.foerderdatenbank.de/FDB/Content/DE/Foerderprogramm/Bund/BMWi/exist-gruendungsstipendium.html">Förderdatenbank</a>).</p>
+        <table>
+          <thead><tr><th>Component</th><th>Amount</th></tr></thead>
+          <tbody>
+            <tr><td>Stipend, graduate</td><td>€2,500 per month</td></tr>
+            <tr><td>Stipend, student</td><td>€1,000 per month</td></tr>
+            <tr><td>Stipend, founder with doctorate</td><td>€3,000 per month</td></tr>
+            <tr><td>Material expenses</td><td>up to €10,000 solo, €30,000 for a team</td></tr>
+            <tr><td>Coaching</td><td>€5,000</td></tr>
+          </tbody>
+        </table>
+        <p>A team of three graduates therefore receives up to about €125,000 over the year. The application goes through the university and needs a mentor there. CAIRO can host AI-related EXIST teams: it has one running project and two applications in preparation, and I am glad to support more.</p>
+
+        <h3>Campus Founders, Heilbronn</h3>
+        <p>Campus Founders is a startup hub in Heilbronn, about an hour from Würzburg by train, founded and supported by the Dieter Schwarz Foundation (<a href="https://sifted.eu/articles/europes-newest-ai-hub">Sifted</a>). Dieter Schwarz built Lidl and Kaufland.</p>
+        <p>Its AI Founders programme was a 12-week programme for early-stage AI startups with a living stipend and free accommodation (<a href="https://www.eu-startups.com/2024/02/elevate-your-ai-startup-join-the-ai-founders-program-in-heilbronn-sponsored/">EU-Startups</a>). It appears to have been merged into the 12-week CF Accelerator, so check the current offer before applying. The hub also runs open pitch events and has a supportive community. It is a natural next step for a project that finds traction in this course.</p>
+
+        <h3>Starting a company in Germany</h3>
+        <p>Germany is not the fastest place to incorporate. In the United Arab Emirates or in Delaware a limited company can be registered remotely within a day or so. Registering a company in Munich once took me two months, because the chamber of commerce kept rejecting proposed names as too similar to existing ones. Experiences vary by city: a student reported no such trouble elsewhere.</p>
+
+        <h3>Why European venture capital is more cautious</h3>
+        <p>European investors are more risk-averse than American ones, and part of the reason is where the money comes from.</p>
+        <p>In the United States, the 1974 pension law ERISA at first discouraged pension funds from investing in young companies. In 1979 the Department of Labor reinterpreted its "prudent man" standard so that risk was judged across a whole portfolio. Over the following decade pension funds became the largest single source of venture capital (<a href="https://thebhc.org/node/97281">Business History Conference</a>; <a href="https://www.npr.org/transcripts/1120386248">NPR Planet Money</a>). Half a century of that capital is part of the explanation for California's dominance in technology.</p>
+        <p>Europe has large pension assets but directs very little of them to venture capital. European pension funds committed $6.5 billion to European venture funds over 2015 to 2025 (<a href="https://globalventuring.com/corporate/overview/european-pension-funds-vc-short-term/">Global Venturing</a>). EU rules do not forbid such investment; the limits come mainly from national rules and from the funds' own caution (<a href="https://www.alliedforstartups.org/insights/allied-for-startups-position-on-the-savings-and-investment-union/">Allied for Startups</a>).</p>
+        <p>The European Commission's Startup and Scaleup Strategy of May 2025 and its Savings and Investments Union aim to draw institutional investors into venture capital (<a href="https://finance.ec.europa.eu/news/commission-seeks-input-venture-and-growth-capital-funds-reform-2026-01-15_en">European Commission</a>). If this succeeds, expect new funds in Europe within a few years, many of them American firms raising from European pensions on the strength of their US record.</p>
+        <p>The next three to five years also depend on today's European unicorns. Successful exits would do three things:</p>
+        <ol>
+          <li>Their founders would reinvest in Europe more than anyone else would.</li>
+          <li>Global investors would see Europe as a place where large companies can be built and sold.</li>
+          <li>Regulators would have a reason to move.</li>
+        </ol>
+
+        <h3>Network density</h3>
+        <p>Silicon Valley remains the best place to raise money because of how densely its network is packed. I understood this only on a visit as a doctoral student. A serial founder hosted me and took me to his weekly poker game with friends in their sixties. The stakes were capped at the price of the wine on the table. Once a month the same group flew to Las Vegas by private jet for the game. None of them was famous, but several had sold companies, and each knew people who knew people.</p>
+        <p>California alone is the world's fourth-largest economy on 2024 figures, with a GDP of $4.1 trillion, just behind Germany (<a href="https://abc7news.com/post/california-now-4th-largest-economy-world-new-data-shows/16239057/">ABC7</a>).</p>
+        <p>Within Germany, Bavaria has the best concentration of private capital: Munich above all, and the belt from Heilbronn through Main-Franken to Nuremberg. It is far from Silicon Valley's level, and London, Paris and Stockholm are ahead in Europe. For finding an angel investor in Germany, though, you are in one of the better places.</p>
+
+        <h2 id="next"><span class="num">→</span>Next session</h2>
+        <p>Students from International Innovation Management join and the group roughly doubles. After a round of introductions we form the working teams for the first block. Then Class 01: get out of the building.</p>
+
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <a href="../index.html">← Course index</a>
+      <a href="../class-01/">Class 01 →</a>
+    </div>
+  </footer>
+
+</body>
+</html>
