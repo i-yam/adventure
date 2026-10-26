@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 01 · Lecture notes · Adventure Capitalism</title>
+<meta name="ac:tags" content="interest=customers; comfort=no-code; time=deep; track=core; ai=off; type=notes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800;900&family=Public+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+/* Notes-page layout. Same block as class-00; uses the house tokens, adds long-form elements the shared sheet does not cover. */
+.body h2{
+  font-family:"Archivo",sans-serif;
+  font-weight:900;
+  font-size:1.5rem;
+  letter-spacing:-0.02em;
+  line-height:1.1;
+  border-top:2px solid var(--rule);
+  padding-top:1rem;
+  margin:3rem 0 1.2rem;
+}
+.body h2 .num{color:var(--accent);margin-right:0.5rem;}
+.body h3{
+  font-family:"Archivo",sans-serif;
+  font-weight:800;
+  font-size:1.05rem;
+  letter-spacing:-0.01em;
+  margin:2rem 0 0.8rem;
+}
+.body ul,.body ol{margin:0 0 1.35rem 1.3rem;}
+.body li{margin-bottom:0.45rem;}
+.body table{
+  width:100%;
+  border-collapse:collapse;
+  margin:0 0 1.6rem;
+  font-size:0.92em;
+  line-height:1.45;
+}
+.body th,.body td{
+  text-align:left;
+  vertical-align:top;
+  padding:0.55rem 0.7rem 0.55rem 0;
+  border-bottom:1px solid var(--hairline);
+}
+.body th{
+  font-family:"Space Mono",monospace;
+  font-weight:400;
+  font-size:0.68rem;
+  text-transform:uppercase;
+  letter-spacing:0.12em;
+  color:var(--ink-soft);
+  border-bottom:2px solid var(--rule);
+}
+.body .aside{
+  font-size:0.94em;
+  color:var(--ink-soft);
+  border-left:2px solid var(--accent);
+  padding-left:1.1rem;
+  margin:1.4rem 0;
+}
+.toc{
+  margin:0 0 2.5rem;
+  padding:1rem 0 0;
+  border-top:1px solid var(--hairline);
+}
+.toc-label{
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.2em;
+  color:var(--ink-soft);
+  margin-bottom:0.7rem;
+}
+.toc ol{
+  list-style:none;
+  margin:0;
+  columns:2;
+  column-gap:2rem;
+}
+.toc li{margin-bottom:0.3rem;font-size:0.92em;}
+.toc a{background:none;}
+.toc .n{font-family:"Space Mono",monospace;font-size:0.72rem;color:var(--ink-soft);margin-right:0.5rem;}
+@media (max-width:560px){.toc ol{columns:1;} .body table{font-size:0.84em;}}
+</style>
+</head>
+<body>
+
+  <header class="masthead">
+    <div class="wrap">
+      <div class="brand">ADVENTURE<span class="dot">.</span>CAPITALISM</div>
+      <div class="meta mono">12 CLASSES / 3 SHARK TANKS</div>
+    </div>
+  </header>
+
+  <div class="wrap">
+
+    <div class="classhead">
+      <div>
+        <div class="kicker mono">CLASS 01 · LECTURE NOTES · CUSTOMER DISCOVERY</div>
+        <h1>Get out of the building.</h1>
+      </div>
+      <div class="classnum" aria-hidden="true">01</div>
+    </div>
+
+    <div class="tags mono">
+      <span><b>FORMAT</b> lecture notes</span>
+      <span class="sep">/</span>
+      <span><b>COMFORT</b> no-code</span>
+      <span class="sep">/</span>
+      <span><b>TIME</b> 30min read</span>
+      <span class="sep">/</span>
+      <span><b>TRACK</b> core</span>
+      <span class="sep">/</span>
+      <span><b>FEEDS</b> the three modules, class 04 pitch</span>
+    </div>
+
+    <div class="content">
+      <aside class="rail">
+        <div class="rail-label mono">The<br>notes</div>
+      </aside>
+
+      <div class="body">
+        <p class="lead">You know roughly what you want to build. You have no idea who wants to buy it. Closing that gap is the whole job at this stage, and the only instrument for it is talking to people. Badly at first.</p>
+
+        <p>These are the notes from the second session. The three modules of Class 01 (<a href="finding-a-problem.html">finding a problem</a>, <a href="talking-to-users.html">talking to users</a>, <a href="competition.html">competition</a>) carry the exercises; this page carries the argument and the stories behind them. The homework is in Section 12.</p>
+
+        <nav class="toc">
+          <div class="toc-label mono">Contents</div>
+          <ol>
+            <li><span class="n">01</span><a href="#s1">Pitch to everyone</a></li>
+            <li><span class="n">02</span><a href="#s2">What Nike sells</a></li>
+            <li><span class="n">03</span><a href="#s3">The steel mill</a></li>
+            <li><span class="n">04</span><a href="#s4">Belief is necessary, not sufficient</a></li>
+            <li><span class="n">05</span><a href="#s5">The customer development loop</a></li>
+            <li><span class="n">06</span><a href="#s6">Ask the patients</a></li>
+            <li><span class="n">07</span><a href="#s7">Being annoying is rational</a></li>
+            <li><span class="n">08</span><a href="#s8">The room's ideas</a></li>
+            <li><span class="n">09</span><a href="#s9">The elevator</a></li>
+            <li><span class="n">10</span><a href="#s10">Everyone will lie to you</a></li>
+            <li><span class="n">11</span><a href="#s11">Narrow is fine now</a></li>
+            <li><span class="n">12</span><a href="#s12">Homework: five conversations</a></li>
+            <li><span class="n">13</span><a href="#s13">Reading</a></li>
+          </ol>
+        </nav>
+
+        <h2 id="s1"><span class="num">1</span>Pitch to everyone</h2>
+        <p>I learned what a paper prototype is at ABBYY, the document-recognition company. ABBYY was started by five people, which is rare, and had the catastrophic founder break-up that five-person starts usually have; two of the original five carried the company on. One of them, <a href="https://en.wikipedia.org/wiki/David_Yang_(businessman)">David Yang</a>, had by then stepped back from operations and was starting something new: digital employees that answer the phone for a hotel or a gym. It later became Yva.ai.</p>
+        <p>He had no product. He had a PowerPoint. At a company retreat with about fifty salespeople on the premises, I watched him pitch it to nearly every one of them, in coffee breaks, asking for five minutes at a time. None of those people would ever buy it. So I asked him why.</p>
+        <p>His answer: it is an automation product, these people sell automation, and if one of them reacts to something in the deck, that reaction is useful for whatever I do next. A fifth-time founder, pitching a slide deck to the remotely relevant.</p>
+        <p>That is the core activity of the early stage, and it has a simple cause. You know what you can build, roughly. You know nothing about what people can buy. There are limits on both sides, and you have to find them by collision.</p>
+
+        <h2 id="s2"><span class="num">2</span>What Nike sells</h2>
+        <p>What do you pay for when you buy Nike shoes? Not the shoes. The usual answer in class is "the belief that you can be an athlete", which is close but too strong. Nobody buying trainers thinks they will turn professional. In one word, Nike sells motivation. The claim of "Just do it" is that owning the product makes you more likely to work out. Everybody who has joined a gym in January and stopped by February knows how badly people want to buy that.</p>
+        <p>The campaign was built accordingly. The first spot in 1988 showed an eighty-year-old man who ran seventeen miles every morning, not a star; the whole series put ordinary people on screen (<a href="https://mediavillage.com/article/historys-moment-in-media-the-rise-of-nikes-just-do-it-tagline/amp">MediaVillage</a>). The audience was everyone who was not an athlete yet.</p>
+        <p>The pattern to copy: find the part of the market nobody serves, name the reason it is unserved, and that reason tells you how to position the product. The difference between you and Nike is that Nike had sales figures, a marketing department and years of customers when it did this. You have a co-founder if you are lucky. So you have to get the same information the slow way, by asking.</p>
+
+        <h2 id="s3"><span class="num">3</span>The steel mill</h2>
+        <p>A friend of mine started an AI company for steel production. Steel is made partly from scrap of unknown composition, and the properties you want come from expensive alloying metals added during the melt. The pitch: an AI reads the chemistry of the melt in real time and decides, in fractions of a second, how much of the expensive additives to throw in. Less waste of rare metals, same steel.</p>
+        <p>The prototype worked on paper. They agreed a trial with the management of a mill, installed the software, and in the first month it was used zero times. When they asked why, the shift leaders explained. If we follow your machine and it is wrong, the whole batch is scrap, and a batch is worth millions. If we do it our way and it is right, we get our quarterly bonus. We know how to get it right. Why would we touch your button?</p>
+        <p>The fix was an incentive, not a feature. Press one button and the software takes over; if you press it, you get your bonus regardless; if the steel comes out wrong, the startup eats the cost. Only on those terms did anyone use it, and my friend then spent half a year not sleeping, because every melt carried a small, non-zero chance of killing his company.</p>
+        <p>They had pitched to management. They had never pitched to the person who actually runs a shift. Thirty minutes with that person would have surfaced the bonus problem before the contract, and they could have either designed around it or spent the previous year making the algorithm's failure probability very small instead of its demo impressive. Pitch to the floor, not only to the office.</p>
+
+        <h2 id="s4"><span class="num">4</span>Belief is necessary, not sufficient</h2>
+        <p>A student objected: people with ideas want to convince others, not to hear that the idea is bad. True, and you will be that person. Founding only makes sense if you believe in the thing; you take more risk, less salary and more responsibility for it. The point is that belief does not deliver the result on its own. The founders who make it are the ones who hear the no, and then either find the counter-argument or move the idea until the no goes away.</p>
+        <p>Steve Jobs is the extreme case, and his engineers had a name for it: the reality distortion field. In 1983 he told Larry Kenyon, who wrote the Macintosh disk driver, that the boot time had to come down. Kenyon had the usual list of reasons it could not. Jobs did not argue with the list. He said: five million people will soon boot a Mac every day; ten seconds off the boot is fifty million seconds a day; over a year that is dozens of lifetimes, so you would be saving a dozen lives. The team took more than ten seconds off within months (<a href="https://www.folklore.org/Saving_Lives.html">Andy Hertzfeld, folklore.org</a>).</p>
+        <p>The argument does not touch the engineering at all. That is both its power and its danger. The same man also, by many accounts, dismissed ideas and presented them as his own a week later. I do not recommend it. I only note that without a strong version of that belief almost nobody gets anywhere, and that belief alone is how Theranos happens (Section 10).</p>
+
+        <h2 id="s5"><span class="num">5</span>The customer development loop</h2>
+        <p>Steve Blank named the method; Eric Ries popularised it in <i>The Lean Startup</i>. Work on an idea has two phases, search and execution, and you do not start executing until the search returns a yes. The search has two steps:</p>
+        <ul>
+          <li><b>Customer discovery.</b> Talk to the people you think are your customers and try to teach them your idea in the form you believe is attractive to them.</li>
+          <li><b>Customer validation.</b> Take their reaction, change the idea or the way you present it, and go round again. The more loops the better.</li>
+        </ul>
+        <p>The module page on <a href="finding-a-problem.html">finding a problem</a> has the diagram and three cases (Dropbox's screencast, Airbnb's photographs, Superhuman's 40% question). The scale to keep in mind: the US National Science Foundation's I-Corps programme requires each team to complete at least a hundred customer discovery interviews (<a href="https://seedfund.nsf.gov/resources/awardees/phase-1/nsf-i-corps">NSF</a>). A hundred is normal. Five is where we start this week.</p>
+        <p>Why so much search? Because execution is expensive. Generative AI has made building drastically cheaper, and it is still far more expensive than asking. At the early stage, spend on the search.</p>
+
+        <h2 id="s6"><span class="num">6</span>Ask the patients</h2>
+        <p>One more case, from <i>Tribal Leadership</i> by Dave Logan, John King and Halee Fischer-Wright, a book on how organisations behave that is worth your time if the managerial side interests you.</p>
+        <p>Griffin Hospital in Derby, Connecticut, was a struggling hospital with a bad reputation. Its reliable customers were women who went into labour nearby, because you drive to the nearest hospital and assume any hospital will do. The chief executive, Patrick Charmel, did one thing: he asked those women what they wanted. The list included flowers by the bed, which policy forbade because flowers can cause allergies. The board would not act on the list. Charmel left rather than run a hospital that would not do what its patients asked; the staff protested, he was reinstated, and the hospital spent the following years doing what was on the list. It has since appeared for years on the US lists of best places to work, and the finances followed.</p>
+        <p>A woman who has just given birth and is allergic to flowers is not going to be surprised by flowers from her husband. Most rules that stop you serving the customer protect against a situation that does not occur.</p>
+
+        <h2 id="s7"><span class="num">7</span>Being annoying is rational</h2>
+        <p>Asked how you pitch to cold people without being the annoying marketing guy: you will be the annoying marketing guy. Most of our instincts about social cohesion are orthogonal to what makes a good founder, and the discomfort is internal more than it is real.</p>
+        <p>Pleias sits in Station F in Paris, an old railway station with a startup cluster inside and no good way to admit a crowd. When there is a conference, there is a forty-minute queue outside, in November. The first time I stood in it I spent twenty minutes freezing in silence. Then it occurred to me that everyone in the queue was trying to enter the building my company is in, so they were probably relevant. I introduced myself to the person next to me, then the next one. I met about fifty people. They had nothing else to do, and the queue got better for everyone.</p>
+        <p>A related observation. European founders ask an investor whether they may pitch. American founders say their name, what they do, and hand over the card. The second group sells more. The first group is being polite, and polite is not the job.</p>
+
+        <h2 id="s8"><span class="num">8</span>The room's ideas</h2>
+        <p>Everyone gave one idea they would start with if they had to be a solo founder tomorrow. I went first: personalised medicine from a person's genome plus their full medical record, with a language model on top. The rest, with the comment I gave in class:</p>
+        <table>
+          <thead><tr><th>Idea</th><th>Comment</th></tr></thead>
+          <tbody>
+            <tr><td>Non-alcoholic spirits that taste like the real thing</td><td>Younger people drink less everywhere; a growing market.</td></tr>
+            <tr><td>A visual, social app for divers</td><td>The founder dives, which is the right way to start.</td></tr>
+            <tr><td>One AI-searchable platform for everything a university puts on separate pages</td><td>Clear pain; the customer is a university, see the warning on institutions below.</td></tr>
+            <tr><td>A safety companion for elderly people who get scam calls</td><td>Products for the elderly are a large market. A friend's dating app for the over-60s pivoted, after several tries, into organising dinners for six matched strangers: easier to accept than a dating app, and many users wanted friendship rather than romance. Identity and age are verified.</td></tr>
+            <tr><td>Scan receipts, get expiry reminders and recipes for what is in the fridge</td><td>Very concrete, which is fine as long as you are not married to it. Interviews may show that photographing receipts is too much friction, that receipts carry no expiry dates, or that the waste worth tackling is in supermarkets, where the data already exists.</td></tr>
+            <tr><td>Mental health for people working from home</td><td>The right level of precision: narrow enough to know whom to interview, broad enough to be a market.</td></tr>
+            <tr><td>An inclusive board game, including for people with disabilities</td><td>I can introduce you to a wheelchair-using board-game enthusiast. CAIRO also hosts a hackathon on inclusion and AI on 29 October with about a hundred participants and several social organisations: go and interview.</td></tr>
+            <tr><td>Live location for buses and trams</td><td>The pain is real. The customer is the government, and the government is a very bad customer for a startup: the compliance burden is designed for corporations with legal departments. Deutsche Bahn is formally a private company and famously in need of help; aim there instead.</td></tr>
+            <tr><td>Support for overwhelmed school teachers: a reflective diary with activities and advice</td><td>Education is in crisis for reasons that are not only AI, and teachers have no time to read the books written for them.</td></tr>
+            <tr><td>Meal-prep boxes for the ketogenic diet</td><td>Broaden to every "cultish" diet at once; people who try keto will try paleo.</td></tr>
+            <tr><td>Computer-vision coaching for sport, in the gym and outdoors</td><td>A student in last year's course, who owns a gym in the city centre, prototyped exactly this with the gym's existing cameras and priced it as an upsell to members. I can connect you.</td></tr>
+            <tr><td>A "parenting licence": a course on the hormones, law, money and development nobody teaches future parents</td><td>As a parent, I would be furious at the word licence. As a founder, the fury is free reach. In May 2026 the AI-companion company Joi AI advertised for "masturbation consultants" at $2,000 a month and got worldwide press for a job post (<a href="https://decrypt.co/368866/ai-startup-pay-people-2000-month-masturbate">Decrypt</a>). The product is ed-tech for prospective parents; the name is a PR decision.</td></tr>
+            <tr><td>Shared dinners where each guest brings a course</td><td>Meetup for dinners. There was a version of this at the university already.</td></tr>
+            <tr><td>Warehouse management with neurosymbolic AI</td><td>The founder has strong opinions on neurosymbolic AI. Keep them for the second class and interview warehouse managers first.</td></tr>
+            <tr><td>Sharing bulky vegetables between people who live alone</td><td>Vegetables are the cheapest line in the basket. If this is to be a business, share the salmon.</td></tr>
+          </tbody>
+        </table>
+        <p>Read down the list and the clusters are obvious: food (dinners, sharing, meal prep, fridge, spirits), lifestyle and sport (diving, coaching), education (teachers, parents, the university platform) and mental health (home office, the elderly). That is how the first teams will form. You do not need to pick a team yet.</p>
+
+        <h2 id="s9"><span class="num">9</span>The elevator</h2>
+        <p>The exercise. Two lines, face to face. One side pitches its idea in one sentence; the other side raises a hand the moment it feels the sentence is over, no questions allowed. Then everyone shifts one place and the sides swap. An elevator pitch is exactly this: the other person leaves at their floor, and you had one sentence.</p>
+        <p>Round one: most listeners understood. Round two, after everyone had a chance to improve: fewer hands. Round three: fewer still. Given time to polish, people added, and comprehension fell. Then the hard rounds, where the listener's job was to dislike the idea and say why. Where is the money, is it legal, what about personal data. Afterwards, one listener in the room said they were convinced. In the final round, none.</p>
+        <p>What people reported afterwards:</p>
+        <ul>
+          <li>You need to be simple and clear, and to pick the single most informative thing about the idea. Numbers up front lose people; a story carries.</li>
+          <li>Pushback is rarely dismissive. It is a position or a probing question, and if you have no answer, the listener disengages.</li>
+          <li>A topic can be a landmine. One pitch about keeping grandparents safe landed on a listener whose grandparents were dead. That is not a failed pitch; that is why you pitch to many people.</li>
+          <li>The pitches that worked asked a question first. "Are you a parent?" turned a monologue into a conversation and told the pitcher where the listener was coming from.</li>
+        </ul>
+        <p>Why clarity matters so much: an investor hears five to ten pitches a day, a scout up to sixteen, and they compartmentalise. You want to be remembered after a short contact. People forget facts and remember stories; that is a settled finding, not a slogan. One clear connection between your person and your idea is worth more than three features.</p>
+
+        <h2 id="s10"><span class="num">10</span>Everyone will lie to you</h2>
+        <p>Asked what they did under pushback, one student said: I lied. Good. That is the second module.</p>
+        <p>Lying requires what psychologists call theory of mind: the understanding that what I know and what you know are different things. Children acquire it at around four to five. Before that, a child who covers her eyes believes you cannot see her, because she cannot see you. After it, the child understands that information is private, and can lie. Some adults never quite stop believing their own story. Elizabeth Holmes raised Theranos to a nine-billion-dollar valuation on a blood test nobody has ever seen work, is serving an eleven-year sentence, and invited a film crew into her house for the 34 days before she reported to prison; the documentary, <i>You Can See Everything</i>, is in cinemas now (<a href="https://abc7ny.com/post/what-know-former-theranos-founder-elizabeth-holmes-documentary-can-see-everything-nathan-fielder-a24/19803250/">ABC</a>). From the trailer, she may still believe the technology existed.</p>
+        <p>You will sometimes be tempted to lie in a pitch. Do not, especially to partners, clients and investors. But understand that people will lie to you, and mostly out of kindness. Your friends will praise a bad idea to support you. Occasionally someone will trash a good one out of an old grudge. Feedback on an idea you have just described is close to worthless as data.</p>
+        <p>So pitch through questions, not statements. "Food waste is a problem, this much is lost per year" is a monologue the listener must sit through. "Do you know how much food New York throws away in a day?" is an opener. If the person cares, they answer, and now they are talking and you are listening, which is the point. Following them out of the elevator while they explain food waste to you is not awkward; it is a conversation.</p>
+        <p>Then the questions themselves. These are the ones founders ask, and every one is broken:</p>
+        <table>
+          <thead><tr><th>Asked in the wild</th><th>What is wrong</th><th>Ask instead</th></tr></thead>
+          <tbody>
+            <tr><td>Do you think it is a good idea?</td><td>Closed, suggestive, asks for a grade</td><td>How do you handle this today? Walk me through the last time it came up.</td></tr>
+            <tr><td>Would you buy a product that did this?</td><td>A hypothetical purchase</td><td>What have you already tried, and how did that go?</td></tr>
+            <tr><td>How much would you pay for it?</td><td>Open, but still a hypothetical; people remember that apps cost €9.99 and say that</td><td>What does this cost you now, in money, time or workarounds?</td></tr>
+            <tr><td>Do you like this feature?</td><td>Closed; a feature is a symptom</td><td>What were you trying to get done when you reached for something like it? How would you improve it?</td></tr>
+            <tr><td>You'd use this, right?</td><td>A door held open for a polite yes</td><td>When did you last need something like this, and what did you do instead?</td></tr>
+          </tbody>
+        </table>
+        <p>The rule under the table: the more hypotheticals you ask people to imagine, the more they will lie, not from malice but because nobody is good at hypotheticals. What they did last Tuesday is grounded. What they would do with an app they cannot see is invented on the spot. The <a href="talking-to-users.html">module page</a> has these five as an exercise, and Eric Migicovsky's YC talk, <a href="https://youtu.be/MT4Ig2uqjTc">How to Talk to Users</a>, walks the same ground in twenty minutes.</p>
+
+        <h2 id="s11"><span class="num">11</span>Narrow is fine now</h2>
+        <p>Talk to people broadly, including people adjacent to your intended audience, because you may find that a narrower group than you planned for is the one that cares. Then do not be afraid of how narrow it is.</p>
+        <p>A friend in the UK learned that his teenage son is gay, and from his son that several of the boy's friends had a much harder time coming out to their parents. Father and son built an app that helps English-speaking gay teenagers structure that conversation. Five years ago this was not a business: the audience was too small for the cost of building software. Now building costs a thousandth of what it did, teenagers already pay for apps, and a narrow product for a narrow group is viable. There may be very few of your customers in Würzburg. There may be a great many in the world, and you do not claim to build locally. How to run the numbers on a niche is the subject of Class 02.</p>
+
+        <h2 id="s12"><span class="num">12</span>Homework: five conversations</h2>
+        <p>Before the next class, talk to at least five people about the problem you want to work on. Friends, family, neighbours, anyone. Alone or with one or two others from the board. The rules:</p>
+        <ol>
+          <li><b>Structure it first.</b> Write seven to fifteen questions before the first conversation. About one question per minute is the pace; a customer interview is fifteen minutes and you will not need more.</li>
+          <li><b>Most important questions first.</b> Some people answer at length and leave early. Get what you need before that happens.</li>
+          <li><b>Three things to learn.</b> Do they recognise the problem. How do they deal with it now. What would they prefer to what they do now.</li>
+          <li><b>Open questions, past tense.</b> Section 10.</li>
+          <li><b>Use your real network, not LinkedIn.</b> Later in the course you will write to strangers in the startup scene, who are surprisingly willing to give a founder fifteen minutes. Not yet.</li>
+        </ol>
+        <p>Class 02 opens with each of you reporting what the five conversations did to your idea. "Nothing" is a possible answer, and a suspicious one.</p>
+        <p>The three module exercises are built to feed this. Module 01 gets you the one-sentence problem and the list of whom to talk to. Module 02 gets you the question script. Module 03 you can do after the interviews, when you know what you are actually competing with.</p>
+
+        <h2 id="s13"><span class="num">13</span>Reading</h2>
+        <p>The course recommends a short shelf. None of it is compulsory; all of it is short.</p>
+        <table>
+          <thead><tr><th>Title</th><th>Why</th></tr></thead>
+          <tbody>
+            <tr><td>Ilya Strebulaev and Alex Dang, <a href="https://www.hachette.co.uk/titles/ilya-strebulaev/the-venture-mindset/9781399810005/"><i>The Venture Mindset</i></a> (2024)</td><td>How investors decide. Several stories in this course come from it. German edition available.</td></tr>
+            <tr><td>Eric Ries, <i>The Lean Startup</i> (2011)</td><td>The search-then-execute framework and the customer development loop, in readable form. Steve Blank's <i>The Four Steps to the Epiphany</i> is the original and the harder read.</td></tr>
+            <tr><td>Dave Logan, John King and Halee Fischer-Wright, <i>Tribal Leadership</i> (2008)</td><td>Five stages of how groups behave. Source of the hospital story. Optional, for the managerially inclined.</td></tr>
+            <tr><td><a href="https://www.ycombinator.com/library">Y Combinator library</a> and <a href="https://www.youtube.com/@ycombinator">YouTube channel</a></td><td>The largest accelerator in the world, with the best track record, explaining itself for free. Start with Paul Graham's essays, linked from the module pages.</td></tr>
+          </tbody>
+        </table>
+
+        <p class="aside">The final part of the session, on where competition really is, continues in <a href="competition.html">module 03</a>: picture a thousand people who want to build the same thing, and watch the room empty.</p>
+
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <a href="index.html">← Class 01</a>
+      <a href="finding-a-problem.html">Module 01 →</a>
+    </div>
+  </footer>
+
+</body>
+</html>
