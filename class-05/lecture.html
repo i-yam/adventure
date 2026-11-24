@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 05 · Lecture notes · Adventure Capitalism</title>
+<meta name="ac:tags" content="interest=product; comfort=no-code; time=deep; track=core; ai=on; type=notes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800;900&family=Public+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+/* Notes-page layout. Same block as class-00 and class-01; uses the house tokens, adds long-form elements the shared sheet does not cover. */
+.body h2{
+  font-family:"Archivo",sans-serif;
+  font-weight:900;
+  font-size:1.5rem;
+  letter-spacing:-0.02em;
+  line-height:1.1;
+  border-top:2px solid var(--rule);
+  padding-top:1rem;
+  margin:3rem 0 1.2rem;
+}
+.body h2 .num{color:var(--accent);margin-right:0.5rem;}
+.body h3{
+  font-family:"Archivo",sans-serif;
+  font-weight:800;
+  font-size:1.05rem;
+  letter-spacing:-0.01em;
+  margin:2rem 0 0.8rem;
+}
+.body ul,.body ol{margin:0 0 1.35rem 1.3rem;}
+.body li{margin-bottom:0.45rem;}
+.body table{
+  width:100%;
+  border-collapse:collapse;
+  margin:0 0 1.6rem;
+  font-size:0.92em;
+  line-height:1.45;
+}
+.body th,.body td{
+  text-align:left;
+  vertical-align:top;
+  padding:0.55rem 0.7rem 0.55rem 0;
+  border-bottom:1px solid var(--hairline);
+}
+.body th{
+  font-family:"Space Mono",monospace;
+  font-weight:400;
+  font-size:0.68rem;
+  text-transform:uppercase;
+  letter-spacing:0.12em;
+  color:var(--ink-soft);
+  border-bottom:2px solid var(--rule);
+}
+.body .aside{
+  font-size:0.94em;
+  color:var(--ink-soft);
+  border-left:2px solid var(--accent);
+  padding-left:1.1rem;
+  margin:1.4rem 0;
+}
+.toc{
+  margin:0 0 2.5rem;
+  padding:1rem 0 0;
+  border-top:1px solid var(--hairline);
+}
+.toc-label{
+  font-size:0.72rem;
+  text-transform:uppercase;
+  letter-spacing:0.2em;
+  color:var(--ink-soft);
+  margin-bottom:0.7rem;
+}
+.toc ol{
+  list-style:none;
+  margin:0;
+  columns:2;
+  column-gap:2rem;
+}
+.toc li{margin-bottom:0.3rem;font-size:0.92em;}
+.toc a{background:none;}
+.toc .n{font-family:"Space Mono",monospace;font-size:0.72rem;color:var(--ink-soft);margin-right:0.5rem;}
+@media (max-width:560px){.toc ol{columns:1;} .body table{font-size:0.84em;}}
+</style>
+</head>
+<body>
+
+  <header class="masthead">
+    <div class="wrap">
+      <div class="brand">ADVENTURE<span class="dot">.</span>CAPITALISM</div>
+      <div class="meta mono">12 CLASSES / 3 SHARK TANKS</div>
+    </div>
+  </header>
+
+  <div class="wrap">
+
+    <div class="classhead">
+      <div>
+        <div class="kicker mono">CLASS 05 · LECTURE NOTES · PRODUCT/MARKET FIT</div>
+        <h1>Your value picks your customers.</h1>
+      </div>
+      <div class="classnum" aria-hidden="true">05</div>
+    </div>
+
+    <div class="tags mono">
+      <span><b>FORMAT</b> lecture notes</span>
+      <span class="sep">/</span>
+      <span><b>COMFORT</b> no-code</span>
+      <span class="sep">/</span>
+      <span><b>TIME</b> 35min read</span>
+      <span class="sep">/</span>
+      <span><b>TRACK</b> core</span>
+      <span class="sep">/</span>
+      <span><b>FEEDS</b> the four parts, class 08 shark tank</span>
+    </div>
+
+    <div class="content">
+      <aside class="rail">
+        <div class="rail-label mono">The<br>notes</div>
+      </aside>
+
+      <div class="body">
+        <p class="lead">The first shark tank is over and the feedback is in. This session opened Block 2, the seed block, where the question changes from "is the problem real?" to "do people actually want what you built?" These notes are the argument behind that question, the examples the room went through, and the pivots several teams put on the table.</p>
+
+        <p>The session was a lecture more than a workshop; the lecturer was losing his voice. The four parts of Class 05 (<a href="module-01.html">nobody buys a technology</a>, <a href="module-02.html">draw it on paper</a>, <a href="module-03.html">forty percent</a>, <a href="module-04.html">write the kill rule first</a>) carry the exercises. This page carries the reasoning, in roughly the order it came up. Section 14 is the summary to reread before Shark Tank #2.</p>
+
+        <nav class="toc">
+          <div class="toc-label mono">Contents</div>
+          <ol>
+            <li><span class="n">01</span><a href="#s1">Three sprints to the next tank</a></li>
+            <li><span class="n">02</span><a href="#s2">The end game: Bending Spoons</a></li>
+            <li><span class="n">03</span><a href="#s3">Sticky products, rubbish ideas</a></li>
+            <li><span class="n">04</span><a href="#s4">Pre-seed, seed, and fit</a></li>
+            <li><span class="n">05</span><a href="#s5">Working backwards</a></li>
+            <li><span class="n">06</span><a href="#s6">The box in the middle</a></li>
+            <li><span class="n">07</span><a href="#s7">One market, many promises</a></li>
+            <li><span class="n">08</span><a href="#s8">The value picks the customer</a></li>
+            <li><span class="n">09</span><a href="#s9">Onboarding in eight frames</a></li>
+            <li><span class="n">10</span><a href="#s10">Pivots in the room</a></li>
+            <li><span class="n">11</span><a href="#s11">Pick your fight</a></li>
+            <li><span class="n">12</span><a href="#s12">When to kill an idea</a></li>
+            <li><span class="n">13</span><a href="#s13">When the wrong people show up</a></li>
+            <li><span class="n">14</span><a href="#s14">Summary and homework</a></li>
+            <li><span class="n">15</span><a href="#s15">Reading</a></li>
+          </ol>
+        </nav>
+
+        <h2 id="s1"><span class="num">1</span>Three sprints to the next tank</h2>
+        <p>Block 2 has three sessions: this one, the next one a week later, and Shark Tank #2 on 8 December. Because some students are elsewhere from December, the second tank runs remotely: one link, everyone joins, nobody has to be in the room. Teams that can come in person still can.</p>
+        <p>The panel is still being assembled. Alexey Shagraev, a repeat shark who enjoys the format, is coming back. Also expected: a founder from California building technology for the death industry (graveyards and funeral homes are among the last undigitised corners of everyday life), a leader of internal digital startups at a regional group who would join in person if he can, and someone from Miro. Miro is a good reason to start the theory where we did.</p>
+
+        <h2 id="s2"><span class="num">2</span>The end game: Bending Spoons</h2>
+        <p>Most people have never heard of Bending Spoons and most people use its products. The Milan company owns, among others, Evernote, WeTransfer, Vimeo, Eventbrite, AOL, Airtable and, since October 2026, Miro. Its model is simple to state: buy software companies after they stop growing, cut most of the team, and run the product for profit better than its founders did.</p>
+        <p>Miro is the clean example. The online whiteboard exploded during COVID and reached a private valuation of about $17.5 billion in 2022, on a bet that the world would keep working from home on collaborative canvases. Bending Spoons bought it in 2026 at an enterprise value of about $1.36 billion, roughly 90 percent below that peak. Two parts of the bet did not come true. People turned out to like offices and each other more than the model assumed. And AI changed how creative teams work faster than anyone planned for. Miro still has millions of paying users and roughly $600 million in recurring revenue; customers are not leaving soon. But growing at COVID speed again is not plausible, so the $17.5 billion story is over.</p>
+        <p>From the founder's side the question is personal. You have limited years. Do you stay with a company that will hold its size and slowly shrink, or do you sell, take the cash and do something else? Bending Spoons is the buyer for founders who answer "sell".</p>
+        <p>The pitch to the founder goes roughly like this. You used to grow fourfold or tenfold a year; now you grow four percent. That is a different business and it needs different people. We keep the ones who keep the lights on, the marketing and the pricing, and let the rest go. Then we raise prices, carefully. Users who thought they would pay ten a month will often pay twenty, and only a few percent leave. Profit triples, and you do not have to watch because you have already left. Cynical, maybe, but it works.</p>
+        <p class="aside">Why talk about the end of a company in the class about product/market fit? Because Bending Spoons is what it looks like when someone understands fit and lifetime value better than anyone else and lives off that understanding. That understanding starts forming at seed, which is where you are.</p>
+
+        <h2 id="s3"><span class="num">3</span>Sticky products, rubbish ideas</h2>
+        <p>The model rests on two mistakes founders make over and over.</p>
+        <h3>They underestimate how sticky a good product is</h3>
+        <p>Switching tools is a real decision with real costs, which is why the course keeps saying: get ahead of competition rather than fight it. Build a Meetup clone that is ten percent cheaper and nobody moves. Their groups are there, their routine is there, the people who know them are there. To pull users off a product they already use you need to be something like ten times better, a no-brainer. It is far easier to grow by reaching people who do not yet know anything like you exists. The same logic protects incumbents: Meetup has probably reached most people who want to organise meetups, and a local copy that got there first will be hard to beat in Lagos.</p>
+        <h3>They overestimate their talent for new ways to make money</h3>
+        <p>A company that grows explosively attracts talent, and talent arrives with ideas: now that we have the users, we can monetise them this way, and that way, and that way. Bending Spoons' experience says most of those ideas are rubbish. Good companies tend to do very few things very well.</p>
+        <p>Meta is the big example. It has tried to reinvent itself several times, but it still earns money the way Facebook did at the start: selling ads built on user data. The VR push burned enormous amounts of money. The AI push looks better so far. Both started with acquisitions (Oculus in 2014; a large stake in Scale AI in 2025, with its founder Alexandr Wang moving to Meta), and so did Instagram and WhatsApp. Meta is very good at one thing, selling ads, and uses that money to buy the other things.</p>
+
+        <h2 id="s4"><span class="num">4</span>Pre-seed, seed, and fit</h2>
+        <p>Block 1 was pre-seed. You have an idea and a first signal that the market and the problem are real. You think your team could address it. You are willing to spend four to ten years on it. You scrape together a little money, or talk one or two people into building a first prototype with you at night.</p>
+        <p>Seed is when you have found product/market fit: what the market wants and what you offer fit together like puzzle pieces. Ideally you walk into a seed round and say: we have fit, we are ready to scale exponentially, we need resources to do it. The next three sessions are about what fit means, what a business model is, and how you tell.</p>
+
+        <h2 id="s5"><span class="num">5</span>Working backwards</h2>
+        <p>The method for this block borrows from Amazon, as described in <i>Working Backwards</i> by Colin Bryar and Bill Carr. At Amazon a project starts with a press release written as if the project were already done. The end state comes first; you reverse-engineer from it to today.</p>
+        <p>Written formats are short: a one-page memo, or a six-page narrative at most, never a slide deck. Meetings start with everyone reading the memo in silence for the first ten to fifteen minutes. Asked why they do not read it beforehand, the answer is that nobody has the time and the company would rather not pretend otherwise. The reasoning is worth spelling out.</p>
+        <ul>
+          <li><b>Writing aligns.</b> When it is on the page, whoever does not understand can ask, and the text can be fixed on the spot. With AI the document can now be edited live as the discussion goes.</li>
+          <li><b>Fewer misunderstandings.</b> Everyone discusses the same text, read at the same moment, not one person's memory from three days ago.</li>
+          <li><b>Better plans.</b> A press release has to say when it happens and what it achieves, so people can ask whether the end result is worth it. Judging an imagined good outcome is easier than judging work in progress.</li>
+          <li><b>Respect for scarce attention.</b> Every executive at a company that is moving is overloaded, because attention is a proxy for resources, promotions and survival. A one-hour meeting of four people costs four hours. A half-hour meeting about a memo three of them did not read costs two hours and probably produces a bad decision. Reading together removes the gap between the people who prepared and the people who could not, including the one who skipped it because he was busy saving the company a million.</li>
+        </ul>
+        <h3>The door desk</h3>
+        <p>Successful companies tend to have a founding myth, and Amazon's is cold rationality. Jeff Bezos left a hedge-fund job on Wall Street in 1994 to sell books online. Books were the perfect first product: they keep forever, store cheaply and can be shipped anywhere. A warehouse in the middle of nowhere can stock every book in print; a Manhattan bookstore cannot afford one copy of a niche cookbook. The one customer who finally finds it will not stop telling people.</p>
+        <p>Amazon listed in 1997, and that year's shareholder letter, "It's All About the Long Term", told investors to expect years of reinvestment before profit. Then Amazon kept that promise to lose money for a very long time, built the everything store, and added AWS on top. The story everyone retells is the desks. Real desks cost money and needed assembling anyway, so Bezos bought doors from a hardware store, screwed legs on them and called them desks. Nobody at Amazon talks about free massages and smoothies. They talk about door desks.</p>
+        <p class="aside">You do not need Amazon's culture. The method is the point: describe where you want to end up, then work back to where you are. Here, the end state is exponential growth, and working back lands you on product/market fit.</p>
+
+        <h2 id="s6"><span class="num">6</span>The box in the middle</h2>
+        <p>The tool for describing a whole business on one page is the Business Model Canvas, from Alexander Osterwalder and Yves Pigneur. The innovation-management students in the room know it well. Its centre box is the value proposition, and it is in the centre because without it nothing else is a business.</p>
+        <p>"Value" is chosen on purpose. Price and value are different things, as we discussed two weeks ago. Value is what the customer needs from you. A good deal is one where they pay less than they think it is worth.</p>
+        <p>The rest of the canvas follows from the centre. The value proposition tells you how to talk to customers and which segments to talk to differently; which channels reach them; what resources and activities you need to deliver; which partners you depend on. That gives you costs (partners, ads, support, delivery, storage) on one side and revenue on the other. Revenue above costs is a business. Revenue below costs is a stove for burning money. Competition keeps pushing your revenue down and your costs up, so a business that works this year may not work next year if the market, the customer or the product shifts.</p>
+
+        <h2 id="s7"><span class="num">7</span>One market, many promises</h2>
+        <p>We came back to <a href="module-01.html">Uber in 2010</a>. Asked for its value proposition, the room offered: you will find a ride home; you can do it without a transit card; you can get a ride whenever you need one, from anywhere. Close, but at launch Uber worked only in San Francisco and did not guarantee a car. What it promised was a service better than a taxi on every front: you get a ride, you see on the map when it arrives, and it feels premium. In the early days the cars were black town cars and the drivers wore suits, at prices comparable to a cab. Faster, more reliable, similar price, nicer. Staying slightly vague about "better" was smart, because it let the service win on several fronts at once.</p>
+        <p>Inside the same ride-hailing category the promises vary a lot:</p>
+        <table>
+          <thead><tr><th>Company</th><th>Promise</th><th>Origin</th></tr></thead>
+          <tbody>
+            <tr><td>Uber</td><td>Convenience and cost: a better taxi.</td><td>San Francisco, 2010.</td></tr>
+            <tr><td>Rhino</td><td>Safety: on-demand rides in armored luxury cars, plus contracts for companies that need to guarantee staff safety.</td><td>São Paulo, where armed robbery is rare per trip but frequent enough that executives already used armored cars.</td></tr>
+            <tr><td>inDrive</td><td>Riders and drivers agree the price themselves, a real marketplace instead of algorithmic pricing.</td><td>Yakutsk, Siberia, 2013. At forty below people carpooled through local forums because driving alone was risky; the app made the forum smoother, then scaled nationally and globally.</td></tr>
+          </tbody>
+        </table>
+        <p>A student added inDrive, and it is a model founder story: start from a sharp pain in a very specific community, solve it reliably, and use the traction and the market knowledge to scale. Your value proposition is the answer to "why do people choose you?", which is why the course keeps treating it and the unique selling point as one thing.</p>
+
+        <h2 id="s8"><span class="num">8</span>The value picks the customer</h2>
+        <p>Block 1 started from customers: go out, find out what they want, offer it. That remains right early on. But even if you interview a thousand people, the sample will never match the users of a real product. There is always a gap between your actual audience and your picture of it.</p>
+        <p>As you approach fit, the direction reverses. You formulate a value proposition, and the people for whom it is valuable show up. Not the other way round. That is hard, because the outcome is partly out of your hands.</p>
+        <p>Chatroulette is the blunt example. Its creators built random live video chats with strangers and did not set out to serve exhibitionists. That is who found the most value in it, and the service spent the rest of its life building filters. The category survived and still has many copies and streamers, but the value proposition chose its own audience.</p>
+        <p>A gentler example came from the room: robotaxis. Riders, especially women, report that a car with no stranger at the wheel feels safer, and Waymo now markets to exactly that; its own data says over half of women riders in established markets feel safer. The company did not plan on that group becoming its strongest advocates. This is why you ship early. Once something is out with a value proposition attached, you find out who it actually works for.</p>
+
+        <h2 id="s9"><span class="num">9</span>Onboarding in eight frames</h2>
+        <p>The first time you use a product is different from every time after. The app walks you through; the website highlights where to look. That is onboarding, and it is the shortest piece of storytelling a founder of a digital product gets. It is also your best chance to explain the value proposition in practice.</p>
+        <p>The exercise, which is the core of <a href="module-02.html">Part 2</a>:</p>
+        <ol>
+          <li><b>Frame 1</b> is where someone who knows nothing about you meets you, in one specific channel: a search ad, an Instagram ad, an influencer video, your App Store page.</li>
+          <li><b>Frames 2 to 7</b> take that person from the click to understanding why the product is worth it.</li>
+          <li><b>Frame 8</b> is the screen of normal, happy use: the mockup most of you already showed in your pitch.</li>
+        </ol>
+        <p>Eight is an upper bound. Onboarding flows longer than about eight steps lose people; five to seven is the comfortable range. Draw it as a team, by hand or with AI. Several teams were regrouping, so the exercise moved to next session, where it will be the starting point.</p>
+
+        <h2 id="s10"><span class="num">10</span>Pivots in the room</h2>
+        <p>Several teams wanted new ideas or new members, so anyone pitching a pivot stated a value proposition and the room reacted.</p>
+        <h3>Data for the autonomous-driving future</h3>
+        <p>An AI that collects mobility data now and predicts what German cities should and should not build once autonomous driving arrives: fewer parking garages, different streets, starting with buses and public transport, with municipalities and transit operators as customers. The reaction: who is the customer? German public transport is municipal, which makes it probably the slowest buyer you could choose, in the most regulated market. Self-driving opens lots of other doors, from in-car entertainment to fleet coordination; Waymo's pitch includes your own car working for others while you sit in the office. Of all the options, this one picks the hardest buyer in the hardest market. Think about what is more sellable.</p>
+        <h3>A smart e-reader</h3>
+        <p>An app for any e-book, not just Kindle titles, that summarises and answers questions; for example, who is who among the dozens of name variants in a Russian novel. The first version sounded like it wanted people to read less and more at once. Framed as question-answering for reading comprehension, the signal is clearer.</p>
+        <h3>A health avatar</h3>
+        <p>An AI avatar that mirrors your health: it gets heavier or sicker when you skip exercise and eat badly, and happier when you improve. The problem is real and the market enormous; there are millions of self-improvement books and apps. The difficulty is psychology. An avatar more beautiful than you can feed body dysmorphia, and being told by a machine that you are imperfect hurts. People want to improve, but they badly want not to feel bad about themselves. There is a reason GLP-1 drug makers trade at the valuations they do, while the number of diet books in a country does not track its obesity rate. An abstract avatar softens the problem without removing it.</p>
+        <p>Duolingo is the reference, in both directions. The streak keeps people coming back for a thousand days. And in the room, as in most groups, losing a long streak was the main reason people quit, even paying users: the pressure that builds the habit turns into guilt when it breaks. The owl is relentlessly positive on paper and still a meme for nagging. Do the arithmetic on value: a thousand days at about six minutes a day is roughly a hundred hours, about €360 over three years. That is less learning than a class with the same hours and cheaper than one, but no missed class has ever produced the feelings a lost streak does. People are fundamentally irrational, and your product has to accept that.</p>
+        <h3>Repairability</h3>
+        <p>Old phones and earphones are often cheaper to replace than fix in Germany, and parts are hard to get. A student noted that EU right-to-repair rules are coming, though water-sealed devices are built not to be opened. The problem is real, and repairing is often a life philosophy as much as a market. It is not obvious that it is greener: large-scale recycling plus factory production can beat repair on cost and maybe on resources. Repair already works as a business in Germany for bikes and especially cars; electronics is less clear.</p>
+
+        <h2 id="s11"><span class="num">11</span>Pick your fight</h2>
+        <p>The next session opened with a story about regulation. Meditron is among the strongest open medical language models, a fine-tune of open models built by teams at EPFL and Yale and led by Annie Hartley, who grew up in South Africa. The pitch to Swiss hospitals was to let the model handle routine cases so physicians could focus on hard ones; on standard diagnoses it can do better than an average physician. The regulator said no. So the work moved to where the alternative is not an average physician but no physician at all: pilots in East Africa, including maternal care in Zanzibar and hospital projects in Kenya. An AI that beats the doctor you do not have, at a fraction of the cost, is an easy sell.</p>
+        <p>Technology adoption cuts both ways: adopt too early and you can get burned, adopt too late and you get burned differently. Germany pioneered solar and now trails China in both making and installing panels. Germany shut its nuclear plants and buys power from neighbours, France included. Adoption is often not rational; it is how people feel about a technology.</p>
+        <p>The lesson for founders: it is much harder to solve a problem when people on the other side keep re-tying the knot while you untie it. Sometimes the fight is worth picking. Often you can go where people want to try the new thing. Africa has rougher roads, fewer traffic lights and less driving data, but it is the continent whose population keeps growing through this century, and some cities there may get autonomous cars before Germany does.</p>
+        <p>Vay is a German example. The Berlin-and-Hamburg team spent a long time looking for a German city to launch in, and launched in Las Vegas instead. Its rental cars are driven to you remotely by a teledriver in a control centre with nobody inside; you take over and drive yourself, then the car is driven away remotely. No person inside the car during the remote leg makes approval easier, and Vegas fits the use case: you are at the hotel for a few days and want a car brought to the door. Assume the world is global, at least for now. Regionalisation is coming back, and some founders bet on a world of a few large regulatory blocs, where you can scale inside one but struggle to cross. Pick the market where you face the least resistance to first traction, and hope your home market catches up.</p>
+
+        <h2 id="s12"><span class="num">12</span>When to kill an idea</h2>
+        <p>A student asked how you know when to switch. The answer came from the lecturer's own company, which has killed its idea twice.</p>
+        <p><b>Year one.</b> The premise: train small, fully open language models, a Linux of LLMs. Easy to pitch; meetings with top-tier US funds followed. The answer was the classic one, which works like telling a six-year-old to come back at nine: too early, show traction. The company was already incorporated, so it survived on AI consulting work and on grants that paid for public compute in exchange for open datasets and models. The two full-time co-founders lived on unemployment benefits; the company paid two employees.</p>
+        <p><b>Year two.</b> What clearly sold was professional services, particularly to organisations that did not want to send data to the big American labs. Pivot one: sovereign, on-premise AI. Better. The co-founders could take salaries; there were several employees. But investors kept saying Mistral would take that market. The team had agreed up front that the year had to end at a set revenue target, in their case a million. It ended about ten percent short. A business that pays ten salaries, built from three people in two years, looks good. They pivoted anyway, because they had agreed to.</p>
+        <p><b>Year three.</b> Pivot two: synthetic data, since usable training data was becoming the frontier and the team had learned how models get built. Growth ran about seven times faster than the year before.</p>
+        <p>Three lessons from that:</p>
+        <ul>
+          <li><b>Killing the idea is not killing the team.</b> Everyone hired in the first year still works there after two pivots, because they were good and aligned. Your co-founder is the closest person to you after your spouse; choose accordingly. Instagram started as Burbn and nobody remembers.</li>
+          <li><b>Hold two beliefs at once.</b> You need resilience because you will probably fail, and complete confidence that this will work. That sounds like a contradiction and it is hard.</li>
+          <li><b>Write the metric down in advance.</b> Nobody can set a deadline for your product but you. Agree as a founding team: reach this by then or we stop and pivot. Without that agreement, a million minus ten percent is impossible to walk away from. Good VCs help here, which people underestimate: they know what scalable growth looks like in your market and will tell you that fourfold a year is slow when the standard is tenfold. That is pressure, but you need the pressure anyway. <a href="module-04.html">Part 4</a> is this exercise.</li>
+        </ul>
+        <p>A smaller example: a couples-relationship app. The goal was an app within a year (met), then 100 paying users (missed). They stopped.</p>
+
+        <h2 id="s13"><span class="num">13</span>When the wrong people show up</h2>
+        <p>The follow-up question: what if your users turn out to be people you did not expect, as with Chatroulette or Waymo? That is a founder's choice, and it depends on your values and your team.</p>
+        <p>One founder built the first live VR streaming for sports and could not sell the rights. An adult-entertainment company asked to use it. He had a three-person team that did not mind, so he became the leading VR live-stream provider for adult content and later sold to a larger firm in that industry. Happy outcome for him; plenty of founders would say no, and that is fine.</p>
+        <p>A tamer, fully legitimate one: an edtech platform helping people move into IT careers, built for laptops. On customer calls, the lecturer noticed that only one in ten people was on a laptop. When he asked, six of the ten said a phone was the only device they had. These were people from non-digital jobs; one was a police officer sitting through twelve-hour shifts in a village where nothing happened, who wanted to become a designer and could only study on his phone. The whole product was rebuilt phone-first, including what was taught at the start, on the assumption that a laptop arrives with the first job or internship. That was the right audience; people who already had laptops already knew how to break into tech.</p>
+        <p>This is also why you do not scale the team before fit. Persuading two co-founders with equity to switch markets is easy. Persuading twenty people, fifteen of them employees, is not. The deeper you are in a market, the harder it is to pivot, so learn to pivot early. If you put €10,000 of your own money into a GmbH, you want it doing something that brings in cash within six months to a year, and growing exponentially after that if you are lucky.</p>
+
+        <h2 id="s14"><span class="num">14</span>Summary and homework</h2>
+        <ul>
+          <li>Product/market fit is the puzzle-piece match between what a market wants and what you offer. Seed money is for scaling once you have it.</li>
+          <li>The value proposition sits at the centre of the canvas. Channels, segments, partners, costs and revenue follow from it.</li>
+          <li>One category can hold very different promises: convenience, safety, a negotiated price.</li>
+          <li>Past the earliest stage, your value proposition chooses your customers. Ship early so you learn who they are.</li>
+          <li>Good products are stickier than founders think. New monetisation ideas are usually worse than founders think.</li>
+          <li>Work backwards from the end state. Pick markets that will let you get first traction.</li>
+          <li>Kill ideas against a metric agreed in advance, not against your mood. Keep the team.</li>
+        </ul>
+        <p><b>Before next session:</b></p>
+        <ol>
+          <li>Settle the teams you will work in until 8 December. Make a group chat if you need one.</li>
+          <li>Write the value proposition of your current (or new) idea.</li>
+          <li>Draw the onboarding: eight frames or fewer, from the ad to normal use (<a href="module-02.html">Part 2</a>).</li>
+          <li>Optional but recommended: as a team, write down what result by 8 December means you keep going. Be more ambitious than "the sharks don't say no" (<a href="module-04.html">Part 4</a>).</li>
+        </ol>
+        <p>One topic was skipped for time: using your current users and traction to judge whether the product makes sense. That is <a href="module-03.html">Part 3</a>, the Sean Ellis test and retention curves, and it comes back next session.</p>
+
+        <h2 id="s15"><span class="num">15</span>Reading</h2>
+        <table>
+          <thead><tr><th>Title</th><th>Why</th></tr></thead>
+          <tbody>
+            <tr><td>Colin Bryar and Bill Carr, <i>Working Backwards</i> (2021)</td><td>The press-release method and the memo meeting from Section 5, by two Amazon insiders.</td></tr>
+            <tr><td>Jeff Bezos, <a href="https://www.aboutamazon.com/news/company-news/amazons-original-1997-letter-to-shareholders">1997 letter to shareholders</a></td><td>The "long term" promise. Short, and still stapled to every Amazon annual report.</td></tr>
+            <tr><td>Alexander Osterwalder and Yves Pigneur, <i>Business Model Generation</i> (2010)</td><td>The canvas from Section 6. Skim the value-proposition chapter.</td></tr>
+            <tr><td>Marc Andreessen, <a href="https://pmarchive.com/guide_to_startups_part4.html">The Only Thing That Matters</a> (2007)</td><td>Where "product/market fit" became the term, from the a16z side of the argument.</td></tr>
+            <tr><td><a href="https://techcrunch.com/2026/09/10/bending-spoons-to-buy-collaboration-tools-maker-miro-for-1-36b-90-less-than-its-2022-valuation/">TechCrunch on Bending Spoons buying Miro</a> (2026)</td><td>The numbers behind Section 2.</td></tr>
+            <tr><td>Paul Graham, <a href="https://www.ycombinator.com/library/96-do-things-that-don-t-scale">Do Things That Don't Scale</a></td><td>This class's essay. The YC side: how early users and fit actually get found.</td></tr>
+          </tbody>
+        </table>
+
+        <p class="aside">The four parts of this class follow the order of the argument here: what you promise, how you show it, how you measure whether it landed, and when you stop. Do them with your settled team.</p>
+
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <a href="index.html">← Class 05</a>
+      <a href="module-01.html">Part 1 →</a>
+    </div>
+  </footer>
+
+</body>
+</html>
